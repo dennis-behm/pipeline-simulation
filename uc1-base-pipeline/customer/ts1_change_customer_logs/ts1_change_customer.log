@@ -1,0 +1,1358 @@
+gitClone.sh: [INFO] Git Clone Wrapper. Version=1.2.0
+gitClone.sh: [INFO] **************************************************************
+gitClone.sh: [INFO] ** Start Git Clone on HOST/USER: z/OS ZT01 01.00 03 8561/BPXROOT
+gitClone.sh: [INFO] **          Repo: https://github.com/dennis-behm/customer.git
+gitClone.sh: [INFO] **       WorkDir: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17
+gitClone.sh: [INFO] **        GitDir: customer
+gitClone.sh: [INFO] **           Ref: main -> main
+gitClone.sh: [INFO] **************************************************************
+
+gitClone.sh: [INFO] Preforming Git Clone of Repo https://github.com/dennis-behm/customer.git, Ref main to /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17
+gitClone.sh: [INFO] git clone -b main https://github.com/dennis-behm/customer.git
+Cloning into 'customer'...
+gitClone.sh: [INFO] Git Status for customer
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+gitClone.sh: [INFO] Git Show-Ref for customer
+6a1e8bb94c917a16def56d4debda84977ab2894f refs/heads/main
+6a1e8bb94c917a16def56d4debda84977ab2894f refs/remotes/origin/HEAD
+6a1e8bb94c917a16def56d4debda84977ab2894f refs/remotes/origin/main
+gitClone.sh: [INFO] Clone Repository Complete. rc=0
+dbbBuild.sh: [INFO] DBB Build Wrapper. Version=1.20
+dbbBuild.sh: [WARNING] Db2 JDBC User not set. It is recommended to use Db2 for the DBB Metadatastore.
+dbbBuild.sh: [WARNING] Db2 JDBC Password file not set. It is recommended to use Db2 for the DBB Metadatastore.
+dbbBuild.sh: [INFO] **************************************************************
+dbbBuild.sh: [INFO] ** Start Fetch Build Dependencies on HOST/USER: z/OS ZT01 01.00 03 8561/DBEHM
+dbbBuild.sh: [INFO] **                     WorkDir: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17
+dbbBuild.sh: [INFO] **                 Application: customer
+dbbBuild.sh: [INFO] **                      Branch: main
+dbbBuild.sh: [INFO] **     Application Descriptor : /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/applicationDescriptor.yml
+dbbBuild.sh: [INFO] **          Use Package Cache : true
+dbbBuild.sh: [INFO] **     Archive Cache Location : /u/dbehm/cbs/.archiveCache
+dbbBuild.sh: [INFO] **    External Dependency Log : /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/externalDependenciesLog.yml
+dbbBuild.sh: [INFO] **************************************************************
+
+dbbBuild.sh: [INFO] ** Fetch Application Dependencies from Artifact Repository
+dbbBuild.sh: [INFO] ** CMD : groovyz /u/dbehm/git/dbb/Templates/Common-Backend-Scripts/utilities/fetchBuildDependencies.groovy -w /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17 -a /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/applicationDescriptor.yml -p /u/dbehm/git/dbb/Templates/Common-Backend-Scripts/pipelineBackend.config -b main -d /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/externalDependenciesLog.yml -c /u/dbehm/cbs/.archiveCache
+** Script configuration:
+   applicationDescriptor -> /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/applicationDescriptor.yml
+   archiveCache -> /u/dbehm/cbs/.archiveCache
+   artifactRepository.password -> xxxxxx 
+   artifactRepository.url -> http://10.3.20.231:8081/artifactory
+   artifactRepository.user -> admin 
+   artifactRepositoryNameSuffix -> dbehm-repo-local
+   branch -> main
+   enablePackageCache -> true
+   externalDependenciesFilePath -> /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/externalDependenciesLog.yml
+   pipelineBackendConfigFile -> /u/dbehm/git/dbb/Templates/Common-Backend-Scripts/pipelineBackend.config
+   workspace -> /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17
+*** Fetching dependent application archives
+** Fetching archive for application 'base' from 'http://10.3.20.231:8081/artifactory/base-dbehm-repo-local/release/rel-1.0.0/base-rel-1.0.0-2025-06-17_14-00-42.tar'
+** Archive was already found in archive cache at '/u/dbehm/cbs/.archiveCache//base-dbehm-repo-local/release/rel-1.0.0/base-rel-1.0.0-2025-06-17_14-00-42.tar'
+** Expanding tar file '/u/dbehm/cbs/.archiveCache//base-dbehm-repo-local/release/rel-1.0.0/base-rel-1.0.0-2025-06-17_14-00-42.tar' to '/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/imports/base' 
+** [INFO] No baseline record found for application 'customer'.
+** Write ExternalDependency Record to /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/externalDependenciesLog.yml
+** Build finished
+dbbBuild.sh: [INFO] Fetch Build Dependencies Completed. rc=0
+
+dbbBuild.sh: [INFO] **************************************************************
+dbbBuild.sh: [INFO] ** Started - DBB Build on HOST/USER: z/OS ZT01 01.00 03 8561/DBEHM
+dbbBuild.sh: [INFO] **          Workspace: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17
+dbbBuild.sh: [INFO] **        Application: customer
+dbbBuild.sh: [INFO] **             Branch: main
+dbbBuild.sh: [INFO] **         Build Type: --fullBuild --debug
+dbbBuild.sh: [INFO] **                HLQ: DBEHM.CUSTOMER.MAIN.BLD
+dbbBuild.sh: [INFO] **             AppDir: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer
+dbbBuild.sh: [INFO] **             LogDir: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs
+dbbBuild.sh: [INFO] **     zAppBuild Path: /u/dbehm/git/dbb-zappbuild
+dbbBuild.sh: [INFO] **           DBB_HOME: /tmp/dbb_v302_patch_national_chars
+dbbBuild.sh: [INFO] **      DBB JDBC USER:
+dbbBuild.sh: [INFO] **  DBB JDBC Pwd File:
+dbbBuild.sh: [INFO] **           Verbose : --verbose
+dbbBuild.sh: [INFO] **         DBB Logger: No
+dbbBuild.sh: [INFO] **************************************************************
+
+dbbBuild.sh: [INFO] Invoking the zAppBuild Build Framework.
+dbbBuild.sh: [INFO] /tmp/dbb_v302_patch_national_chars/bin/groovyz  /u/dbehm/git/dbb-zappbuild/build.groovy --workspace /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17 --application customer --outDir /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs --hlq DBEHM.CUSTOMER.MAIN.BLD --verbose --logEncoding UTF-8 --propFiles /var/dbb/dbb-zappbuild-config/build.properties,/var/dbb/dbb-zappbuild-config/datasets.properties,/var/dbb/dbb-zappbuild-config/buildFolder.properties,/u/dbehm/git/workspace_test/skipJCL.properties --fullBuild --debug
+
+** Build start at 20250625.095935.494
+**************** Initialization of the build process ****************
+** Input args = --workspace /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17 --application customer --outDir /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs --hlq DBEHM.CUSTOMER.MAIN.BLD --verbose --logEncoding UTF-8 --propFiles /var/dbb/dbb-zappbuild-config/build.properties,/var/dbb/dbb-zappbuild-config/datasets.properties,/var/dbb/dbb-zappbuild-config/buildFolder.properties,/u/dbehm/git/workspace_test/skipJCL.properties --fullBuild --debug
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/build.properties
+** Loading zAppBuild build properties
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/datasets.properties
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/GlobalOptions.properties
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/dependencyReport.properties
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/Assembler.properties
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/BMS.properties
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/Cobol.properties
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/Transfer.properties
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/MFS.properties
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/PSBgen.properties
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/DBDgen.properties
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/ACBgen.properties
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/LinkEdit.properties
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/PLI.properties
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/REXX.properties
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/TazUnitTest.properties
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/CRB.properties
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/zCEE3.properties
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/zCEE2.properties
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/Easytrieve.properties
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/CPP.properties
+** Loading default application properties
+** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/defaultzAppBuildConf.properties
+** Loading application specific properties
+** applicationConfDir = /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf/application.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf/file.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf/bind.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf/Assembler.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf/BMS.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf/Cobol.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf/LinkEdit.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf/bind.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf/PLI.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf/MFS.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf/PSBgen.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf/DBDgen.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf/ACBgen.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf/REXX.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf/TazUnitTest.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf/Transfer.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf/CRB.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf/CPP.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf/reports.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf/languageConfigurationMapping.properties
+** Loading property file /var/dbb/dbb-zappbuild-config/build.properties
+** Loading property file /var/dbb/dbb-zappbuild-config/datasets.properties
+** Loading property file /var/dbb/dbb-zappbuild-config/buildFolder.properties
+** Loading property file /u/dbehm/git/workspace_test/skipJCL.properties
+java.version=11.0.21+9
+java.home=/V3R1/usr/lpp/java/J11.0_64
+user.dir=/u/dbehm/git/june-engagement/scripts/uc1-base-pipeline/customer
+** Build properties at start up:
+EZETLOAD=
+IBMZPLI_V51=
+IBMZPLI_V52=PLI.V5R2.SIBMZCMP
+MACLIB=SYS1.MACLIB
+PDTCCMOD=PDTCC.V1R8.SIPVMODA
+REFERAL=IMSCFG.IMSC.REFERAL
+SASMMOD1=HLASM.SASMMOD1
+SBZUSAMP=RATCFG.ZUNIT.SBZUSAMP
+SCCNCMP=CBC.SCCNCMP
+SCEEH=CEE.SCEEH.H
+SCEELKED=CEE.SCEELKED
+SCEEMAC=CEE.SCEEMAC
+SCSQCOBC=WMQ.V9R2M4.SCSQCOBC
+SCSQCPPS=WMQ.V9R2M4.SCSQCPPS
+SCSQLOAD=WMQ.V9R2M4.SCSQLOAD
+SCSQMACS=
+SCSQPLIC=WMQ.V9R2M4.SCSQPLIC
+SDFHC370=CICSTS.V5R4.CICS.SDFHC370
+SDFHCOB=CICSTS.V5R4.CICS.SDFHCOB
+SDFHLOAD=CICSTS.V5R4.CICS.SDFHLOAD
+SDFHMAC=CICSTS.V5R4.CICS.SDFHMAC
+SDFHPL1=CICSTS.V5R4.CICS.SDFHPL1
+SDFSMAC=IMS.V15R1.SDFSMAC
+SDFSRESL=IMS.V15R1.SDFSRESL
+SDSNEXIT=DBC0CFG.SDSNEXIT
+SDSNLOAD=DBC0CFG.DB2.V12.SDSNLOAD
+SEQAMOD=DEBUG.V14R1.SEQAMOD
+SEQASAMP=DEBUG.V16.SEQASAMP
+SFANLMD=
+SFELLOAD=RDZ.V14R1.SFELLOAD
+SIGYCOMP_V4=
+SIGYCOMP_V6=COBOL.V6R4.SIGYCOMP
+acbgen_dbdPDS=DBEHM.CUSTOMER.MAIN.BLD.DBDLIB
+acbgen_deployType=ACB
+acbgen_loadDatasets=DBEHM.CUSTOMER.MAIN.BLD.ACBLIB
+acbgen_loadOptions=cyl space(5,5) dir(40) dsorg(PO) recfm(U) blksize(32760) dsntype(PDS)
+acbgen_loadPDS=DBEHM.CUSTOMER.MAIN.BLD.ACBLIB
+acbgen_outputDatasets=DBEHM.CUSTOMER.MAIN.BLD.ACBLIB
+acbgen_pgm=DFSRRC00
+acbgen_pgmMaxRC=8
+acbgen_pgmParms=UPB
+acbgen_psbPDS=DBEHM.CUSTOMER.MAIN.BLD.PSBLIB
+acbgen_requiredBuildProperties=acbgen_psbPDS,acbgen_dbdPDS,acbgen_loadPDS, acbgen_pgm,acbgen_linkEditor,acbgen_tempOptions,acbgen_maxRC, SDFSMAC,SCEEMAC
+acbgen_tempOptions=cyl space(5,5) unit(vio) lrecl(80) recfm(f,b) new
+addSubmodulesToBuildList=false::**/*.cbl
+application=customer
+applicationBuildGroup=customer-main
+applicationBuildLabel=build.20250625.095935.494
+applicationCollectionName=customer-main
+applicationConfDir=/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/application-conf
+applicationConfRootDir=
+applicationCurrentBranch=main
+applicationDefaultPropFiles=defaultzAppBuildConf.properties
+applicationOutputsCollectionName=customer-main-outputs
+applicationPropFiles=file.properties,bind.properties,Assembler.properties,BMS.properties,Cobol.properties,LinkEdit.properties,bind.properties,PLI.properties,MFS.properties,PSBgen.properties,DBDgen.properties,ACBgen.properties,REXX.properties,TazUnitTest.properties,Transfer.properties,CRB.properties,CPP.properties,reports.properties,languageConfigurationMapping.properties
+applicationSrcDirs=customer
+asmCopySearch=search:[SYSLIB:COPY]/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/maclib/*.mac
+asmMacroSearch=search:[SYSLIB:MACRO]/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/maclib/*.mac
+assember_cicsprecompiler=DFHEAP1$
+assembler_asmaOptFile=
+assembler_assemblySyslibConcatenation=
+assembler_cicsprecompilerParms=
+assembler_compileErrorFeedbackXmlOptions=tracks space(200,40) dsorg(PS) blksize(27998) lrecl(16383) recfm(v,b) new keep
+assembler_compileErrorPrefixParms=ADATA,EX(ADX(ELAXHASM))
+assembler_db2precompiler=DSNHPC
+assembler_db2precompilerParms=HOST(ASM)
+assembler_dbrmPDS=DBEHM.CUSTOMER.MAIN.BLD.DBRM
+assembler_debugPDS=DBEHM.CUSTOMER.MAIN.BLD.EQALANGX
+assembler_debugParms=ADATA
+assembler_dependenciesCopyMode=TEXT
+assembler_dependenciesDatasetMapping=assembler_macroPDS
+assembler_dependencySearch=search:[SYSLIB:MACRO]/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/maclib/*.macsearch:[SYSLIB:COPY]/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/maclib/*.mac
+assembler_deployType=LOAD
+assembler_deployTypeCICS=CICSLOAD
+assembler_deployTypeDLI=IMSLOAD
+assembler_deployTypeIMS=IMSLOAD
+assembler_eqalangx=EQALANGX
+assembler_eqalangxParms=(ASM ERROR LOUD
+assembler_fileBuildRank=
+assembler_identifyLoad=true
+assembler_impactPropertyList=assembler_pgmParms
+assembler_impactPropertyListCICS=assembler_db2precompilerParms
+assembler_impactPropertyListSQL=assembler_cicsprecompilerParms
+assembler_linkEdit=true
+assembler_linkEditMaxRC=4
+assembler_linkEditParms=MAP,RENT,COMPAT(PM5)
+assembler_linkEditStream=
+assembler_linkEditSyslibConcatenation=
+assembler_linkEditor=IEWBLINK
+assembler_loadDatasets=DBEHM.CUSTOMER.MAIN.BLD.LOAD
+assembler_loadOptions=cyl space(1,1) dsorg(PO) recfm(U) blksize(32760) dsntype(library)
+assembler_loadPDS=DBEHM.CUSTOMER.MAIN.BLD.LOAD
+assembler_macroPDS=DBEHM.CUSTOMER.MAIN.BLD.MACRO
+assembler_maxCICSTranslatorRC=4
+assembler_maxIDILANGX_RC=8
+assembler_maxRC=4
+assembler_maxSQLTranslatorRC=4
+assembler_objPDS=DBEHM.CUSTOMER.MAIN.BLD.OBJ
+assembler_outputDatasets=DBEHM.CUSTOMER.MAIN.BLD.LOAD,DBEHM.CUSTOMER.MAIN.BLD.DBRM
+assembler_pgm=ASMA90
+assembler_pgmParms=LIST
+assembler_requiredBuildProperties=assembler_srcPDS,assembler_macroPDS,assembler_objPDS,assembler_loadPDS, assembler_pgm,assembler_linkEditor,assembler_tempOptions,assembler_maxRC, SASMMOD1,SDFHLOAD,SDFHMAC,MACLIB,SCEELKED,SCEEMAC, assembler_dependencySearch
+assembler_scanLoadModule=true
+assembler_sidefileOptions=cyl dsorg(PO) dsntype(library) space(5,5) unit(vio) blksize(27998) lrecl(1562) recfm(v,b)
+assembler_srcDatasets=DBEHM.CUSTOMER.MAIN.BLD.ASM,DBEHM.CUSTOMER.MAIN.BLD.MACRO,DBEHM.CUSTOMER.MAIN.BLD.OBJ,DBEHM.CUSTOMER.MAIN.BLD.DBRM
+assembler_srcOptions=cyl space(1,1) lrecl(80) dsorg(PO) recfm(F,B) dsntype(library)
+assembler_srcPDS=DBEHM.CUSTOMER.MAIN.BLD.ASM
+assembler_storeSSI=true
+assembler_sysadataOptions=cyl space(5,5) lrecl(32756) dsorg(PO) recfm(v,b) blksize(32760) dsntype(library)
+assembler_sysadataPDS=DBEHM.CUSTOMER.MAIN.BLD.SYSADATA
+assembler_tempOptions=cyl space(5,5) unit(vio) lrecl(80) recfm(f,b) new
+bind_collectionID=
+bind_db2Location=
+bind_jobCard=//DB2BIND JOB 'DBB-DB2BIND',MSGLEVEL=(1,1),MSGCLASS=R,NOTIFY=&SYSUID
+bind_maxRC=4
+bind_packageOwner=
+bind_performBindPackage=false
+bind_performBindPlan=false
+bind_plan=
+bind_plan_pklist=
+bind_qualifier=
+bmsSearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/bms/*.bms
+bms_assembler=ASMA90
+bms_compileParms=SYSPARM(MAP),DECK,NOOBJECT
+bms_copyGenParms=SYSPARM(DSECT),DECK,NOOBJECT
+bms_copy_deployType=MAPCOPY
+bms_cpyPDS=DBEHM.CUSTOMER.MAIN.BLD.BMS.COPY
+bms_deployType=MAPLOAD
+bms_fileBuildRank=
+bms_impactPropertyList=bms_copyGenParms,bms_compileParms,bms_linkEditParms
+bms_linkEditParms=MAP,RENT,COMPAT(PM5)
+bms_linkEditor=IEWBLINK
+bms_loadDatasets=DBEHM.CUSTOMER.MAIN.BLD.LOAD
+bms_loadOptions=cyl space(1,1) dsorg(PO) recfm(U) blksize(32760) dsntype(library)
+bms_loadPDS=DBEHM.CUSTOMER.MAIN.BLD.LOAD
+bms_maxRC=0
+bms_outputDatasets=DBEHM.CUSTOMER.MAIN.BLD.BMS.COPY,DBEHM.CUSTOMER.MAIN.BLD.LOAD
+bms_requiredBuildProperties=bms_srcPDS,bms_cpyPDS,bms_loadPDS, bms_assembler,bms_linkEditor,bms_tempOptions,bms_maxRC, SASMMOD1,SDFHLOAD,SDFHMAC,MACLIB,SCEELKED
+bms_srcDatasets=DBEHM.CUSTOMER.MAIN.BLD.BMS,DBEHM.CUSTOMER.MAIN.BLD.BMS.COPY
+bms_srcOptions=cyl space(1,1) lrecl(80) dsorg(PO) recfm(F,B) dsntype(library)
+bms_srcPDS=DBEHM.CUSTOMER.MAIN.BLD.BMS
+bms_storeSSI=true
+bms_tempOptions=cyl space(5,5) unit(vio) lrecl(80) recfm(f,b) new
+buildListFileExt=txt
+buildOrder=BMS.groovy,MFS.groovy,Cobol.groovy,Assembler.groovy,PLI.groovy,LinkEdit.groovy,DBDgen.groovy,PSBgen.groovy,Transfer.groovy,CRB.groovy,zCEE2.groovy
+buildOutDir=/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs
+buildPropFiles=datasets.properties,Assembler.properties,BMS.properties,MFS.properties,PSBgen.properties,DBDgen.properties,ACBgen.properties,Cobol.properties,LinkEdit.properties,PLI.properties,ZunitConfig.properties
+cobol_BMS_PDS=${team}.BMS.COPY
+cobol_compileCICSParms=CICS
+cobol_compileDebugParms=TEST
+cobol_compileDependenciesDatasets=DBEHM.CUSTOMER.MAIN.BLD.COPY.IMP
+cobol_compileErrorFeedbackXmlOptions=tracks space(200,40) dsorg(PS) blksize(27998) lrecl(16383) recfm(v,b) new keep
+cobol_compileErrorPrefixParms=ADATA,EX(ADX(ELAXMGUX))
+cobol_compileMaxRC=4
+cobol_compileParms=LIB
+cobol_compileSQLParms=SQL
+cobol_compileSyslibConcatenation=
+cobol_compiler=IGYCRCTL
+cobol_compilerVersion=V6
+cobol_cpyPDS=DBEHM.CUSTOMER.MAIN.BLD.COPY
+cobol_dbrmPDS=DBEHM.CUSTOMER.MAIN.BLD.DBRM
+cobol_dependenciesAlternativeLibraryNameMapping=
+cobol_dependenciesCopyMode=BINARY::**/*.OBJ
+cobol_dependenciesCopyMode=TEXT
+cobol_dependenciesDatasetMapping=cobol_cpyPDS
+cobol_dependenciesDatasetMapping=cobol_import_objPDS::**/*.OBJ
+cobol_dependencySearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/src/copy/*.cpy;imports/**/include/src/*.cpy
+cobol_deployType=LOAD
+cobol_deployTypeCICS=CICSLOAD
+cobol_deployTypeDLI=IMSLOAD
+cobol_deployTypeIMS=IMSLOAD
+cobol_fileBuildRank=
+cobol_fileBuildRank=1::**/*M1.cbl
+cobol_identifyLoad=true
+cobol_impactPropertyList=cobol_compilerVersion,cobol_compileParms
+cobol_impactPropertyListCICS=cobol_compileCICSParms
+cobol_impactPropertyListSQL=cobol_compileSQLParms
+cobol_import_cpyPDS=DBEHM.CUSTOMER.MAIN.BLD.COPY.IMP
+cobol_import_objPDS=DBEHM.CUSTOMER.MAIN.BLD.OBJ.IMP
+cobol_linkDebugExit=
+cobol_linkEdit=true
+cobol_linkEditDependenciesDatasets=DBEHM.CUSTOMER.MAIN.BLD.OBJ.IMP
+cobol_linkEditMaxRC=4
+cobol_linkEditParms=MAP,RENT,COMPAT(PM5)
+cobol_linkEditStream=
+cobol_linkEditSyslibConcatenation=
+cobol_linkEditor=IEWBLINK
+cobol_loadDatasets=DBEHM.CUSTOMER.MAIN.BLD.LOAD
+cobol_loadOptions=cyl space(1,1) dsorg(PO) recfm(U) blksize(32760) dsntype(library)
+cobol_loadPDS=DBEHM.CUSTOMER.MAIN.BLD.LOAD
+cobol_objPDS=DBEHM.CUSTOMER.MAIN.BLD.OBJ
+cobol_outputDatasets=DBEHM.CUSTOMER.MAIN.BLD.LOAD
+cobol_printTempOptions=cyl space(5,5) unit(vio) lrecl(133) recfm(f,b) new
+cobol_requiredBuildProperties=cobol_srcPDS,cobol_cpyPDS,cobol_objPDS,cobol_loadPDS,cobol_compiler,cobol_linkEditor,cobol_tempOptions,applicationOutputsCollectionName,SDFHCOB,SDFHLOAD,SDSNLOAD,SCEELKED, cobol_dependencySearch
+cobol_scanLoadModule=true
+cobol_srcDatasets=DBEHM.CUSTOMER.MAIN.BLD.COBOL,DBEHM.CUSTOMER.MAIN.BLD.COPY,DBEHM.CUSTOMER.MAIN.BLD.OBJ,DBEHM.CUSTOMER.MAIN.BLD.DBRM
+cobol_srcOptions=cyl space(1,1) lrecl(80) dsorg(PO) recfm(F,B) dsntype(library)
+cobol_srcPDS=DBEHM.CUSTOMER.MAIN.BLD.COBOL
+cobol_storeSSI=true
+cobol_tempOptions=cyl space(5,5) unit(vio) lrecl(80) recfm(f,b) new
+cobol_test_loadDatasets=DBEHM.CUSTOMER.MAIN.BLD.TEST.LOAD
+cobol_test_loadOptions=cyl space(1,1) dsorg(PO) recfm(U) blksize(32760) dsntype(library)
+cobol_test_srcDatasets=DBEHM.CUSTOMER.MAIN.BLD.TEST.COBOL
+cobol_test_srcOptions=cyl space(1,1) lrecl(80) dsorg(PO) recfm(F,B) dsntype(library)
+cobol_testcase_loadPDS=DBEHM.CUSTOMER.MAIN.BLD.TEST.LOAD
+cobol_testcase_srcPDS=DBEHM.CUSTOMER.MAIN.BLD.TEST.COBOL
+continueOnScanFailure=true
+copybookSearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/src/copy/*.cpy;imports/**/include/src/*.cpy
+cppHeaderSearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/headers/*.h
+cpp_assemblySyslibConcatenation=
+cpp_compileCICSParms=CICS
+cpp_compileDebugParms=TEST
+cpp_compileMaxRC=4
+cpp_compileParms=LIB
+cpp_compileSQLParms=SQL
+cpp_compileSyslibConcatenation=
+cpp_dependenciesCopyMode=TEXT
+cpp_dependenciesDatasetMapping=cpp_headerPDS
+cpp_dependencySearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/headers/*.h
+cpp_deployType=LOAD
+cpp_deployTypeCICS=CICSLOAD
+cpp_deployTypeDLI=IMSLOAD
+cpp_fileBuildRank=
+cpp_headerPDS=DBEHM.CUSTOMER.MAIN.BLD.CPP.H
+cpp_identifyLoad=true
+cpp_impactPropertyList=cpp_compileParms
+cpp_impactPropertyListCICS=cpp_compileCICSParms
+cpp_impactPropertyListSQL=cpp_compileSQLParms
+cpp_linkEdit=true
+cpp_linkEditMaxRC=4
+cpp_linkEditParms=MAP,RENT,COMPAT(PM5)
+cpp_linkEditStream=
+cpp_linkEditSyslibConcatenation=
+cpp_linkEditor=IEWBLINK
+cpp_loadDatasets=DBEHM.CUSTOMER.MAIN.BLD.LOAD
+cpp_loadOptions=cyl space(1,1) dsorg(PO) recfm(U) blksize(32760) dsntype(library)
+cpp_loadPDS=DBEHM.CUSTOMER.MAIN.BLD.LOAD
+cpp_objPDS=DBEHM.CUSTOMER.MAIN.BLD.OBJ
+cpp_outputDatasets=DBEHM.CUSTOMER.MAIN.BLD.LOAD
+cpp_requiredBuildProperties=cpp_srcPDS,cpp_objPDS,cpp_loadPDS, cpp_compiler,cpp_linkEditor,cpp_tempOptions,cpp_compileMaxRC,SCCNCMPcpp_compiler=CCNDRVR
+cpp_scanLoadModule=true
+cpp_srcDatasets=DBEHM.CUSTOMER.MAIN.BLD.CPP,DBEHM.CUSTOMER.MAIN.BLD.CPP.H,DBEHM.CUSTOMER.MAIN.BLD.OBJ
+cpp_srcOptions=cyl space(1,1) lrecl(80) dsorg(PO) recfm(F,B) dsntype(library)
+cpp_srcPDS=DBEHM.CUSTOMER.MAIN.BLD.CPP
+cpp_storeSSI=true
+cpp_tempListOptions=cyl space(15,15)  lrecl(137) recfm(v,b) new
+cpp_tempOptions=cyl space(5,5) unit(vio) lrecl(80) recfm(f,b) new
+crb_applicationConstraintsFile=/u/dbehm/git/dbb-zappbuild/build-conf/cicsResourceBuilderConfigurations/customer-constraints.yaml
+crb_maxRC=4
+crb_requiredBuildProperties=crb_zrbLocation,crb_resourceModelFile
+crb_resourceModelFile=/u/dbehm/git/dbb-zappbuild/build-conf/cicsResourceBuilderConfigurations/customer-model.yaml
+crb_zrbLocation=
+createBuildOutputSubfolder=false
+createTestcaseDependency=true
+dbb.AbstractScanner.encoding=ibm-1047
+dbb.DependencyScanner.controlTransfers=false
+dbb.DependencyScanner.languageHint=C::**/*.c,**/*.cpp,**/*.h
+dbb.LinkEditScanner.excludeFilter=CICSTS.V5R4.CICS.SDFHLOAD.*, CEE.SCEELKED.*
+dbb.RepositoryClient.password=ADMIN
+dbb.RepositoryClient.passwordFile=/u/dbehm/git/dbb-zappbuild/utilities/ADMIN.pw
+dbb.RepositoryClient.url=https://10.3.20.96:10443/dbb
+dbb.RepositoryClient.userId=ADMIN
+dbb.file.tagging=true
+dbb.gateway.accountNumber=
+dbb.gateway.groupId=
+dbb.gateway.logLevel=2
+dbb.gateway.procedureName=
+dbb.gateway.regionSize=
+dbb.gateway.type=legacy
+dbb.scannerMapping="scannerClass":"DependencyScanner", "languageHint":"ASM"::asm,mac
+dbb.scannerMapping="scannerClass":"DependencyScanner", "languageHint":"C"::c,h
+dbb.scannerMapping="scannerClass":"DependencyScanner", "languageHint":"COB"::cbl,cpy,cob
+dbb.scannerMapping="scannerClass":"DependencyScanner", "languageHint":"CPP"::cpp,hpp
+dbb.scannerMapping="scannerClass":"DependencyScanner", "languageHint":"EASY"::ezt,eztm
+dbb.scannerMapping="scannerClass":"DependencyScanner", "languageHint":"PLI"::pli,inc
+dbb.scannerMapping="scannerClass":"DependencyScanner", "languageHint":"REXX"::rexx
+dbb.scannerMapping="scannerClass":"ZUnitConfigScanner"::bzucfg
+dbb.scriptMapping=Assembler.groovy::**/*.asm
+dbb.scriptMapping=BMS.groovy::**/*.bms
+dbb.scriptMapping=CRB.groovy::**/crb/*.yaml
+dbb.scriptMapping=Cobol.groovy::**/*.cbl
+dbb.scriptMapping=DBDgen.groovy::**/dbd/*.asm
+dbb.scriptMapping=Easytrieve.groovy::**/*.ezt
+dbb.scriptMapping=LinkEdit.groovy::**/*.lnk
+dbb.scriptMapping=MFS.groovy::**/*.mfs
+dbb.scriptMapping=PLI.groovy::**/*.pli
+dbb.scriptMapping=PSBgen.groovy::**/psb/*.asm
+dbb.scriptMapping=TazUnitTest.groovy::**/*.bzucfg
+dbb.scriptMapping=Transfer.groovy::**/*.jcl,**/*.xml
+dbb.scriptMapping=zCEE2.groovy::**/zosconnect_artefacts/apis/*.*,**/zosconnect_artefacts/services/*.*,**/zosconnect_artefacts/apiRequester/*.properties,**/zosconnect_artefacts/SAR/*.properties
+dbb.scriptMapping=zCEE3.groovy::**/openapi.yaml
+dbdgen_assemblerMaxRC=4
+dbdgen_compileErrorFeedbackXmlOptions=tracks space(200,40) dsorg(PS) blksize(27998) lrecl(16383) recfm(v,b) new keep
+dbdgen_compileErrorPrefixParms=ADATA,EX(ADX(ELAXHASM))
+dbdgen_deployType=DBD
+dbdgen_fileBuildRank=
+dbdgen_impactPropertyList=dbdgen_pgmParms
+dbdgen_linkEditMaxRC=0
+dbdgen_linkEditParms=XREF,LIST
+dbdgen_linkEditor=IEWBLINK
+dbdgen_loadDatasets=DBEHM.CUSTOMER.MAIN.BLD.DBDLIB
+dbdgen_loadOptions=cyl space(1,1) dsorg(PO) recfm(U) blksize(32760) dsntype(library)
+dbdgen_loadPDS=DBEHM.CUSTOMER.MAIN.BLD.DBDLIB
+dbdgen_objPDS=DBEHM.CUSTOMER.MAIN.BLD.OBJ
+dbdgen_outputDatasets=DBEHM.CUSTOMER.MAIN.BLD.DBDLIB
+dbdgen_pgm=ASMA90
+dbdgen_pgmParms=OBJECT,NODECK,NODBCS,'SIZE(MAX,ABOVE)'
+dbdgen_requiredBuildProperties=dbdgen_srcPDS,dbdgen_objPDS,dbdgen_loadPDS, dbdgen_pgm,dbdgen_linkEditor,dbdgen_tempOptions,dbdgen_assemblerMaxRC, SDFSMAC,SCEEMAC
+dbdgen_runACBgen=true
+dbdgen_srcDatasets=DBEHM.CUSTOMER.MAIN.BLD.DBD,DBEHM.CUSTOMER.MAIN.BLD.OBJ
+dbdgen_srcOptions=cyl space(1,1) lrecl(80) dsorg(PO) recfm(F,B) dsntype(library)
+dbdgen_srcPDS=DBEHM.CUSTOMER.MAIN.BLD.DBD
+dbdgen_tempOptions=cyl space(5,5) unit(vio) lrecl(80) recfm(f,b) new
+debug=true
+documentDeleteRecords=true
+easytrieve_compiler=FSYTPA00
+easytrieve_cpyPDS=DBEHM.CUSTOMER.MAIN.BLD.MAC
+easytrieve_dbrmPDS=DBEHM.CUSTOMER.MAIN.BLD.DBRM
+easytrieve_dependenciesCopyMode=TEXT
+easytrieve_dependenciesDatasetMapping=easytrieve_cpyPDS
+easytrieve_linkEditor=IEWBLINK
+easytrieve_loadDatasets=DBEHM.CUSTOMER.MAIN.BLD.LOAD
+easytrieve_loadOptions=cyl space(1,1) dsorg(PO) recfm(U) blksize(32760) dsntype(library)
+easytrieve_loadPDS=DBEHM.CUSTOMER.MAIN.BLD.LOAD
+easytrieve_objPDS=DBEHM.CUSTOMER.MAIN.BLD.OBJ
+easytrieve_outputDatasets=DBEHM.CUSTOMER.MAIN.BLD.LOAD
+easytrieve_printTempOptions=cyl space(5,5) unit(vio) lrecl(133) recfm(f,b) new
+easytrieve_requiredBuildProperties=easytrieve_srcPDS,easytrieve_cpyPDS,easytrieve_objPDS,easytrieve_loadPDS,easytrieve_compiler,easytrieve_linkEditor,easytrieve_tempOptions,applicationOutputsCollectionName,SCEELKED
+easytrieve_srcDatasets=DBEHM.CUSTOMER.MAIN.BLD.EZT,DBEHM.CUSTOMER.MAIN.BLD.MAC,DBEHM.CUSTOMER.MAIN.BLD.OBJ,DBEHM.CUSTOMER.MAIN.BLD.DBRM
+easytrieve_srcOptions=cyl space(1,1) lrecl(80) dsorg(PO) recfm(F,B) dsntype(library)
+easytrieve_srcPDS=DBEHM.CUSTOMER.MAIN.BLD.EZT
+easytrieve_tempOptions=cyl space(5,5) unit(vio) lrecl(80) recfm(f,b) new
+epscmort.cbl=languageConfigProps02
+epsmpmt.cbl=languageConfigProps01
+epsnbrvl.cbl=languageConfigProps01
+excludeFileList=.*,**/.*,**/*.xml,**/*.groovy,**/*.json,**/*.md,**/application-conf/*.*
+eztMacSearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/eztmacros/*.eztm
+formatConsoleOutput=false
+fullBuild=true
+generateDb2BindInfoRecord=true
+generateDb2BindInfoRecordProperties=bind_collectionID,bind_packageOwner,bind_qualifier
+gitRepositoryCompareService=/compare/
+gitRepositoryURL=
+global_instreamDataTempAllocation=tracks space(5,5) unit(vio) lrecl(80) recfm(f,b) new
+hlq=DBEHM.CUSTOMER.MAIN.BLD
+impactBuildOnBuildPropertyChanges=false
+impactBuildOnBuildPropertyList=[assembler_pgmParms,assembler_db2precompilerParms,assembler_cicsprecompilerParms,bms_copyGenParms,bms_compileParms,bms_linkEditParms,cobol_compilerVersion,cobol_compileParms,cobol_compileCICSParms,cobol_compileSQLParms,dbdgen_pgmParms,linkEdit_parms,mfs_phase1Parms,mfs_phase2Parms,pli_compilerVersion,pli_compileParms,pli_compileCICSParms,pli_compileSQLParms,acbgen_pgmParms,psbgen_pgmParms,psbgen_linkEditParms]
+impactSearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/src/copy/*.cpy;imports/**/include/src/*.cpysearch:/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/plinc/*.cpysearch:/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/headers/*.hsearch:/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/bms/*.bmssearch:[:LINK]/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/src/cobol/*.cblsearch:[SYSLIB:COPY]/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/rexx/*.rexxsearch:[:ZUNITINC]/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/cobol/*.cbl;customer/pli/*.pli;customer/tests/*.cbl;customer/tests/*.plisearch:[SYSPROG:PROGRAMDEPENDENCY]/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/cobol/*.cbl;customer/pli/*.plisearch:/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/eztmacros/*.eztm
+isCICS=true::**/cobol/member.cbl
+isIMS=true::**/cobol/DLIBATCH.cbl
+isMQ=true::**/cobol/member.cbl
+isSQL=true::**/cobol/member.cbl
+jobCard=
+linkEdit_parms=MAP,RENT,COMPAT(PM5)
+linkSearch=search:[:LINK]/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/src/cobol/*.cbl
+linkedit_deployType=LOAD
+linkedit_deployTypeCICS=CICSLOAD
+linkedit_deployTypeDLI=IMSLOAD
+linkedit_deployTypeIMS=IMSLOAD
+linkedit_fileBuildRank=
+linkedit_impactPropertyList=linkEdit_parms
+linkedit_linkEditSyslibConcatenation=
+linkedit_linkEditor=IEWBLINK
+linkedit_loadDatasets=DBEHM.CUSTOMER.MAIN.BLD.LOAD
+linkedit_loadOptions=cyl space(1,1) dsorg(PO) recfm(U) blksize(32760) dsntype(library)
+linkedit_loadPDS=DBEHM.CUSTOMER.MAIN.BLD.LOAD
+linkedit_maxRC=0
+linkedit_objPDS=DBEHM.CUSTOMER.MAIN.BLD.OBJ
+linkedit_outputDatasets=DBEHM.CUSTOMER.MAIN.BLD.LOAD
+linkedit_requiredBuildProperties=linkedit_srcPDS,linkedit_objPDS,linkedit_loadPDS,linkedit_linkEditor,linkedit_tempOptions,applicationOutputsCollectionName,SDFHLOAD,SCEELKED
+linkedit_scanLoadModule=true
+linkedit_srcDatasets=DBEHM.CUSTOMER.MAIN.BLD.LINK,DBEHM.CUSTOMER.MAIN.BLD.OBJ
+linkedit_srcOptions=cyl space(1,1) lrecl(80) dsorg(PO) recfm(F,B) dsntype(library)
+linkedit_srcPDS=DBEHM.CUSTOMER.MAIN.BLD.LINK
+linkedit_storeSSI=true
+linkedit_tempOptions=cyl space(5,5) unit(vio) lrecl(80) recfm(f,b) new
+loadFileLevelProperties=false
+loadLanguageConfigurationProperties=false
+logEncoding=UTF-8
+mainBuildBranch=main
+metadataStoreType=file
+mfs_deployType=MFSSOURCE
+mfs_fileBuildRank=
+mfs_impactPropertyList=mfs_phase1Parms,mfs_phase2Parms
+mfs_loadDatasets=DBEHM.CUSTOMER.MAIN.BLD.TFORMAT
+mfs_loadOptions=cyl space(1,1) dsorg(PO) recfm(U) blksize(32760) dsntype(library)
+mfs_phase1MaxRC=4
+mfs_phase1Parms=NOXREF,NOCOMP,NOSUBS,NODIAG,NOCOMPRESS,LINECNT=55,STOPRC=8,DEVCHAR=I
+mfs_phase1processor=DFSUPAA0
+mfs_phase2Execution=false
+mfs_phase2MaxRC=4
+mfs_phase2Parms=COMPRESS,NOCOMPREND,UPDATE,DEVCHAR=I
+mfs_phase2processor=DFSUNUB0
+mfs_requiredBuildProperties=mfs_srcPDS,mfs_tformatPDS, mfs_phase1processor,mfs_phase2processor,mfs_tempOptions,mfs_phase1MaxRC,mfs_phase2MaxRC, SDFSMAC,SDFSRESL,REFERAL
+mfs_srcDatasets=DBEHM.CUSTOMER.MAIN.BLD.MFS
+mfs_srcOptions=cyl space(1,1) lrecl(80) dsorg(PO) blksize(32720) recfm(F,B) dsntype(library)
+mfs_srcPDS=DBEHM.CUSTOMER.MAIN.BLD.MFS
+mfs_tempOptions=cyl space(5,5) unit(vio) new
+mfs_tformatPDS=DBEHM.CUSTOMER.MAIN.BLD.TFORMAT
+outDir=/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs
+pli_BMS_PDS=${team}.BMS.COPY
+pli_compileCICSParms=SYSTEM(CICS),PP(MACRO,CICS)
+pli_compileDebugParms=TEST
+pli_compileErrorFeedbackXmlOptions=tracks space(200,40) dsorg(PS) blksize(27998) lrecl(16383) recfm(v,b) new keep
+pli_compileErrorPrefixParms=XINFO(XML)
+pli_compileIMSParms=SYSTEM(IMS)
+pli_compileMaxRC=4
+pli_compileParms=PP(INCLUDE('ID(++INCLUDE)'))
+pli_compileSQLParms=PP(SQL)
+pli_compileSyslibConcatenation=
+pli_compiler=IBMZPLI
+pli_compilerVersion=V52
+pli_dbrmPDS=DBEHM.CUSTOMER.MAIN.BLD.DBRM
+pli_dependenciesAlternativeLibraryNameMapping=
+pli_dependenciesCopyMode=TEXT
+pli_dependenciesDatasetMapping=pli_incPDS
+pli_dependencySearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/plinc/*.cpy
+pli_deployType=LOAD
+pli_deployTypeCICS=CICSLOAD
+pli_deployTypeDLI=IMSLOAD
+pli_deployTypeIMS=IMSLOAD
+pli_fileBuildRank=
+pli_identifyLoad=true
+pli_impactPropertyList=pli_compilerVersion,pli_compileParms
+pli_impactPropertyListCICS=pli_compileCICSParms
+pli_impactPropertyListSQL=pli_compileSQLParms
+pli_incPDS=DBEHM.CUSTOMER.MAIN.BLD.PLI.INCLUDE
+pli_linkDebugExit=
+pli_linkEdit=true
+pli_linkEditMaxRC=0
+pli_linkEditParms=DYNAM(DLL)::**/testcase/*.pli
+pli_linkEditParms=MAP,RENT,COMPAT(PM5)
+pli_linkEditStream=
+pli_linkEditSyslibConcatenation=
+pli_linkEditor=IEWBLINK
+pli_listOptions=cyl space(5,5) unit(vio) blksize(0) lrecl(137) recfm(v,b) new
+pli_loadDatasets=DBEHM.CUSTOMER.MAIN.BLD.LOAD
+pli_loadOptions=cyl space(1,1) dsorg(PO) recfm(U) blksize(32760) dsntype(library)
+pli_loadPDS=DBEHM.CUSTOMER.MAIN.BLD.LOAD
+pli_objPDS=DBEHM.CUSTOMER.MAIN.BLD.OBJ
+pli_outputDatasets=DBEHM.CUSTOMER.MAIN.BLD.LOAD,DBEHM.CUSTOMER.MAIN.BLD.DBRM
+pli_requiredBuildProperties=pli_srcPDS,pli_incPDS,pli_objPDS,pli_loadPDS,pli_compiler,pli_linkEditor,pli_tempOptions,applicationOutputsCollectionName,SDFHCOB,SDFHLOAD,SDSNLOAD,SCEELKED, pli_dependencySearch
+pli_scanLoadModule=true
+pli_srcDatasets=DBEHM.CUSTOMER.MAIN.BLD.PLI,DBEHM.CUSTOMER.MAIN.BLD.PLI.INCLUDE,DBEHM.CUSTOMER.MAIN.BLD.OBJ,DBEHM.CUSTOMER.MAIN.BLD.DBRM
+pli_srcOptions=cyl space(1,1) lrecl(80) dsorg(PO) recfm(F,B) dsntype(library)
+pli_srcPDS=DBEHM.CUSTOMER.MAIN.BLD.PLI
+pli_storeSSI=true
+pli_tempOptions=cyl space(5,5) unit(vio) lrecl(80) recfm(f,b) new
+pli_test_loadDatasets=DBEHM.CUSTOMER.MAIN.BLD.TEST.LOAD
+pli_test_loadOptions=cyl space(1,1) dsorg(PO) recfm(U) blksize(32760) dsntype(library)
+pli_test_srcDatasets=DBEHM.CUSTOMER.MAIN.BLD.TEST.PLI
+pli_test_srcOptions=cyl space(1,1) lrecl(80) dsorg(PO) recfm(F,B) dsntype(library)
+pli_testcase_loadPDS=DBEHM.CUSTOMER.MAIN.BLD.TEST.LOAD
+pli_testcase_srcPDS=DBEHM.CUSTOMER.MAIN.BLD.TEST.PLI
+pliincludeSearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/plinc/*.cpy
+propFiles=/var/dbb/dbb-zappbuild-config/build.properties,/var/dbb/dbb-zappbuild-config/datasets.properties,/var/dbb/dbb-zappbuild-config/buildFolder.properties,/u/dbehm/git/workspace_test/skipJCL.properties
+propertyFileExtension=properties
+propertyFilePath=properties
+psbgen_assemblerMaxRC=4
+psbgen_compileErrorFeedbackXmlOptions=tracks space(200,40) dsorg(PS) blksize(27998) lrecl(16383) recfm(v,b) new keep
+psbgen_compileErrorPrefixParms=ADATA,EX(ADX(ELAXHASM))
+psbgen_deployType=PSB
+psbgen_fileBuildRank=
+psbgen_impactPropertyList=acbgen_pgmParms,psbgen_pgmParms,psbgen_linkEditParms
+psbgen_linkEditMaxRC=0
+psbgen_linkEditParms=XREF,LIST
+psbgen_linkEditor=IEWBLINK
+psbgen_loadDatasets=DBEHM.CUSTOMER.MAIN.BLD.PSBLIB
+psbgen_loadOptions=cyl space(1,1) dsorg(PO) recfm(U) blksize(32760) dsntype(library)
+psbgen_loadPDS=DBEHM.CUSTOMER.MAIN.BLD.PSBLIB
+psbgen_objPDS=DBEHM.CUSTOMER.MAIN.BLD.OBJ
+psbgen_outputDatasets=DBEHM.CUSTOMER.MAIN.BLD.PSBLIB
+psbgen_pgm=ASMA90
+psbgen_pgmParms=OBJECT,NODECK,NODBCS,'SIZE(MAX,ABOVE)'
+psbgen_requiredBuildProperties=psbgen_srcPDS,psbgen_objPDS,psbgen_loadPDS, psbgen_pgm,psbgen_linkEditor,psbgen_tempOptions,psbgen_assemblerMaxRC, SDFSMAC,SCEEMAC
+psbgen_runACBgen=true
+psbgen_srcDatasets=DBEHM.CUSTOMER.MAIN.BLD.PSB,DBEHM.CUSTOMER.MAIN.BLD.OBJ
+psbgen_srcOptions=cyl space(1,1) lrecl(80) dsorg(PO) recfm(F,B) dsntype(library)
+psbgen_srcPDS=DBEHM.CUSTOMER.MAIN.BLD.PSB
+psbgen_tempOptions=cyl space(5,5) unit(vio) lrecl(80) recfm(f,b) new
+reportConcurrentChanges=false
+reportConcurrentChangesGitBranchReferencePatterns=main
+reportConcurrentChangesIntersectionFailsBuild=false
+reportExternalImpacts=false
+reportExternalImpactsAnalysisDepths=simple
+reportExternalImpactsAnalysisFileFilter=**/*
+reportExternalImpactsCollectionPatterns=.*-master.*
+requiredBuildProperties=buildOrder,buildListFileExt
+requiredDBBToolkitVersion=2.0.2
+resolveSubsystems=false
+rexxCopySearch=search:[SYSLIB:COPY]/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/rexx/*.rexx
+rexx_cexecDatasets=DBEHM.CUSTOMER.MAIN.BLD.CEXEC
+rexx_cexecOptions=cyl space(1,1) lrecl(80) recfm(F,B) blksize(27920) DSORG(PO) dsntype(pds) dir(10)
+rexx_cexecPDS=DBEHM.CUSTOMER.MAIN.BLD.CEXEC
+rexx_cexec_deployType=CEXEC
+rexx_compileMaxRC=4
+rexx_compileParms=OBJECT PRINT XREF CEXEC
+rexx_compileSyslibConcatenation=
+rexx_compiler=REXXCOMP
+rexx_dependencySearch=search:[SYSLIB:COPY]/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/rexx/*.rexx
+rexx_deployType=CLIST
+rexx_fileBuildRank=
+rexx_impactPropertyList=rexx_compileParms
+rexx_linkDebugExit=INCLUDE OBJECT(@{member})  \n    INCLUDE SYSLIB(EQAD3CXT)
+rexx_linkEdit=true
+rexx_linkEditMaxRC=4
+rexx_linkEditParms=MAP,RENT,COMPAT(PM5)
+rexx_linkEditStream=
+rexx_linkEditSyslibConcatenation=
+rexx_linkEditor=IEWBLINK
+rexx_loadDatasets=DBEHM.CUSTOMER.MAIN.BLD.LOAD
+rexx_loadOptions=cyl space(1,1) dsorg(PO) recfm(U) blksize(32760) dsntype(library)
+rexx_loadPDS=DBEHM.CUSTOMER.MAIN.BLD.LOAD
+rexx_objPDS=DBEHM.CUSTOMER.MAIN.BLD.OBJ
+rexx_outputDatasets=DBEHM.CUSTOMER.MAIN.BLD.CEXEC,DBEHM.CUSTOMER.MAIN.BLD.LOAD
+rexx_printTempOptions=cyl space(5,5) unit(vio) lrecl(133) recfm(f,b) new
+rexx_requiredBuildProperties=rexx_srcPDS,rexx_objPDS,rexx_loadPDS,rexx_cexecPDS, rexx_compiler,rexx_linkEditor,rexx_tempOptions, SFANLMD, rexx_dependencySearch, rexx_compileMaxRC, rexx_linkEditMaxRC, rexx_linkEdit
+rexx_rexxPrintTempOptions=cyl space(5,5) unit(vio) lrecl(121) recfm(f,a) new
+rexx_scanLoadModule=true
+rexx_srcDatasets=DBEHM.CUSTOMER.MAIN.BLD.REXX,DBEHM.CUSTOMER.MAIN.BLD.OBJ
+rexx_srcOptions=cyl space(1,1) lrecl(80) dsorg(PO) recfm(F,B) dsntype(library)
+rexx_srcPDS=DBEHM.CUSTOMER.MAIN.BLD.REXX
+rexx_tempOptions=cyl space(5,5) unit(vio) lrecl(80) recfm(f,b) new
+skipImpactCalculationList=
+skipStoringLogicalFile=true::**/*.jcl
+startTime=20250625.095935.494
+systemDatasets=datasets.properties
+tazRecordingFileSearch=search:[SYSPLAY:]/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/tests/*.rec
+tazTestConfigSearch=search:[:ZUNITINC]/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/cobol/*.cbl;customer/pli/*.pli;customer/tests/*.cbl;customer/tests/*.pli
+tazTestcasePgmSearch=search:[SYSPROG:PROGRAMDEPENDENCY]/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/cobol/*.cbl;customer/pli/*.pli
+tazunittest_bzucfgPDS=DBEHM.CUSTOMER.MAIN.BLD.BZU.BZUCFG
+tazunittest_bzuplayPDS=DBEHM.CUSTOMER.MAIN.BLD.BZU.BZUPLAY
+tazunittest_bzureportPDS=DBEHM.CUSTOMER.MAIN.BLD.BZU.BZURPT
+tazunittest_dependenciesCopyMode=BINARY
+tazunittest_dependenciesDatasetMapping=tazunittest_bzuplayPDS
+tazunittest_dependencySearch=search:[SYSPLAY:]/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/tests/*.rec
+tazunittest_eqaplayParms=STOP=E,REPORT=XML
+tazunittest_jobCard=//TAZTEST JOB ,MSGCLASS=H,CLASS=A,NOTIFY=&SYSUID,REGION=0M
+tazunittest_loadDatasets=DBEHM.CUSTOMER.MAIN.BLD.BZU.BZUPLAY
+tazunittest_loadOptions=cyl space(1,1) dsorg(PO) lrecl(256) recfm(F,B) blksize(32512) dsntype(library)
+tazunittest_maxPassRC=4
+tazunittest_maxWarnRC=8
+tazunittest_playbackFileExtension=rec
+tazunittest_reportDatasets=DBEHM.CUSTOMER.MAIN.BLD.BZU.BZURPT
+tazunittest_reportOptions=tracks space(200,40) dsorg(PO) blksize(32760) lrecl(16383) recfm(v,b) dsntype(library)
+tazunittest_requiredBuildProperties=tazunittest_srcDatasets,tazunittest_loadDatasets,tazunittest_reportDatasets,tazunittest_bzucfgPDS,tazunittest_bzureportPDS,tazunittest_bzuplayPDS,tazunittest_srcOptions,tazunittest_loadOptions,tazunittest_reportOptions,tazunittest_jobCard,tazunittest_maxPassRC,tazunittest_maxWarnRC,tazunittest_playbackFileExtension,tazunittest_eqaplayParms,tazunittest_userDebugSessionTestParm, tazunittest_dependencySearch
+tazunittest_srcDatasets=DBEHM.CUSTOMER.MAIN.BLD.BZU.BZUCFG
+tazunittest_srcOptions=cyl space(1,1) lrecl(27998) dsorg(PO) recfm(V,B) dsntype(library)
+tazunittest_tazxlsconv=
+tazunittest_userDebugSessionTestParm=TEST(ERROR,,PROMPT,DBMDT:*)
+testOrder=TazUnitTest.groovy
+topicBranchBuild=null
+transfer_copyMode=TEXT
+transfer_datasetMapping=transfer_jclPDS::**/*.jcl
+transfer_deployType=JCL::**/*.jcl
+transfer_deployType=TRANSFER
+transfer_dsOptions=cyl space(1,1) lrecl(144) dsorg(PO) recfm(F,B) dsntype(library)::transfer_xmlPDS
+transfer_dsOptions=cyl space(1,1) lrecl(80) dsorg(PO) recfm(F,B) dsntype(library)::transfer_srcPDS,transfer_jclPDS
+transfer_jclPDS=DBEHM.CUSTOMER.MAIN.BLD.JCL
+transfer_requiredBuildProperties=transfer_srcPDS,transfer_dsOptions,transfer_deployType
+transfer_srcPDS=DBEHM.CUSTOMER.MAIN.BLD.SOURCE
+transfer_xmlPDS=DBEHM.CUSTOMER.MAIN.BLD.XML
+verbose=true
+workspace=/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17
+zAppBuildDir=/u/dbehm/git/dbb-zappbuild
+zcee2_ARA_packageArtifacts=true
+zcee2_inputType=PROJECT
+zcee2_requiredBuildProperties=zcee2_zconbtPath
+zcee2_zconbtPath=
+zcee3_gradlePath=/var/gradle/gradle-8.10/bin/gradle
+zcee3_gradle_debug=true
+zcee3_requiredBuildProperties=zcee3_shellEnvironment, zcee3_gradlePath
+zcee3_shellEnvironment=bash
+** Running zAppBuild Version 3.11.0-BASE 
+** Running DBB Toolkit Version 3.0.2 12-Jun-2025 18:54:20 
+required props = buildOrder,buildListFileExt
+** File MetadataStore initialized
+** Build output located at /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs
+** Build result created for BuildGroup:customer-main BuildLabel:build.20250625.095935.494
+** Loading DBB scanner mapping configuration dbb.scannerMapping
+************* Creation and processing of the build list *************
+** --fullBuild option selected. Building all programs for application customer. Recreating DBB collections.
+** Deleting collection customer-main
+** Deleting collection customer-main-outputs
+** Updating collections customer-main and customer-main-outputs
+** Created collection customer-main
+** Created collection customer-main-outputs
+*** Sorted list of changed files: [customer/src/cicsdefs/CAO1.cics, customer/src/copy/CAM1.cpy, customer/src/cobol/CAB1.cbl, customer/src/cobol/CAO1.cbl, customer/src/cobol/CAM1.cbl, customer/src/jcl/CAB1.jcl, customer/applicationDescriptor.yml, customer/scripts/ts1_change_customer.sh, customer/scripts/ts1_change_customer_log/deploymentPlan.yaml, customer/scripts/ts1_change_customer_log/deploymentPlanReport.html, customer/src/db2defs/CAD1.db2table, customer/scripts/ts1_change_customer_log/ts1_change_customer.log, customer/zapp.yaml, customer/src/copy/CAD1SQL.cpy, customer/src/copy/CAD1REC.cpy, customer/scripts/ts1_change_customer_log/deploy-logs/evidences/evidence.yaml]
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/src/cicsdefs/CAO1.cics' with class com.ibm.dbb.dependency.DummyScanner
+*** Logical file for 'customer/src/cicsdefs/CAO1.cics' =
+{
+  "lname": "CAO1",
+  "file": "customer/src/cicsdefs/CAO1.cics",
+  "language": "ANY",
+  "cics": false,
+  "sql": false,
+  "dli": false,
+  "mq": false
+}
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/src/copy/CAM1.cpy' with class com.ibm.dbb.dependency.DependencyScanner
+*** Logical file for 'customer/src/copy/CAM1.cpy' =
+{
+  "lname": "CAM1",
+  "file": "customer/src/copy/CAM1.cpy",
+  "language": "COB",
+  "cics": false,
+  "sql": false,
+  "dli": false,
+  "mq": false
+}
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/src/cobol/CAB1.cbl' with class com.ibm.dbb.dependency.DependencyScanner
+*** Logical file for 'customer/src/cobol/CAB1.cbl' =
+{
+  "lname": "CAB1",
+  "file": "customer/src/cobol/CAB1.cbl",
+  "language": "COB",
+  "cics": false,
+  "sql": false,
+  "dli": false,
+  "mq": false,
+  "logicalDependencies": [
+    {
+      "lname": "BAM1",
+      "library": "SYSLIB",
+      "category": "COPY"
+    },
+    {
+      "lname": "CAM1",
+      "library": "SYSLIB",
+      "category": "COPY"
+    }
+  ]
+}
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/src/cobol/CAO1.cbl' with class com.ibm.dbb.dependency.DependencyScanner
+*** Logical file for 'customer/src/cobol/CAO1.cbl' =
+{
+  "lname": "CAO1",
+  "file": "customer/src/cobol/CAO1.cbl",
+  "language": "COB",
+  "cics": false,
+  "sql": false,
+  "dli": false,
+  "mq": false,
+  "logicalDependencies": [
+    {
+      "lname": "BAM1",
+      "library": "SYSLIB",
+      "category": "COPY"
+    },
+    {
+      "lname": "CAM1",
+      "library": "SYSLIB",
+      "category": "COPY"
+    }
+  ]
+}
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/src/cobol/CAM1.cbl' with class com.ibm.dbb.dependency.DependencyScanner
+*** Logical file for 'customer/src/cobol/CAM1.cbl' =
+{
+  "lname": "CAM1",
+  "file": "customer/src/cobol/CAM1.cbl",
+  "language": "COB",
+  "cics": false,
+  "sql": true,
+  "dli": false,
+  "mq": false,
+  "logicalDependencies": [
+    {
+      "lname": "BAD1REC",
+      "library": "SYSLIB",
+      "category": "COPY"
+    },
+    {
+      "lname": "CAD1REC",
+      "library": "SYSLIB",
+      "category": "COPY"
+    },
+    {
+      "lname": "CAM1",
+      "library": "SYSLIB",
+      "category": "COPY"
+    },
+    {
+      "lname": "SQLCA",
+      "library": "SYSLIB",
+      "category": "SQL INCLUDE"
+    }
+  ]
+}
+*** The file '/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/src/jcl/CAB1.jcl' is not added to DBB Metadatastore, but can be processed by build scripts.
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/applicationDescriptor.yml' with class com.ibm.dbb.dependency.DummyScanner
+*** Logical file for 'customer/applicationDescriptor.yml' =
+{
+  "lname": "APPLICATIONDESCRIPTOR",
+  "file": "customer/applicationDescriptor.yml",
+  "language": "ANY",
+  "cics": false,
+  "sql": false,
+  "dli": false,
+  "mq": false
+}
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/scripts/ts1_change_customer.sh' with class com.ibm.dbb.dependency.DummyScanner
+*** Logical file for 'customer/scripts/ts1_change_customer.sh' =
+{
+  "lname": "TS1_CHANGE_CUSTOMER",
+  "file": "customer/scripts/ts1_change_customer.sh",
+  "language": "ANY",
+  "cics": false,
+  "sql": false,
+  "dli": false,
+  "mq": false
+}
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/scripts/ts1_change_customer_log/deploymentPlan.yaml' with class com.ibm.dbb.dependency.DummyScanner
+*** Logical file for 'customer/scripts/ts1_change_customer_log/deploymentPlan.yaml' =
+{
+  "lname": "DEPLOYMENTPLAN",
+  "file": "customer/scripts/ts1_change_customer_log/deploymentPlan.yaml",
+  "language": "ANY",
+  "cics": false,
+  "sql": false,
+  "dli": false,
+  "mq": false
+}
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/scripts/ts1_change_customer_log/deploymentPlanReport.html' with class com.ibm.dbb.dependency.DummyScanner
+*** Logical file for 'customer/scripts/ts1_change_customer_log/deploymentPlanReport.html' =
+{
+  "lname": "DEPLOYMENTPLANREPORT",
+  "file": "customer/scripts/ts1_change_customer_log/deploymentPlanReport.html",
+  "language": "ANY",
+  "cics": false,
+  "sql": false,
+  "dli": false,
+  "mq": false
+}
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/src/db2defs/CAD1.db2table' with class com.ibm.dbb.dependency.DummyScanner
+*** Logical file for 'customer/src/db2defs/CAD1.db2table' =
+{
+  "lname": "CAD1",
+  "file": "customer/src/db2defs/CAD1.db2table",
+  "language": "ANY",
+  "cics": false,
+  "sql": false,
+  "dli": false,
+  "mq": false
+}
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/scripts/ts1_change_customer_log/ts1_change_customer.log' with class com.ibm.dbb.dependency.DummyScanner
+*** Logical file for 'customer/scripts/ts1_change_customer_log/ts1_change_customer.log' =
+{
+  "lname": "TS1_CHANGE_CUSTOMER",
+  "file": "customer/scripts/ts1_change_customer_log/ts1_change_customer.log",
+  "language": "ANY",
+  "cics": false,
+  "sql": false,
+  "dli": false,
+  "mq": false
+}
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/zapp.yaml' with class com.ibm.dbb.dependency.DummyScanner
+*** Logical file for 'customer/zapp.yaml' =
+{
+  "lname": "ZAPP",
+  "file": "customer/zapp.yaml",
+  "language": "ANY",
+  "cics": false,
+  "sql": false,
+  "dli": false,
+  "mq": false
+}
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/src/copy/CAD1SQL.cpy' with class com.ibm.dbb.dependency.DependencyScanner
+*** Logical file for 'customer/src/copy/CAD1SQL.cpy' =
+{
+  "lname": "CAD1SQL",
+  "file": "customer/src/copy/CAD1SQL.cpy",
+  "language": "COB",
+  "cics": false,
+  "sql": true,
+  "dli": false,
+  "mq": false
+}
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/src/copy/CAD1REC.cpy' with class com.ibm.dbb.dependency.DependencyScanner
+*** Logical file for 'customer/src/copy/CAD1REC.cpy' =
+{
+  "lname": "CAD1REC",
+  "file": "customer/src/copy/CAD1REC.cpy",
+  "language": "COB",
+  "cics": false,
+  "sql": false,
+  "dli": false,
+  "mq": false
+}
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer/scripts/ts1_change_customer_log/deploy-logs/evidences/evidence.yaml' with class com.ibm.dbb.dependency.DummyScanner
+*** Logical file for 'customer/scripts/ts1_change_customer_log/deploy-logs/evidences/evidence.yaml' =
+{
+  "lname": "EVIDENCE",
+  "file": "customer/scripts/ts1_change_customer_log/deploy-logs/evidences/evidence.yaml",
+  "language": "ANY",
+  "cics": false,
+  "sql": false,
+  "dli": false,
+  "mq": false
+}
+** Storing 15 logical files in MetadataStore collection 'customer-main'
+** Writing build list file to /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/buildList.txt
+customer/src/cicsdefs/CAO1.cics
+customer/src/copy/CAM1.cpy
+customer/src/cobol/CAB1.cbl
+customer/src/cobol/CAO1.cbl
+customer/src/cobol/CAM1.cbl
+customer/src/jcl/CAB1.jcl
+customer/applicationDescriptor.yml
+customer/scripts/ts1_change_customer.sh
+customer/scripts/ts1_change_customer_log/deploymentPlan.yaml
+customer/scripts/ts1_change_customer_log/deploymentPlanReport.html
+customer/src/db2defs/CAD1.db2table
+customer/scripts/ts1_change_customer_log/ts1_change_customer.log
+customer/zapp.yaml
+customer/src/copy/CAD1SQL.cpy
+customer/src/copy/CAD1REC.cpy
+customer/scripts/ts1_change_customer_log/deploy-logs/evidences/evidence.yaml
+** Invoking build scripts according to build order: BMS.groovy,MFS.groovy,Cobol.groovy,Assembler.groovy,PLI.groovy,LinkEdit.groovy,DBDgen.groovy,PSBgen.groovy,Transfer.groovy,CRB.groovy,zCEE2.groovy
+** Building 3 files mapped to Cobol.groovy script
+required props = cobol_srcPDS,cobol_cpyPDS,cobol_objPDS,cobol_loadPDS,cobol_compiler,cobol_linkEditor,cobol_tempOptions,applicationOutputsCollectionName,SDFHCOB,SDFHLOAD,SDSNLOAD,SCEELKED, cobol_dependencySearch
+** Creating / verifying build dataset DBEHM.CUSTOMER.MAIN.BLD.COBOL
+** Creating / verifying build dataset DBEHM.CUSTOMER.MAIN.BLD.COPY
+** Creating / verifying build dataset DBEHM.CUSTOMER.MAIN.BLD.OBJ
+** Creating / verifying build dataset DBEHM.CUSTOMER.MAIN.BLD.DBRM
+** Creating / verifying build dataset DBEHM.CUSTOMER.MAIN.BLD.LOAD
+*** (1/3) Building file customer/src/cobol/CAM1.cbl
+*** Resolution rules for customer/src/cobol/CAM1.cbl:
+search:/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/src/copy/*.cpy;imports/**/include/src/*.cpy
+*** Physical dependencies for customer/src/cobol/CAM1.cbl:
+{
+  "lname": "BAD1REC",
+  "library": "SYSLIB",
+  "category": "COPY",
+  "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/",
+  "file": "imports/base/include/src/BAD1REC.cpy",
+  "resolved": true,
+  "excluded": false
+}
+{
+  "lname": "CAD1REC",
+  "library": "SYSLIB",
+  "category": "COPY",
+  "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/",
+  "file": "customer/src/copy/CAD1REC.cpy",
+  "resolved": true,
+  "excluded": false
+}
+{
+  "lname": "CAM1",
+  "library": "SYSLIB",
+  "category": "COPY",
+  "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/",
+  "file": "customer/src/copy/CAM1.cpy",
+  "resolved": true,
+  "excluded": false
+}
+{
+  "lname": "SQLCA",
+  "library": "SYSLIB",
+  "category": "SQL INCLUDE",
+  "resolved": false,
+  "excluded": false
+}
+Program attributes: CICS=false, SQL=true, DLI=false, MQ=false
+*** Cobol compiler parms for customer/src/cobol/CAM1.cbl = LIB,SQL,TEST
+*** Link-Edit parms for customer/src/cobol/CAM1.cbl = MAP,RENT,COMPAT(PM5),SSI=6a1e8bb9
+*** Generated linkcard input stream: 
+  IDENTIFY CAM1('customer/6a1e8bb9')
+    
+*** Scanning load module for customer/src/cobol/CAM1.cbl
+*** Logical file = 
+{
+  "lname": "CAM1",
+  "file": "customer/src/cobol/CAM1.cbl",
+  "language": "ZBND",
+  "cics": false,
+  "sql": false,
+  "dli": false,
+  "mq": false,
+  "logicalDependencies": [
+    {
+      "lname": "CAM1",
+      "library": "DBEHM.CUSTOMER.MAIN.BLD.OBJ",
+      "category": "LINK"
+    },
+    {
+      "lname": "DSNHLI",
+      "library": "DBC0CFG.DB2.V12.SDSNLOAD",
+      "category": "LINK"
+    }
+  ]
+}
+*** (2/3) Building file customer/src/cobol/CAB1.cbl
+*** Resolution rules for customer/src/cobol/CAB1.cbl:
+search:/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/src/copy/*.cpy;imports/**/include/src/*.cpy
+*** Physical dependencies for customer/src/cobol/CAB1.cbl:
+{
+  "lname": "BAM1",
+  "library": "SYSLIB",
+  "category": "COPY",
+  "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/",
+  "file": "imports/base/include/src/BAM1.cpy",
+  "resolved": true,
+  "excluded": false
+}
+{
+  "lname": "CAM1",
+  "library": "SYSLIB",
+  "category": "COPY",
+  "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/",
+  "file": "customer/src/copy/CAM1.cpy",
+  "resolved": true,
+  "excluded": false
+}
+Program attributes: CICS=false, SQL=false, DLI=false, MQ=false
+*** Cobol compiler parms for customer/src/cobol/CAB1.cbl = LIB,TEST
+*** Link-Edit parms for customer/src/cobol/CAB1.cbl = MAP,RENT,COMPAT(PM5),SSI=6a1e8bb9
+*** Generated linkcard input stream: 
+  IDENTIFY CAB1('customer/6a1e8bb9')
+    
+*** Scanning load module for customer/src/cobol/CAB1.cbl
+*** Logical file = 
+{
+  "lname": "CAB1",
+  "file": "customer/src/cobol/CAB1.cbl",
+  "language": "ZBND",
+  "cics": false,
+  "sql": false,
+  "dli": false,
+  "mq": false,
+  "logicalDependencies": [
+    {
+      "lname": "CAB1",
+      "library": "DBEHM.CUSTOMER.MAIN.BLD.OBJ",
+      "category": "LINK"
+    }
+  ]
+}
+*** (3/3) Building file customer/src/cobol/CAO1.cbl
+*** Resolution rules for customer/src/cobol/CAO1.cbl:
+search:/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/?path=customer/src/copy/*.cpy;imports/**/include/src/*.cpy
+*** Physical dependencies for customer/src/cobol/CAO1.cbl:
+{
+  "lname": "BAM1",
+  "library": "SYSLIB",
+  "category": "COPY",
+  "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/",
+  "file": "imports/base/include/src/BAM1.cpy",
+  "resolved": true,
+  "excluded": false
+}
+{
+  "lname": "CAM1",
+  "library": "SYSLIB",
+  "category": "COPY",
+  "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/",
+  "file": "customer/src/copy/CAM1.cpy",
+  "resolved": true,
+  "excluded": false
+}
+Program attributes: CICS=false, SQL=false, DLI=false, MQ=false
+*** Cobol compiler parms for customer/src/cobol/CAO1.cbl = LIB,TEST
+*** Link-Edit parms for customer/src/cobol/CAO1.cbl = MAP,RENT,COMPAT(PM5),SSI=6a1e8bb9
+*** Generated linkcard input stream: 
+  IDENTIFY CAO1('customer/6a1e8bb9')
+    
+*** Scanning load module for customer/src/cobol/CAO1.cbl
+*** Logical file = 
+{
+  "lname": "CAO1",
+  "file": "customer/src/cobol/CAO1.cbl",
+  "language": "ZBND",
+  "cics": false,
+  "sql": false,
+  "dli": false,
+  "mq": false,
+  "logicalDependencies": [
+    {
+      "lname": "CAO1",
+      "library": "DBEHM.CUSTOMER.MAIN.BLD.OBJ",
+      "category": "LINK"
+    }
+  ]
+}
+** Building 1 file mapped to Transfer.groovy script
+required props = transfer_srcPDS,transfer_dsOptions,transfer_deployType
+*** (1/1) Transferring file customer/src/jcl/CAB1.jcl
+** Creating / verifying build dataset DBEHM.CUSTOMER.MAIN.BLD.JCL
+** Copied customer/src/jcl/CAB1.jcl to DBEHM.CUSTOMER.MAIN.BLD.JCL with copyMode TEXT and deployType JCL (rc = 0)
+***************** Finalization of the build process *****************
+*** Obtaining hash for directory /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer
+** Setting property :githash:customer : 6a1e8bb94c917a16def56d4debda84977ab2894f
+** Setting property :giturl:customer : https://github.com/dennis-behm/customer.git
+** Writing build report data to /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/BuildReport.json
+** Writing build report to /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/BuildReport.html
+** Updating build result BuildGroup:customer-main BuildLabel:build.20250625.095935.494
+** Build ended at Wed Jun 25 09:59:43 GMT+02:00 2025
+** Build State : CLEAN
+** Total files processed : 4
+** Total build time  : 7.761 seconds
+
+** Build finished
+dbbBuild.sh: [INFO] DBB Build Complete. rc=0
+packageBuildOutputs.sh: [INFO] Package Build Outputs wrapper. Version=1.10
+packageBuildOutputs.sh: [INFO] The directory for the baseline package /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/baseline was not found.
+packageBuildOutputs.sh: [INFO] **************************************************************
+packageBuildOutputs.sh: [INFO] ** Started - Package Build Outputs on HOST/USER: z/OS ZT01 01.00 03 8561/BPXROOT
+packageBuildOutputs.sh: [INFO] **                  WorkDir: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17
+packageBuildOutputs.sh: [INFO] **                Application: customer
+packageBuildOutputs.sh: [INFO] **                     Branch: main
+packageBuildOutputs.sh: [INFO] **      Application directory: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer
+packageBuildOutputs.sh: [INFO] **           Type of pipeline: release
+packageBuildOutputs.sh: [INFO] **              Tar file Name: customer-rel-1.0.0-2025-06-25_09-59-17.tar
+packageBuildOutputs.sh: [INFO] **       BuildReport Location: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs
+packageBuildOutputs.sh: [INFO] **       PackagingScript Path: /u/dbehm/git/dbb/Templates/Common-Backend-Scripts/../../Pipeline/PackageBuildOutputs/PackageBuildOutputs.groovy
+packageBuildOutputs.sh: [INFO] **              Generate SBOM: false
+packageBuildOutputs.sh: [INFO] **   External Dependencies log: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/externalDependenciesLog.yml
+packageBuildOutputs.sh: [INFO] ** Publish to Artifact Repo: true
+packageBuildOutputs.sh: [INFO] **           ArtifactRepo Url: http://10.3.20.231:8081/artifactory
+packageBuildOutputs.sh: [INFO] **          ArtifactRepo User: admin
+packageBuildOutputs.sh: [INFO] **      ArtifactRepo Password: xxxxx
+packageBuildOutputs.sh: [INFO] **     ArtifactRepo Repo name: customer-dbehm-repo-local
+packageBuildOutputs.sh: [INFO] **      ArtifactRepo Repo Dir: release
+packageBuildOutputs.sh: [INFO] **                   DBB_HOME: /tmp/dbb_v302_patch_national_chars
+packageBuildOutputs.sh: [INFO] **************************************************************
+
+packageBuildOutputs.sh: [INFO] Invoking the Package Build Outputs script.
+packageBuildOutputs.sh: [INFO] /tmp/dbb_v302_patch_national_chars/bin/groovyz  -cp /var/dbb/additionalLibraries/cyclonedx-core-java-8.0.3.jar:/var/dbb/additionalLibraries/jackson-annotations-2.16.1.jar:/var/dbb/additionalLibraries/jackson-core-2.16.1.jar:/var/dbb/additionalLibraries/jackson-databind-2.16.1.jar:/var/dbb/additionalLibraries/jackson-dataformat-xml-2.16.1.jar:/var/dbb/additionalLibraries/json-schema-validator-1.2.0.jar:/var/dbb/additionalLibraries/packageurl-java-1.5.0.jar /u/dbehm/git/dbb/Templates/Common-Backend-Scripts/../../Pipeline/PackageBuildOutputs/PackageBuildOutputs.groovy --workDir /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs --tarFileName customer-rel-1.0.0-2025-06-25_09-59-17.tar --application customer --branch main --applicationFolderPath /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer --addExtension --versionName rel-1.0.0 --externalDependenciesEvidences /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/externalDependenciesLog.yml --publish --artifactRepositoryUrl "http://10.3.20.231:8081/artifactory" --artifactRepositoryUser admin --artifactRepositoryPassword artifactoryadmin --artifactRepositoryName customer-dbehm-repo-local --artifactRepositoryDirectory release
+** PackageBuildOutputs start at 20250625.095952.773
+** Properties at startup:
+   addExtension -> true
+   application -> customer
+   applicationFolderPath -> /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/customer
+   artifactRepository.directory -> release
+   artifactRepository.password -> xxxxxx 
+   artifactRepository.repo -> customer-dbehm-repo-local
+   artifactRepository.url -> http://10.3.20.231:8081/artifactory
+   artifactRepository.user -> admin
+   branch -> main
+   buildReportOrder -> [/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/BuildReport.json]
+   copyModeMap -> ["COPYBOOK": "TEXT", "COPY": "TEXT", "DBRM": "BINARY", "LOAD": "LOAD", "JCL": "TEXT", "EQALANGX" : "BINARY", "OBJ" : "BINARY"]
+   externalDependenciesEvidences -> /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/externalDependenciesLog.yml
+   fileEncoding -> UTF-8
+   generateConcertBuildManifest -> false
+   generateSBOM -> false
+   generateWaziDeployAppManifest -> true
+   packagingPropertiesFile -> /u/dbehm/git/dbb/Pipeline/PackageBuildOutputs/packageBuildOutputs.properties
+   privateInterfacesDeployTypes -> OBJ,BMSCOPY
+   publicInterfacesDeployTypes -> OBJ
+   publish -> true
+   publishInterfaces -> true
+   startTime -> 20250625.095952.773
+   tarFileName -> customer-rel-1.0.0-2025-06-25_09-59-17.tar
+   verbose -> false
+   versionName -> rel-1.0.0
+   workDir -> /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs
+** Read build report data from '/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/BuildReport.json'.
+** Remove output records without deployType or with deployType=ZUNIT-TESTCASE
+*! Build output DBEHM.CUSTOMER.MAIN.BLD.OBJ(CAB1) with deployType 'OBJ' has been excluded from packaging.
+*! Build output DBEHM.CUSTOMER.MAIN.BLD.OBJ(CAO1) with deployType 'OBJ' has been excluded from packaging.
+** 6 Build outputs detected in '/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/BuildReport.json':
+	'CAM1' from 'DBEHM.CUSTOMER.MAIN.BLD.LOAD' with Deploy Type 'LOAD'
+	'CAB1' from 'DBEHM.CUSTOMER.MAIN.BLD.LOAD' with Deploy Type 'LOAD'
+	'CAM1' from 'DBEHM.CUSTOMER.MAIN.BLD.OBJ' with Deploy Type 'OBJ'
+	'CAO1' from 'DBEHM.CUSTOMER.MAIN.BLD.LOAD' with Deploy Type 'LOAD'
+	'CAM1' from 'DBEHM.CUSTOMER.MAIN.BLD.DBRM' with Deploy Type 'DBRM'
+	'CAB1' from 'DBEHM.CUSTOMER.MAIN.BLD.JCL' with Deploy Type 'JCL'
+** Total number of build outputs to package: 6
+** Copy 5 deployable artifacts to temporary package directory '/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/tempPackageDir/bin'
+	Copy 'DBEHM.CUSTOMER.MAIN.BLD.LOAD(CAM1)' to '/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/tempPackageDir/bin/load/CAM1.LOAD' with DBB Copymode 'LOAD'
+	Copy 'DBEHM.CUSTOMER.MAIN.BLD.LOAD(CAB1)' to '/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/tempPackageDir/bin/load/CAB1.LOAD' with DBB Copymode 'LOAD'
+	Copy 'DBEHM.CUSTOMER.MAIN.BLD.LOAD(CAO1)' to '/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/tempPackageDir/bin/load/CAO1.LOAD' with DBB Copymode 'LOAD'
+	Copy 'DBEHM.CUSTOMER.MAIN.BLD.DBRM(CAM1)' to '/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/tempPackageDir/bin/dbrm/CAM1.DBRM' with DBB Copymode 'BINARY'
+	Copy 'DBEHM.CUSTOMER.MAIN.BLD.JCL(CAB1)' to '/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/tempPackageDir/bin/jcl/CAB1.JCL' with DBB Copymode 'TEXT'
+** Copy 1 private interfaces to temporary package directory '/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/tempPackageDir/lib'
+	Copy 'DBEHM.CUSTOMER.MAIN.BLD.OBJ(CAM1)' to '/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/tempPackageDir/lib/bin/CAM1.OBJ' with DBB Copymode 'BINARY'
+** Validate if all interfaces known in Application Descriptor are packaged.
+** Generate Wazi Deploy Application Manifest file to /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/tempPackageDir/wazideploy_manifest.yml
+** Generate package build report order file to '/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/tempPackageDir/buildReportOrder.txt'
+** Copy packaging properties config file to '/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/tempPackageDir/packageBuildOutputs.properties'
+** Create tar file at /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/customer-rel-1.0.0-2025-06-25_09-59-17.tar
+** Package '/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/customer-rel-1.0.0-2025-06-25_09-59-17.tar' successfully created.
+** Upload package to Artifact Repository 'http://10.3.20.231:8081/artifactory/customer-dbehm-repo-local/release/rel-1.0.0/customer-rel-1.0.0-2025-06-25_09-59-17.tar'.
+** ArtifactRepositoryHelper started for upload of /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/customer-rel-1.0.0-2025-06-25_09-59-17.tar to http://10.3.20.231:8081/artifactory/customer-dbehm-repo-local/release/rel-1.0.0/customer-rel-1.0.0-2025-06-25_09-59-17.tar
+** Uploading /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/logs/customer-rel-1.0.0-2025-06-25_09-59-17.tar to http://10.3.20.231:8081/artifactory/customer-dbehm-repo-local/release/rel-1.0.0/customer-rel-1.0.0-2025-06-25_09-59-17.tar...
+** Upload completed.
+** Packaging completed successfully.
+** Build finished
+packageBuildOutputs.sh: [INFO] Package Build Outputs Complete. rc=0
+wazideploy-generate.sh: [INFO] Generate Wazi Deploy Deployment Plan. Version=1.10
+wazideploy-generate.sh: [INFO] Invoking the ArtifactRepositoryHelper groovy script to compute Package Url.
+wazideploy-generate.sh: [INFO] /tmp/dbb_v302_patch_national_chars/bin/groovyz  /u/dbehm/git/dbb/Templates/Common-Backend-Scripts/../../Pipeline/PackageBuildOutputs/ArtifactRepositoryHelpers.groovy --computeArchiveUrl --tarFileName customer-rel-1.0.0-2025-06-25_09-59-17.tar --versionName rel-1.0.0 --artifactRepositoryUrl "http://10.3.20.231:8081/artifactory" --artifactRepositoryName customer-dbehm-repo-local --artifactRepositoryDirectory release
+wazideploy-generate.sh: [INFO] Computation of Archive Url completed. rc=0
+wazideploy-generate.sh: [INFO] **************************************************************
+wazideploy-generate.sh: [INFO] ** Start Wazi Deploy Generation on HOST/USER: z/OS ZT01 01.00 03 8561/BPXROOT
+wazideploy-generate.sh: [INFO] **               Deployment Method: /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/deployment-method.yml
+wazideploy-generate.sh: [INFO] **       Generated Deployment Plan: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/deploymentPlan.yaml
+wazideploy-generate.sh: [INFO] **          Deployment Plan Report: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/deploymentPlanReport.html
+wazideploy-generate.sh: [INFO] **              Package Input File: http://10.3.20.231:8081/artifactory/customer-dbehm-repo-local/release/rel-1.0.0/customer-rel-1.0.0-2025-06-25_09-59-17.tar
+wazideploy-generate.sh: [INFO] **             Package Output File: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/applicationArchive.tar
+wazideploy-generate.sh: [INFO] **              Configuration File: /var/WaziDeploy/config/WaziDeploy-ConfigFile.yml
+wazideploy-generate.sh: [INFO] **        Debug output is disabled.
+wazideploy-generate.sh: [INFO] **************************************************************
+
+wazideploy-generate --deploymentMethod /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/deployment-method.yml --deploymentPlan /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/deploymentPlan.yaml --packageInputFile http://10.3.20.231:8081/artifactory/customer-dbehm-repo-local/release/rel-1.0.0/customer-rel-1.0.0-2025-06-25_09-59-17.tar --deploymentPlanReport /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/deploymentPlanReport.html --packageOutputFile /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/applicationArchive.tar --configFile /var/WaziDeploy/config/WaziDeploy-ConfigFile.yml
+
+* Read the deployment method from: /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/deployment-method.yml
+* Build the deployment plan from the deployment method with the deployment plan extension: WdDeploymentStateExtension
+* Read manifest from: /tmp/tmpw00s7a6t/wazideploy_manifest_1.yml
+** Generic step CONFIG/READ CONFIGURATION/INCLUDE APPLICATION VARIABLES
+*** No item found
+** Generic step CONFIG/READ CONFIGURATION/INCLUDE MIDDLEWARE VARIABLES
+*** No item found
+** Generic step CONFIG/READ CONFIGURATION/INCLUDE COMMON VARIABLES
+*** No item found
+** Generic step PACKAGE/PACKAGE/PACKAGE
+*** No item found
+** Collecting items for DELETE_MODULES/DELETE/MEMBER_ARCHIVE
+*** No item found
+** Collecting items for DELETE_MODULES/DELETE/MEMBER_DELETE
+*** No item found
+** Collecting items for DEPLOY_MODULES/ADD/MEMBER_COPY
+*** 5 items found [CAB1.JCL, CAM1.LOAD, CAB1.LOAD, CAO1.LOAD, CAM1.DBRM]
+** Collecting items for VERIFICATION/JCLEXPERT/SCAN_JCL
+*** 1 item found [CAB1.JCL]
+** Collecting items for DB2/UPDATE/DB2_BIND_PACKAGE
+*** 1 item found [CAM1.DBRM]
+** Collecting items for DB2/UPDATE/DB2_BIND_PLAN
+*** 1 item found [CAM1.DBRM]
+** Collecting items for CICS/UPDATE/PROG_UPDATE
+*** No item found
+* Save the deployment plan to: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/deploymentPlan.yaml
+* Save the deployment plan report to: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/deploymentPlanReport.html
+wazideploy-deploy.sh: [INFO] Deploy Package with Wazi Deploy. Version=1.20
+wazideploy-deploy.sh: [INFO] ** Archive was found at location '/applicationArchive.tar'.
+wazideploy-deploy.sh: [INFO] **************************************************************
+wazideploy-deploy.sh: [INFO] ** Start Wazi Deploy Deployment on HOST/USER: z/OS ZT01 01.00 03 8561/BPXROOT
+wazideploy-deploy.sh: [INFO] **                Application Name: customer
+wazideploy-deploy.sh: [INFO] **               Working Directory: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17
+wazideploy-deploy.sh: [INFO] **                 Deployment Plan: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/deploymentPlan.yaml
+wazideploy-deploy.sh: [INFO] **                Environment File: /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/environment-conf/python/EOLEB7-Integration.yml
+wazideploy-deploy.sh: [INFO] **              Package Input File: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/applicationArchive.tar
+wazideploy-deploy.sh: [INFO] **         User-provided extraVars: hlq=DBEHM.CUSTTEST
+wazideploy-deploy.sh: [INFO] **                   Evidence File: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/deploy/evidences/evidence.yaml
+wazideploy-deploy.sh: [INFO] **        Debug output is disabled.
+wazideploy-deploy.sh: [INFO] **************************************************************
+
+wazideploy-deploy --workingFolder /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17 --deploymentPlan /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/deploymentPlan.yaml --envFile /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/environment-conf/python/EOLEB7-Integration.yml -e application=customer -e hlq=DBEHM.CUSTTEST -e deploy_cfg_home=/u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/ --packageInputFile /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/applicationArchive.tar --evidencesFileName /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/deploy/evidences/evidence.yaml
+** Reading the deployment file from: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/deploymentPlan.yaml
+** Reading the target environment file from: /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/environment-conf/python/EOLEB7-Integration.yml
+*! WARNING: Accessing extra vars via extra_vars.myvar in environment files is deprecated.
+*!          You can now directly access the extra variables (example: myvar).
+*** Validate Deployment Plan before processing it
+*** End of Deployment Plan validation
+*** Validate /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/applicationArchive.tar fingerprint
+*** Checksum is valid for /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/applicationArchive.tar
+** Registering SMF Record
+** Processing CONFIG(s)
+** Processing CONFIG/READ CONFIGURATION(s)
+** Processing CONFIG/READ CONFIGURATION/INCLUDE APPLICATION VARIABLES(s) with include_vars
+*** Read variable file /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/global/environment-configuration/customer/EOLEB7-Integration.yml
+** Processing CONFIG/READ CONFIGURATION/INCLUDE MIDDLEWARE VARIABLES(s) with include_vars
+*** Read variable file /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/global/cics_config.yml
+*** Read variable file /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/global/db2_config.yml
+** Processing CONFIG/READ CONFIGURATION/INCLUDE COMMON VARIABLES(s) with include_vars
+*** Read variable file /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/global/jcl_verification.yml
+*** Read variable file /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/global/pds_specification.yml
+*** Read variable file /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/global/types_pattern_mapping.yml
+** Processing PACKAGE(s)
+** Processing PACKAGE/PACKAGE(s)
+** Processing PACKAGE/PACKAGE/PACKAGE(s) with package
+*** Processing package /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/applicationArchive.tar
+*** Expand the package /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/applicationArchive.tar to /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17 on system os OS/390
+** Processing DEPLOY_MODULES(s)
+** Processing DEPLOY_MODULES/ADD(s)
+** Processing DEPLOY_MODULES/ADD/MEMBER_COPY(s) with member_copy
+*** Copy /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/bin/jcl/CAB1.JCL to 'DBEHM.CUSTTEST.JCL(CAB1)' (1/5)
+**** Substitute text in /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/bin/jcl/CAB1.JCL.IBM-1047
+*! WARNING: force_lock=True is ineffective with native copy
+*** Copy /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/bin/load/CAM1.LOAD to 'DBEHM.CUSTTEST.LOAD(CAM1)' (2/5)
+*** Copy /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/bin/load/CAB1.LOAD to 'DBEHM.CUSTTEST.LOAD(CAB1)' (3/5)
+*** Copy /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/bin/load/CAO1.LOAD to 'DBEHM.CUSTTEST.LOAD(CAO1)' (4/5)
+*** Copy /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/bin/dbrm/CAM1.DBRM to 'DBEHM.CUSTTEST.DBRM(CAM1)' (5/5)
+** Processing VERIFICATION(s)
+** Processing VERIFICATION/JCLEXPERT(s)
+** Processing VERIFICATION/JCLEXPERT/SCAN_JCL(s) with job_submit
+*** Render job template /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/templates/jcl_expert_validation.jcl.j2 to '/tmp/wazi-deploy/jcl_gen/jcl_expert_validation.jcl'
+** Job JOB06359 submitted with ZOAU Python API.
+**** Job JOB06359 finished CC=0008
+** Processing DB2(s)
+** Processing DB2/UPDATE(s)
+** Processing DB2/UPDATE/DB2_BIND_PACKAGE(s) with db2_bind_package
+**** Perform BIND PACKAGE on 'CAM1.DBRM' (1/1)
+*** Perform BIND PACKAGE with template 'db2_bind_package.jcl.j2'
+*** Submit jcl /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/bind_package_1.jcl
+** Job JOB06360 submitted with ZOAU Python API.
+**** Job JOB06360 finished CC=0004
+** Processing DB2/UPDATE/DB2_BIND_PLAN(s) with db2_bind_plan
+*** Perform BIND PLAN with template 'db2_bind_plan.jcl.j2'
+*** Submit jcl /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/bind_plan_1.jcl
+** Job JOB06361 submitted with ZOAU Python API.
+**** Job JOB06361 finished CC=0000
+** Evidences saved in /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/deploy/evidences/evidence.yaml
+wazideploy-evidence.sh: [INFO] Generate deployment reports with Wazi Deploy. Version=1.10
+wazideploy-evidence.sh: [INFO] **************************************************************
+wazideploy-evidence.sh: [INFO] ** Start Wazi Deploy evidence reporting on HOST/USER: z/OS ZT01 01.00 03 8561/BPXROOT
+wazideploy-evidence.sh: [INFO] **               Working Directory: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17
+wazideploy-evidence.sh: [INFO] **                     Output File: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/deploy/deployment-report.html
+wazideploy-evidence.sh: [INFO] **                   Evidence File: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/deploy/evidences/evidence.yaml
+wazideploy-evidence.sh: [INFO] **************************************************************
+
+wazideploy-evidence --index /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/index --dataFolder /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/deploy/evidences i
+Indexing '/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/deploy/evidences' to '/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/index' ...
+1 new file scanned in 0.21 seconds
+Index in '/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/index':
+    File count: 1 (1 new, 0 deleted)
+    Field count: 122
+    Record count: 202
+wazideploy-evidence --index /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/index --template /u/dbehm/git/wazi-deploy-sample/plum-samples/evidences/templates/full-report.yml --output=/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/deploy/deployment-report.html r renderer=/u/dbehm/git/wazi-deploy-sample/plum-samples/evidences/renderers/full-report.html
+1 record extracted to file '/u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/deploy/deployment-report.html' in 0.07 seconds
+ts1_change_base completed with 0

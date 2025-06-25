@@ -1,0 +1,496 @@
+apiVersion: deploy.ibm.com/v1
+kind: DeploymentPlan
+metadata:
+  name: customer
+  description: customer
+  version: 20250625.095952.773
+  annotations:
+    creation_timestamp: 20250625.080001.192
+    engine:
+      version: 3.0.5
+      build: manual
+      date: Thu Apr 24 00:41:15 CEST 2025
+    package:
+      path: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/applicationArchive.tar
+      sha256: 27d7af1633f3ff5410ef18c11e32df6d6aa576b0fab969c455feaf642b845e27
+activities:
+- name: CONFIG
+  description: |-
+    Load the generic Wazi Deploy Configuration variables
+    Specific for the Python implementation
+  properties: []
+  actions:
+  - name: READ CONFIGURATION
+    properties: []
+    steps:
+    - name: INCLUDE APPLICATION VARIABLES
+      properties:
+      - key: template
+        value: include_vars
+      - key: var_include_vars
+        value: include_application_vars
+      artifacts: []
+      types: []
+      short_name: INCLUDE_APP_VARS
+    - name: INCLUDE MIDDLEWARE VARIABLES
+      properties:
+      - key: template
+        value: include_vars
+      - key: var_include_vars
+        value: include_middleware_vars
+      artifacts: []
+      types: []
+      short_name: INCLUDE_MIDDLEWARE_VARS
+    - name: INCLUDE COMMON VARIABLES
+      properties:
+      - key: template
+        value: include_vars
+      - key: var_include_vars
+        value: include_common_vars
+      artifacts: []
+      types: []
+      short_name: INCLUDE_COMMON_VARS
+    types: []
+    short_name: CONFIG
+  types: []
+- name: PACKAGE
+  description: |-
+    This activity expands the package into the working directory
+  properties: []
+  actions:
+  - name: PACKAGE
+    properties: []
+    steps:
+    - name: PACKAGE
+      properties: []
+      artifacts: []
+      types: []
+    types: []
+  types: []
+  tags:
+  - package
+- name: DEPLOY_MODULES
+  description: |-
+    This activity is deploys artifacts into the target PDS libraries
+  properties: []
+  actions:
+  - name: ADD
+    description: |-
+      This action is applicable when we add new artifacts.
+    properties:
+    - key: my_action_prop
+      value: my_value
+    steps:
+    - name: MEMBER_COPY
+      description: |-
+        This step do the copy of artifacts into PDSs
+      properties: []
+      artifacts:
+      - name: CAB1
+        properties:
+        - key: path
+          value: bin/jcl/CAB1.JCL
+        - key: githash
+          value: 6a1e8bb94c917a16def56d4debda84977ab2894f
+        - key: giturl
+          value: https://github.com/dennis-behm/customer.git
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: JCL
+        hash: 6a1e8bb94c917a16def56d4debda84977ab2894f
+      - name: CAM1
+        properties:
+        - key: path
+          value: bin/load/CAM1.LOAD
+        - key: githash
+          value: 6a1e8bb94c917a16def56d4debda84977ab2894f
+        - key: giturl
+          value: https://github.com/dennis-behm/customer.git
+        - key: dependency_set
+          value:
+          - lname: BAD1REC
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/
+            file: imports/base/include/src/BAD1REC.cpy
+            resolved: true
+            excluded: false
+          - lname: CAD1REC
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/
+            file: customer/src/copy/CAD1REC.cpy
+            resolved: true
+            excluded: false
+          - lname: CAM1
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/
+            file: customer/src/copy/CAM1.cpy
+            resolved: true
+            excluded: false
+          - lname: SQLCA
+            library: SYSLIB
+            category: SQL INCLUDE
+            resolved: false
+            excluded: false
+          - lname: CAM1
+            library: DBEHM.CUSTOMER.MAIN.BLD.OBJ
+            category: LINK
+            file: DBEHM.CUSTOMER.MAIN.BLD.OBJ(CAM1)
+            resolved: true
+            excluded: false
+          - lname: DSNHLI
+            library: DBC0CFG.DB2.V12.SDSNLOAD
+            category: LINK
+            file: DBC0CFG.DB2.V12.SDSNLOAD(DSNHLI)
+            resolved: true
+            excluded: false
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: LOAD
+        hash: 6a1e8bb94c917a16def56d4debda84977ab2894f
+      - name: CAB1
+        properties:
+        - key: path
+          value: bin/load/CAB1.LOAD
+        - key: githash
+          value: 6a1e8bb94c917a16def56d4debda84977ab2894f
+        - key: giturl
+          value: https://github.com/dennis-behm/customer.git
+        - key: dependency_set
+          value:
+          - lname: BAM1
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/
+            file: imports/base/include/src/BAM1.cpy
+            resolved: true
+            excluded: false
+          - lname: CAM1
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/
+            file: customer/src/copy/CAM1.cpy
+            resolved: true
+            excluded: false
+          - lname: CAB1
+            library: DBEHM.CUSTOMER.MAIN.BLD.OBJ
+            category: LINK
+            file: DBEHM.CUSTOMER.MAIN.BLD.OBJ(CAB1)
+            resolved: true
+            excluded: false
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: LOAD
+        hash: 6a1e8bb94c917a16def56d4debda84977ab2894f
+      - name: CAO1
+        properties:
+        - key: path
+          value: bin/load/CAO1.LOAD
+        - key: githash
+          value: 6a1e8bb94c917a16def56d4debda84977ab2894f
+        - key: giturl
+          value: https://github.com/dennis-behm/customer.git
+        - key: dependency_set
+          value:
+          - lname: BAM1
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/
+            file: imports/base/include/src/BAM1.cpy
+            resolved: true
+            excluded: false
+          - lname: CAM1
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/
+            file: customer/src/copy/CAM1.cpy
+            resolved: true
+            excluded: false
+          - lname: CAO1
+            library: DBEHM.CUSTOMER.MAIN.BLD.OBJ
+            category: LINK
+            file: DBEHM.CUSTOMER.MAIN.BLD.OBJ(CAO1)
+            resolved: true
+            excluded: false
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: LOAD
+        hash: 6a1e8bb94c917a16def56d4debda84977ab2894f
+      - name: CAM1
+        properties:
+        - key: path
+          value: bin/dbrm/CAM1.DBRM
+        - key: githash
+          value: 6a1e8bb94c917a16def56d4debda84977ab2894f
+        - key: giturl
+          value: https://github.com/dennis-behm/customer.git
+        - key: dependency_set
+          value:
+          - lname: BAD1REC
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/
+            file: imports/base/include/src/BAD1REC.cpy
+            resolved: true
+            excluded: false
+          - lname: CAD1REC
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/
+            file: customer/src/copy/CAD1REC.cpy
+            resolved: true
+            excluded: false
+          - lname: CAM1
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/
+            file: customer/src/copy/CAM1.cpy
+            resolved: true
+            excluded: false
+          - lname: SQLCA
+            library: SYSLIB
+            category: SQL INCLUDE
+            resolved: false
+            excluded: false
+          - lname: CAM1
+            library: DBEHM.CUSTOMER.MAIN.BLD.OBJ
+            category: LINK
+            file: DBEHM.CUSTOMER.MAIN.BLD.OBJ(CAM1)
+            resolved: true
+            excluded: false
+          - lname: DSNHLI
+            library: DBC0CFG.DB2.V12.SDSNLOAD
+            category: LINK
+            file: DBC0CFG.DB2.V12.SDSNLOAD(DSNHLI)
+            resolved: true
+            excluded: false
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: DBRM
+        hash: 6a1e8bb94c917a16def56d4debda84977ab2894f
+      types: []
+    types: []
+  is_artifact: true
+  types:
+  - name: DBRM
+  - name: LOAD
+  - name: CICSLOAD
+  - name: MAPLOAD
+  - name: JCL
+  tags:
+  - deploy_modules
+- name: VERIFICATION
+  description: |-
+    This action block verifies that the deployed JCLs are correct.
+    It uses the JCL Expert to scan and validate them. This showcases
+    how the conditional deployment 'loop' keyword can be used.
+  properties: []
+  actions:
+  - name: JCLEXPERT
+    description: |-
+      Invoke JCL expert interface for a single member of a dataset
+    properties: []
+    steps:
+    - name: SCAN_JCL
+      properties:
+      - key: template
+        value: job_submit
+      - key: var_job_submit
+        value: jcl_expert_verification
+      artifacts:
+      - name: CAB1
+        properties:
+        - key: path
+          value: bin/jcl/CAB1.JCL
+        - key: githash
+          value: 6a1e8bb94c917a16def56d4debda84977ab2894f
+        - key: giturl
+          value: https://github.com/dennis-behm/customer.git
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: JCL
+        hash: 6a1e8bb94c917a16def56d4debda84977ab2894f
+      when:
+      - wd_query[[ length ( current_plan_step.artifacts) ]] != 0
+      loop:
+        loop_query: current_plan_step.artifacts
+        loop_var: jcl_member
+      is_artifact: true
+      types:
+      - name: JCL
+    types: []
+  types:
+  - name: JCL
+- name: DB2
+  description: |-
+    This activity is dedicated to DBRM bind modules
+  properties: []
+  actions:
+  - name: UPDATE
+    description: |-
+      This action is applicable when we update a DBRM modules
+    properties: []
+    steps:
+    - name: DB2_BIND_PACKAGE
+      properties: []
+      artifacts:
+      - name: CAM1
+        properties:
+        - key: path
+          value: bin/dbrm/CAM1.DBRM
+        - key: githash
+          value: 6a1e8bb94c917a16def56d4debda84977ab2894f
+        - key: giturl
+          value: https://github.com/dennis-behm/customer.git
+        - key: dependency_set
+          value:
+          - lname: BAD1REC
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/
+            file: imports/base/include/src/BAD1REC.cpy
+            resolved: true
+            excluded: false
+          - lname: CAD1REC
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/
+            file: customer/src/copy/CAD1REC.cpy
+            resolved: true
+            excluded: false
+          - lname: CAM1
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/
+            file: customer/src/copy/CAM1.cpy
+            resolved: true
+            excluded: false
+          - lname: SQLCA
+            library: SYSLIB
+            category: SQL INCLUDE
+            resolved: false
+            excluded: false
+          - lname: CAM1
+            library: DBEHM.CUSTOMER.MAIN.BLD.OBJ
+            category: LINK
+            file: DBEHM.CUSTOMER.MAIN.BLD.OBJ(CAM1)
+            resolved: true
+            excluded: false
+          - lname: DSNHLI
+            library: DBC0CFG.DB2.V12.SDSNLOAD
+            category: LINK
+            file: DBC0CFG.DB2.V12.SDSNLOAD(DSNHLI)
+            resolved: true
+            excluded: false
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: DBRM
+        hash: 6a1e8bb94c917a16def56d4debda84977ab2894f
+      types: []
+    - name: DB2_BIND_PLAN
+      properties: []
+      artifacts:
+      - name: CAM1
+        properties:
+        - key: path
+          value: bin/dbrm/CAM1.DBRM
+        - key: githash
+          value: 6a1e8bb94c917a16def56d4debda84977ab2894f
+        - key: giturl
+          value: https://github.com/dennis-behm/customer.git
+        - key: dependency_set
+          value:
+          - lname: BAD1REC
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/
+            file: imports/base/include/src/BAD1REC.cpy
+            resolved: true
+            excluded: false
+          - lname: CAD1REC
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/
+            file: customer/src/copy/CAD1REC.cpy
+            resolved: true
+            excluded: false
+          - lname: CAM1
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/
+            file: customer/src/copy/CAM1.cpy
+            resolved: true
+            excluded: false
+          - lname: SQLCA
+            library: SYSLIB
+            category: SQL INCLUDE
+            resolved: false
+            excluded: false
+          - lname: CAM1
+            library: DBEHM.CUSTOMER.MAIN.BLD.OBJ
+            category: LINK
+            file: DBEHM.CUSTOMER.MAIN.BLD.OBJ(CAM1)
+            resolved: true
+            excluded: false
+          - lname: DSNHLI
+            library: DBC0CFG.DB2.V12.SDSNLOAD
+            category: LINK
+            file: DBC0CFG.DB2.V12.SDSNLOAD(DSNHLI)
+            resolved: true
+            excluded: false
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: DBRM
+        hash: 6a1e8bb94c917a16def56d4debda84977ab2894f
+      types: []
+    types: []
+  is_artifact: true
+  types:
+  - name: DBRM
+  tags:
+  - db2
+manifests:
+- name: customer
+  description: customer
+  version: 20250625.095952.773
+  annotations:
+    creationTimestamp: 20250625.095952.773
+    scmInfo:
+      type: git
+      uri: https://github.com/dennis-behm/customer.git
+      branch: main
+      shortCommit: 6a1e8bb94c917a16def56d4debda84977ab2894f
+    packageInfo:
+      uri: http://10.3.20.231:8081/artifactory/customer-dbehm-repo-local/release/rel-1.0.0/customer-rel-1.0.0-2025-06-25_09-59-17.tar
+      type: artifactRepository
+    external_dependencies:
+    - name: base
+      properties:
+      - key: type
+        value: release
+      - key: reference
+        value: rel-1.0.0
+      - key: uri
+        value: http://10.3.20.231:8081/artifactory/base-dbehm-repo-local/release/rel-1.0.0/base-rel-1.0.0-2025-06-17_14-00-42.tar
+      - key: buildid
+        value: 2025-06-17_14-00-42
+deployment_methods:
+- apiVersion: deploy.ibm.com/v1
+  kind: DeploymentMethod
+  metadata:
+    name: CICS
+    description: |-
+      This deployment method can be use for the deployment of an CICS application.
+    version: 1.0.0
+    annotations:
+      deployVersion: 1.0.0

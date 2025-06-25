@@ -1,0 +1,52 @@
+2025-06-25 09:54:53 - INFO  - deployment_method_manager.py, line 31, in load_deployment_method_from_yaml_file : * Read the deployment method from: /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/deployment-method.yml
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 491, in build        : * Build the deployment plan from the deployment method with the deployment plan extension: WdDeploymentStateExtension
+2025-06-25 09:54:53 - INFO  - state/deployment_state_manager.py, line 612, in __process_package_input_files__ : * Read manifest from: /tmp/tmp9cqo3hqx/wazideploy_manifest_1.yml
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 820, in __build__    : ** Generic step CONFIG/READ CONFIGURATION/INCLUDE APPLICATION VARIABLES
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 856, in __build__    : *** No item found
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 820, in __build__    : ** Generic step CONFIG/READ CONFIGURATION/INCLUDE MIDDLEWARE VARIABLES
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 856, in __build__    : *** No item found
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 820, in __build__    : ** Generic step CONFIG/READ CONFIGURATION/INCLUDE COMMON VARIABLES
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 856, in __build__    : *** No item found
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 820, in __build__    : ** Generic step PACKAGE/PACKAGE/PACKAGE
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 856, in __build__    : *** No item found
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 790, in __build__    : ** Collecting items for DELETE_MODULES/DELETE/MEMBER_ARCHIVE
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 856, in __build__    : *** No item found
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 790, in __build__    : ** Collecting items for DELETE_MODULES/DELETE/MEMBER_DELETE
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 856, in __build__    : *** No item found
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 790, in __build__    : ** Collecting items for DEPLOY_MODULES/ADD/MEMBER_COPY
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 854, in __build__    : *** 5 items found [CAM1.DBRM, CAB1.LOAD, CAM1.LOAD, CAB1.JCL, CAO1.LOAD]
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 790, in __build__    : ** Collecting items for VERIFICATION/JCLEXPERT/SCAN_JCL
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 854, in __build__    : *** 1 item found [CAB1.JCL]
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 790, in __build__    : ** Collecting items for DB2/UPDATE/DB2_BIND_PACKAGE
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 854, in __build__    : *** 1 item found [CAM1.DBRM]
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 790, in __build__    : ** Collecting items for DB2/UPDATE/DB2_BIND_PLAN
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 854, in __build__    : *** 1 item found [CAM1.DBRM]
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 790, in __build__    : ** Collecting items for CICS/UPDATE/PROG_UPDATE
+2025-06-25 09:54:53 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 856, in __build__    : *** No item found
+2025-06-25 09:54:53 - INFO  - wazideploy/util/wd.py, line 40, in main                                         : * Save the deployment plan to: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-54-06/deployPkgDir/deploymentPlan.yaml
+2025-06-25 10:00:00 - INFO  - deployment_method_manager.py, line 31, in load_deployment_method_from_yaml_file : * Read the deployment method from: /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/deployment-method.yml
+2025-06-25 10:00:00 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 491, in build        : * Build the deployment plan from the deployment method with the deployment plan extension: WdDeploymentStateExtension
+2025-06-25 10:00:00 - INFO  - state/deployment_state_manager.py, line 612, in __process_package_input_files__ : * Read manifest from: /tmp/tmpw00s7a6t/wazideploy_manifest_1.yml
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 820, in __build__    : ** Generic step CONFIG/READ CONFIGURATION/INCLUDE APPLICATION VARIABLES
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 856, in __build__    : *** No item found
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 820, in __build__    : ** Generic step CONFIG/READ CONFIGURATION/INCLUDE MIDDLEWARE VARIABLES
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 856, in __build__    : *** No item found
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 820, in __build__    : ** Generic step CONFIG/READ CONFIGURATION/INCLUDE COMMON VARIABLES
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 856, in __build__    : *** No item found
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 820, in __build__    : ** Generic step PACKAGE/PACKAGE/PACKAGE
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 856, in __build__    : *** No item found
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 790, in __build__    : ** Collecting items for DELETE_MODULES/DELETE/MEMBER_ARCHIVE
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 856, in __build__    : *** No item found
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 790, in __build__    : ** Collecting items for DELETE_MODULES/DELETE/MEMBER_DELETE
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 856, in __build__    : *** No item found
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 790, in __build__    : ** Collecting items for DEPLOY_MODULES/ADD/MEMBER_COPY
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 854, in __build__    : *** 5 items found [CAB1.JCL, CAM1.LOAD, CAB1.LOAD, CAO1.LOAD, CAM1.DBRM]
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 790, in __build__    : ** Collecting items for VERIFICATION/JCLEXPERT/SCAN_JCL
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 854, in __build__    : *** 1 item found [CAB1.JCL]
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 790, in __build__    : ** Collecting items for DB2/UPDATE/DB2_BIND_PACKAGE
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 854, in __build__    : *** 1 item found [CAM1.DBRM]
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 790, in __build__    : ** Collecting items for DB2/UPDATE/DB2_BIND_PLAN
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 854, in __build__    : *** 1 item found [CAM1.DBRM]
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 790, in __build__    : ** Collecting items for CICS/UPDATE/PROG_UPDATE
+2025-06-25 10:00:01 - INFO  - wazideploy/manager/state/deployment_state_manager.py, line 856, in __build__    : *** No item found
+2025-06-25 10:00:01 - INFO  - wazideploy/util/wd.py, line 40, in main                                         : * Save the deployment plan to: /u/dbehm/git/june-engagement-workspace/ts1_change_customer/customer/main/dbbbuild_2025-06-25_09-59-17/deployPkgDir/deploymentPlan.yaml

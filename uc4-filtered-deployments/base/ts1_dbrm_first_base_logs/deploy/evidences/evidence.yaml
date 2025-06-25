@@ -1,0 +1,1397 @@
+apiVersion: deploy.ibm.com/v1
+kind: Evidence
+metadata:
+  name: base
+  description: base
+  version: 20250625.123312.660
+  annotations:
+    creation_timestamp: 20250625.103321.265
+    engine:
+      version: 3.0.5
+      build: manual
+      date: Thu Apr 24 00:41:15 CEST 2025
+    package:
+      path: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/applicationArchive.tar
+      sha256: 341cd4ddfac0309a97d1c3c40ca26f8a666e92bb925a33958a97590e7b6edccd
+    runtime_context:
+      zoau_version: 1.2.5.9
+    environment_name: EOLEB7-Integration
+    deploy_timestamp: 20250625.103350.911
+    smf_record:
+      status: Ok
+status: Ok
+activities:
+- name: CONFIG
+  properties: []
+  actions:
+  - name: READ CONFIGURATION
+    properties: []
+    steps:
+    - name: INCLUDE APPLICATION VARIABLES
+      properties:
+      - key: template
+        value: include_vars
+      - key: var_include_vars
+        value: include_application_vars
+      artifacts: []
+      step_result:
+        status: Ok
+        msg: Building block include_vars succeeded
+        results:
+        - status: Ok
+          msg: Succeeded to find and access files in 'files_list' or files must not
+            exist
+          args:
+            files_list:
+            - /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/global/environment-configuration/base/EOLEB7-Integration.yml
+            files_must_exist: false
+          results: []
+        duration: 0.005092144012451172
+      short_name: INCLUDE_APP_VARS
+      loop_index: 0
+    - name: INCLUDE MIDDLEWARE VARIABLES
+      properties:
+      - key: template
+        value: include_vars
+      - key: var_include_vars
+        value: include_middleware_vars
+      artifacts: []
+      step_result:
+        status: Ok
+        msg: Building block include_vars succeeded
+        results:
+        - status: Ok
+          msg: Succeeded to find and access files in 'files_list' or files must not
+            exist
+          args:
+            files_list:
+            - /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/global/cics_config.yml
+            - /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/global/db2_config.yml
+            files_must_exist: true
+          results: []
+        duration: 0.015380620956420898
+      short_name: INCLUDE_MIDDLEWARE_VARS
+      loop_index: 0
+    - name: INCLUDE COMMON VARIABLES
+      properties:
+      - key: template
+        value: include_vars
+      - key: var_include_vars
+        value: include_common_vars
+      artifacts: []
+      step_result:
+        status: Ok
+        msg: Building block include_vars succeeded
+        results:
+        - status: Ok
+          msg: Succeeded to find and access files in 'files_list' or files must not
+            exist
+          args:
+            files_list:
+            - /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/global/jcl_verification.yml
+            - /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/global/pds_specification.yml
+            - /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/global/types_pattern_mapping.yml
+            files_must_exist: true
+          results: []
+        duration: 0.04290652275085449
+      short_name: INCLUDE_COMMON_VARS
+      loop_index: 0
+    action_result:
+      status: Ok
+      msg: Ok
+      results: []
+    short_name: CONFIG
+    loop_index: 0
+  activity_result:
+    status: Ok
+    msg: Ok
+    results: []
+  description: |-
+    Load the generic Wazi Deploy Configuration variables
+    Specific for the Python implementation
+  loop_index: 0
+  tags:
+  - always
+- name: PACKAGE
+  properties: []
+  actions:
+  - name: PACKAGE
+    properties: []
+    steps:
+    - name: PACKAGE
+      properties: []
+      artifacts: []
+      step_result:
+        status: Ok
+        msg: Expand package completed
+        results:
+        - status: Ok
+          msg: Succeeded to expand the package /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/applicationArchive.tar
+            to /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36
+            on system os OS/390
+          results:
+            command: subprocess.run(['tar', '-xvf', '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/applicationArchive.tar',
+              '-L', 'T', '-C', '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36'],
+              capture_output=True, text=True)
+            rc: 0
+        duration: 0.20423388481140137
+      loop_index: 0
+    action_result:
+      status: Ok
+      msg: Ok
+      results: []
+    loop_index: 0
+  activity_result:
+    status: Ok
+    msg: Ok
+    results: []
+  description: This activity expands the package into the working directory
+  loop_index: 0
+  tags:
+  - always
+- name: DB2
+  properties: []
+  actions: []
+  activity_result:
+    status: Skipped
+    msg: Activity DB2 skipped due to a tag
+    results: []
+  description: This activity is dedicated to DBRM bind modules
+  loop_index: 0
+  tags:
+  - db2
+- name: DEPLOY_MODULES
+  properties: []
+  actions:
+  - name: UPADTE
+    properties:
+    - key: my_action_prop
+      value: my_value
+    steps:
+    - name: MEMBER_ARCHIVE
+      properties: []
+      artifacts:
+      - name: BAM1
+        hash: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        properties:
+        - key: path
+          value: bin/load/BAM1.LOAD
+        - key: githash
+          value: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        - key: giturl
+          value: https://github.com/dennis-behm/base.git
+        - key: dependency_set
+          value:
+          - lname: BAD1SQL
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/
+            file: base/src/copy/BAD1SQL.cpy
+            resolved: true
+            excluded: false
+          - lname: BAM1
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/
+            file: base/src/copy/BAM1.cpy
+            resolved: true
+            excluded: false
+          - lname: BAD1REC
+            library: SYSLIB
+            category: SQL INCLUDE
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/
+            file: base/src/copy/BAD1REC.cpy
+            resolved: true
+            excluded: false
+          - lname: SQLCA
+            library: SYSLIB
+            category: SQL INCLUDE
+            resolved: false
+            excluded: false
+          - lname: BAM1
+            library: DBEHM.BASE.MAIN.BLD.OBJ
+            category: LINK
+            file: DBEHM.BASE.MAIN.BLD.OBJ(BAM1)
+            resolved: true
+            excluded: false
+          - lname: DSNHLI
+            library: DBC0CFG.DB2.V12.SDSNLOAD
+            category: LINK
+            file: DBC0CFG.DB2.V12.SDSNLOAD(DSNHLI)
+            resolved: true
+            excluded: false
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: LOAD
+      - name: BAD1
+        hash: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        properties:
+        - key: path
+          value: bin/jcl/BAD1.JCL
+        - key: githash
+          value: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        - key: giturl
+          value: https://github.com/dennis-behm/base.git
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: JCL
+      - name: BAB1
+        hash: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        properties:
+        - key: path
+          value: bin/jcl/BAB1.JCL
+        - key: githash
+          value: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        - key: giturl
+          value: https://github.com/dennis-behm/base.git
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: JCL
+      - name: BAM1
+        hash: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        properties:
+        - key: path
+          value: bin/dbrm/BAM1.DBRM
+        - key: githash
+          value: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        - key: giturl
+          value: https://github.com/dennis-behm/base.git
+        - key: dependency_set
+          value:
+          - lname: BAD1SQL
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/
+            file: base/src/copy/BAD1SQL.cpy
+            resolved: true
+            excluded: false
+          - lname: BAM1
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/
+            file: base/src/copy/BAM1.cpy
+            resolved: true
+            excluded: false
+          - lname: BAD1REC
+            library: SYSLIB
+            category: SQL INCLUDE
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/
+            file: base/src/copy/BAD1REC.cpy
+            resolved: true
+            excluded: false
+          - lname: SQLCA
+            library: SYSLIB
+            category: SQL INCLUDE
+            resolved: false
+            excluded: false
+          - lname: BAM1
+            library: DBEHM.BASE.MAIN.BLD.OBJ
+            category: LINK
+            file: DBEHM.BASE.MAIN.BLD.OBJ(BAM1)
+            resolved: true
+            excluded: false
+          - lname: DSNHLI
+            library: DBC0CFG.DB2.V12.SDSNLOAD
+            category: LINK
+            file: DBC0CFG.DB2.V12.SDSNLOAD(DSNHLI)
+            resolved: true
+            excluded: false
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: DBRM
+      - name: BAB1
+        hash: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        properties:
+        - key: path
+          value: bin/load/BAB1.LOAD
+        - key: githash
+          value: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        - key: giturl
+          value: https://github.com/dennis-behm/base.git
+        - key: dependency_set
+          value:
+          - lname: BAM1
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/
+            file: base/src/copy/BAM1.cpy
+            resolved: true
+            excluded: false
+          - lname: BAB1
+            library: DBEHM.BASE.MAIN.BLD.OBJ
+            category: LINK
+            file: DBEHM.BASE.MAIN.BLD.OBJ(BAB1)
+            resolved: true
+            excluded: false
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: LOAD
+      - name: BAO1
+        hash: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        properties:
+        - key: path
+          value: bin/load/BAO1.LOAD
+        - key: githash
+          value: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        - key: giturl
+          value: https://github.com/dennis-behm/base.git
+        - key: dependency_set
+          value:
+          - lname: BAM1
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/
+            file: base/src/copy/BAM1.cpy
+            resolved: true
+            excluded: false
+          - lname: BAO1
+            library: DBEHM.BASE.MAIN.BLD.OBJ
+            category: LINK
+            file: DBEHM.BASE.MAIN.BLD.OBJ(BAO1)
+            resolved: true
+            excluded: false
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: LOAD
+      step_result:
+        status: Ok
+        msg: All items completed
+        results:
+        - status: Ok
+          msg: Succeeded to copy 'DBEHM.BASETEST.LOAD(BAM1)' to 'DBEHM.BASETEST.BACK.LOAD(BAM1)'
+          args:
+            pattern: .*\.LOAD$
+            dataset: DBEHM.BASETEST.LOAD
+            dataset_backup: DBEHM.BASETEST.BACK.LOAD
+            force_lock: true
+            aliases: true
+            is_load: true
+            is_binary: false
+            is_psb: false
+            is_dbd: false
+            is_asa_text: false
+            rename_subs: []
+            use_native_copy: true
+          results:
+            command: cp -XI //'DBEHM.BASETEST.LOAD(BAM1)' //'DBEHM.BASETEST.BACK.LOAD(BAM1)'
+            result_command:
+              args:
+              - cp
+              - -XI
+              - //'DBEHM.BASETEST.LOAD(BAM1)'
+              - //'DBEHM.BASETEST.BACK.LOAD(BAM1)'
+              returncode: 0
+              stdout: ''
+              stderr: ''
+              msg: 'WARNING: force_lock=True is ineffective with native copy'
+        - status: Ok
+          msg: Succeeded to copy 'DBEHM.BASETEST.LOAD(BAB1)' to 'DBEHM.BASETEST.BACK.LOAD(BAB1)'
+          args:
+            pattern: .*\.LOAD$
+            dataset: DBEHM.BASETEST.LOAD
+            dataset_backup: DBEHM.BASETEST.BACK.LOAD
+            force_lock: true
+            aliases: true
+            is_load: true
+            is_binary: false
+            is_psb: false
+            is_dbd: false
+            is_asa_text: false
+            rename_subs: []
+            use_native_copy: true
+          results:
+            command: cp -XI //'DBEHM.BASETEST.LOAD(BAB1)' //'DBEHM.BASETEST.BACK.LOAD(BAB1)'
+            result_command:
+              args:
+              - cp
+              - -XI
+              - //'DBEHM.BASETEST.LOAD(BAB1)'
+              - //'DBEHM.BASETEST.BACK.LOAD(BAB1)'
+              returncode: 0
+              stdout: ''
+              stderr: ''
+              msg: 'WARNING: force_lock=True is ineffective with native copy'
+        - status: Ok
+          msg: Succeeded to copy 'DBEHM.BASETEST.LOAD(BAO1)' to 'DBEHM.BASETEST.BACK.LOAD(BAO1)'
+          args:
+            pattern: .*\.LOAD$
+            dataset: DBEHM.BASETEST.LOAD
+            dataset_backup: DBEHM.BASETEST.BACK.LOAD
+            force_lock: true
+            aliases: true
+            is_load: true
+            is_binary: false
+            is_psb: false
+            is_dbd: false
+            is_asa_text: false
+            rename_subs: []
+            use_native_copy: true
+          results:
+            command: cp -XI //'DBEHM.BASETEST.LOAD(BAO1)' //'DBEHM.BASETEST.BACK.LOAD(BAO1)'
+            result_command:
+              args:
+              - cp
+              - -XI
+              - //'DBEHM.BASETEST.LOAD(BAO1)'
+              - //'DBEHM.BASETEST.BACK.LOAD(BAO1)'
+              returncode: 0
+              stdout: ''
+              stderr: ''
+              msg: 'WARNING: force_lock=True is ineffective with native copy'
+        - status: Ok
+          msg: Succeeded to copy 'DBEHM.BASETEST.JCL(BAD1)' to 'DBEHM.BASETEST.BACK.JCL(BAD1)'
+          args:
+            pattern: .*.JCL$
+            dataset: DBEHM.BASETEST.JCL
+            dataset_backup: DBEHM.BASETEST.BACK.JCL
+            force_lock: false
+            aliases: true
+            is_load: false
+            is_binary: false
+            is_psb: false
+            is_dbd: false
+            is_asa_text: false
+            rename_subs: []
+            use_native_copy: true
+          results:
+            command: cp -T //'DBEHM.BASETEST.JCL(BAD1)' //'DBEHM.BASETEST.BACK.JCL(BAD1)'
+            result_command:
+              args:
+              - cp
+              - -T
+              - //'DBEHM.BASETEST.JCL(BAD1)'
+              - //'DBEHM.BASETEST.BACK.JCL(BAD1)'
+              returncode: 0
+              stdout: ''
+              stderr: ''
+        - status: Ok
+          msg: Succeeded to copy 'DBEHM.BASETEST.JCL(BAB1)' to 'DBEHM.BASETEST.BACK.JCL(BAB1)'
+          args:
+            pattern: .*.JCL$
+            dataset: DBEHM.BASETEST.JCL
+            dataset_backup: DBEHM.BASETEST.BACK.JCL
+            force_lock: false
+            aliases: true
+            is_load: false
+            is_binary: false
+            is_psb: false
+            is_dbd: false
+            is_asa_text: false
+            rename_subs: []
+            use_native_copy: true
+          results:
+            command: cp -T //'DBEHM.BASETEST.JCL(BAB1)' //'DBEHM.BASETEST.BACK.JCL(BAB1)'
+            result_command:
+              args:
+              - cp
+              - -T
+              - //'DBEHM.BASETEST.JCL(BAB1)'
+              - //'DBEHM.BASETEST.BACK.JCL(BAB1)'
+              returncode: 0
+              stdout: ''
+              stderr: ''
+        - status: Ok
+          msg: Succeeded to copy 'DBEHM.BASETEST.DBRM(BAM1)' to 'DBEHM.BASETEST.BACK.DBRM(BAM1)'
+          args:
+            pattern: .*.DBRM$
+            dataset: DBEHM.BASETEST.DBRM
+            dataset_backup: DBEHM.BASETEST.BACK.DBRM
+            force_lock: false
+            aliases: true
+            is_load: false
+            is_binary: true
+            is_psb: false
+            is_dbd: false
+            is_asa_text: false
+            rename_subs: []
+            use_native_copy: false
+          results:
+            command: 'datasets._copy(DBEHM.BASETEST.DBRM(BAM1), DBEHM.BASETEST.BACK.DBRM(BAM1),
+              None, **{''options'': ''-B''})'
+            result_command:
+              rc: 0
+              response_format: UTF-8
+              stdout_response: ''
+              stderr_response: ''
+              command: dcp -B -- "DBEHM.BASETEST.DBRM(BAM1)" "DBEHM.BASETEST.BACK.DBRM(BAM1)"
+        duration: 6.556870222091675
+      description: This step backs up already installed artifacts into the backup
+        PDS
+      loop_index: 0
+    - name: MEMBER_COPY
+      properties: []
+      artifacts:
+      - name: BAM1
+        hash: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        properties:
+        - key: path
+          value: bin/load/BAM1.LOAD
+        - key: githash
+          value: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        - key: giturl
+          value: https://github.com/dennis-behm/base.git
+        - key: dependency_set
+          value:
+          - lname: BAD1SQL
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/
+            file: base/src/copy/BAD1SQL.cpy
+            resolved: true
+            excluded: false
+          - lname: BAM1
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/
+            file: base/src/copy/BAM1.cpy
+            resolved: true
+            excluded: false
+          - lname: BAD1REC
+            library: SYSLIB
+            category: SQL INCLUDE
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/
+            file: base/src/copy/BAD1REC.cpy
+            resolved: true
+            excluded: false
+          - lname: SQLCA
+            library: SYSLIB
+            category: SQL INCLUDE
+            resolved: false
+            excluded: false
+          - lname: BAM1
+            library: DBEHM.BASE.MAIN.BLD.OBJ
+            category: LINK
+            file: DBEHM.BASE.MAIN.BLD.OBJ(BAM1)
+            resolved: true
+            excluded: false
+          - lname: DSNHLI
+            library: DBC0CFG.DB2.V12.SDSNLOAD
+            category: LINK
+            file: DBC0CFG.DB2.V12.SDSNLOAD(DSNHLI)
+            resolved: true
+            excluded: false
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: LOAD
+      - name: BAD1
+        hash: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        properties:
+        - key: path
+          value: bin/jcl/BAD1.JCL
+        - key: githash
+          value: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        - key: giturl
+          value: https://github.com/dennis-behm/base.git
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: JCL
+      - name: BAB1
+        hash: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        properties:
+        - key: path
+          value: bin/jcl/BAB1.JCL
+        - key: githash
+          value: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        - key: giturl
+          value: https://github.com/dennis-behm/base.git
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: JCL
+      - name: BAM1
+        hash: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        properties:
+        - key: path
+          value: bin/dbrm/BAM1.DBRM
+        - key: githash
+          value: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        - key: giturl
+          value: https://github.com/dennis-behm/base.git
+        - key: dependency_set
+          value:
+          - lname: BAD1SQL
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/
+            file: base/src/copy/BAD1SQL.cpy
+            resolved: true
+            excluded: false
+          - lname: BAM1
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/
+            file: base/src/copy/BAM1.cpy
+            resolved: true
+            excluded: false
+          - lname: BAD1REC
+            library: SYSLIB
+            category: SQL INCLUDE
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/
+            file: base/src/copy/BAD1REC.cpy
+            resolved: true
+            excluded: false
+          - lname: SQLCA
+            library: SYSLIB
+            category: SQL INCLUDE
+            resolved: false
+            excluded: false
+          - lname: BAM1
+            library: DBEHM.BASE.MAIN.BLD.OBJ
+            category: LINK
+            file: DBEHM.BASE.MAIN.BLD.OBJ(BAM1)
+            resolved: true
+            excluded: false
+          - lname: DSNHLI
+            library: DBC0CFG.DB2.V12.SDSNLOAD
+            category: LINK
+            file: DBC0CFG.DB2.V12.SDSNLOAD(DSNHLI)
+            resolved: true
+            excluded: false
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: DBRM
+      - name: BAB1
+        hash: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        properties:
+        - key: path
+          value: bin/load/BAB1.LOAD
+        - key: githash
+          value: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        - key: giturl
+          value: https://github.com/dennis-behm/base.git
+        - key: dependency_set
+          value:
+          - lname: BAM1
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/
+            file: base/src/copy/BAM1.cpy
+            resolved: true
+            excluded: false
+          - lname: BAB1
+            library: DBEHM.BASE.MAIN.BLD.OBJ
+            category: LINK
+            file: DBEHM.BASE.MAIN.BLD.OBJ(BAB1)
+            resolved: true
+            excluded: false
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: LOAD
+      - name: BAO1
+        hash: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        properties:
+        - key: path
+          value: bin/load/BAO1.LOAD
+        - key: githash
+          value: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        - key: giturl
+          value: https://github.com/dennis-behm/base.git
+        - key: dependency_set
+          value:
+          - lname: BAM1
+            library: SYSLIB
+            category: COPY
+            sourceDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/
+            file: base/src/copy/BAM1.cpy
+            resolved: true
+            excluded: false
+          - lname: BAO1
+            library: DBEHM.BASE.MAIN.BLD.OBJ
+            category: LINK
+            file: DBEHM.BASE.MAIN.BLD.OBJ(BAO1)
+            resolved: true
+            excluded: false
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: LOAD
+      step_result:
+        status: Ok
+        msg: All items completed
+        results:
+        - status: Ok
+          msg: Succeeded to copy /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/load/BAM1.LOAD
+            to 'DBEHM.BASETEST.LOAD(BAM1)'
+          args:
+            pattern: .*\.LOAD$
+            dataset: DBEHM.BASETEST.LOAD
+            force_lock: true
+            aliases: true
+            is_load: true
+            is_binary: false
+            is_psb: false
+            is_dbd: false
+            is_asa_text: false
+            rename_subs: []
+            text_subs: []
+            use_native_copy: true
+          results:
+            command: cp -XI /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/load/BAM1.LOAD
+              //'DBEHM.BASETEST.LOAD(BAM1)'
+            result_command:
+              args:
+              - cp
+              - -XI
+              - /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/load/BAM1.LOAD
+              - //'DBEHM.BASETEST.LOAD(BAM1)'
+              returncode: 0
+              stdout: ''
+              stderr: ''
+              msg: 'WARNING: force_lock=True is ineffective with native copy'
+        - status: Ok
+          msg: Succeeded to copy /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/load/BAB1.LOAD
+            to 'DBEHM.BASETEST.LOAD(BAB1)'
+          args:
+            pattern: .*\.LOAD$
+            dataset: DBEHM.BASETEST.LOAD
+            force_lock: true
+            aliases: true
+            is_load: true
+            is_binary: false
+            is_psb: false
+            is_dbd: false
+            is_asa_text: false
+            rename_subs: []
+            text_subs: []
+            use_native_copy: true
+          results:
+            command: cp -XI /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/load/BAB1.LOAD
+              //'DBEHM.BASETEST.LOAD(BAB1)'
+            result_command:
+              args:
+              - cp
+              - -XI
+              - /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/load/BAB1.LOAD
+              - //'DBEHM.BASETEST.LOAD(BAB1)'
+              returncode: 0
+              stdout: ''
+              stderr: ''
+              msg: 'WARNING: force_lock=True is ineffective with native copy'
+        - status: Ok
+          msg: Succeeded to copy /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/load/BAO1.LOAD
+            to 'DBEHM.BASETEST.LOAD(BAO1)'
+          args:
+            pattern: .*\.LOAD$
+            dataset: DBEHM.BASETEST.LOAD
+            force_lock: true
+            aliases: true
+            is_load: true
+            is_binary: false
+            is_psb: false
+            is_dbd: false
+            is_asa_text: false
+            rename_subs: []
+            text_subs: []
+            use_native_copy: true
+          results:
+            command: cp -XI /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/load/BAO1.LOAD
+              //'DBEHM.BASETEST.LOAD(BAO1)'
+            result_command:
+              args:
+              - cp
+              - -XI
+              - /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/load/BAO1.LOAD
+              - //'DBEHM.BASETEST.LOAD(BAO1)'
+              returncode: 0
+              stdout: ''
+              stderr: ''
+              msg: 'WARNING: force_lock=True is ineffective with native copy'
+        - status: Ok
+          msg: Succeeded to convert  /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/jcl/BAD1.JCL
+            from encoding 'IBM-1047' to encoding 'IBM-1047'
+          args:
+            pattern: .*.JCL$
+            encoding:
+              from: IBM-1047
+              to: IBM-1047
+          results:
+            command: iconv -f IBM-1047 -t IBM-1047 /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/jcl/BAD1.JCL
+            rc: 0
+        - status: Ok
+          msg: Succeeded to copy /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/jcl/BAD1.JCL
+            to 'DBEHM.BASETEST.JCL(BAD1)'
+          args:
+            pattern: .*.JCL$
+            dataset: DBEHM.BASETEST.JCL
+            force_lock: false
+            aliases: true
+            is_load: false
+            is_binary: false
+            is_psb: false
+            is_dbd: false
+            is_asa_text: false
+            rename_subs: []
+            text_subs:
+            - pattern: '@PGMLIB'
+              replace: DBEHM.BASETEST
+            use_native_copy: true
+          results:
+            command: cp -T /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/jcl/BAD1.JCL.IBM-1047.sub
+              //'DBEHM.BASETEST.JCL(BAD1)'
+            result_command:
+              args:
+              - cp
+              - -T
+              - /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/jcl/BAD1.JCL.IBM-1047.sub
+              - //'DBEHM.BASETEST.JCL(BAD1)'
+              returncode: 0
+              stdout: ''
+              stderr: ''
+        - status: Ok
+          msg: Succeeded to convert  /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/jcl/BAB1.JCL
+            from encoding 'IBM-1047' to encoding 'IBM-1047'
+          args:
+            pattern: .*.JCL$
+            encoding:
+              from: IBM-1047
+              to: IBM-1047
+          results:
+            command: iconv -f IBM-1047 -t IBM-1047 /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/jcl/BAB1.JCL
+            rc: 0
+        - status: Ok
+          msg: Succeeded to copy /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/jcl/BAB1.JCL
+            to 'DBEHM.BASETEST.JCL(BAB1)'
+          args:
+            pattern: .*.JCL$
+            dataset: DBEHM.BASETEST.JCL
+            force_lock: false
+            aliases: true
+            is_load: false
+            is_binary: false
+            is_psb: false
+            is_dbd: false
+            is_asa_text: false
+            rename_subs: []
+            text_subs:
+            - pattern: '@PGMLIB'
+              replace: DBEHM.BASETEST
+            use_native_copy: true
+          results:
+            command: cp -T /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/jcl/BAB1.JCL.IBM-1047.sub
+              //'DBEHM.BASETEST.JCL(BAB1)'
+            result_command:
+              args:
+              - cp
+              - -T
+              - /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/jcl/BAB1.JCL.IBM-1047.sub
+              - //'DBEHM.BASETEST.JCL(BAB1)'
+              returncode: 0
+              stdout: ''
+              stderr: ''
+        - status: Ok
+          msg: Succeeded to copy /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/dbrm/BAM1.DBRM
+            to 'DBEHM.BASETEST.DBRM(BAM1)'
+          args:
+            pattern: .*.DBRM$
+            dataset: DBEHM.BASETEST.DBRM
+            force_lock: false
+            aliases: true
+            is_load: false
+            is_binary: true
+            is_psb: false
+            is_dbd: false
+            is_asa_text: false
+            rename_subs: []
+            text_subs: []
+            use_native_copy: false
+          results:
+            command: 'datasets._copy(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/dbrm/BAM1.DBRM,
+              DBEHM.BASETEST.DBRM(BAM1), None, **{''options'': ''-B''})'
+            result_command:
+              rc: 0
+              response_format: UTF-8
+              stdout_response: ''
+              stderr_response: ''
+              command: dcp -B -- "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/dbrm/BAM1.DBRM"
+                "DBEHM.BASETEST.DBRM(BAM1)"
+        duration: 9.008820295333862
+      description: This step do the copy of artifacts into PDSs
+      loop_index: 0
+    action_result:
+      status: Ok
+      msg: Ok
+      results: []
+    description: This action is applicable when we add new or changed artifacts.
+    loop_index: 0
+  activity_result:
+    status: Ok
+    msg: Ok
+    results: []
+  description: This activity is deploys artifacts into the target PDS libraries
+  loop_index: 0
+  tags:
+  - deploy
+- name: VERIFICATION
+  properties: []
+  actions:
+  - name: JCLEXPERT
+    properties: []
+    steps:
+    - name: SCAN_JCL
+      properties:
+      - key: template
+        value: job_submit
+      - key: var_job_submit
+        value: jcl_expert_verification
+      artifacts:
+      - name: BAD1
+        hash: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        properties:
+        - key: path
+          value: bin/jcl/BAD1.JCL
+        - key: githash
+          value: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        - key: giturl
+          value: https://github.com/dennis-behm/base.git
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: JCL
+      - name: BAB1
+        hash: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        properties:
+        - key: path
+          value: bin/jcl/BAB1.JCL
+        - key: githash
+          value: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        - key: giturl
+          value: https://github.com/dennis-behm/base.git
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: JCL
+      step_result:
+        status: Ok
+        msg: Job submit succeeded
+        results:
+        - status: Ok
+          msg: Job JOB06432 succeeded
+          args:
+            src: /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/templates/jcl_expert_validation.jcl.j2
+            use_template: true
+            max_rc: 8
+            dest: /tmp/wazi-deploy/jcl_gen/jcl_expert_validation.jcl
+          results:
+            source_path: /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/templates/jcl_expert_validation.jcl.j2
+            dest_path: /tmp/wazi-deploy/jcl_gen/jcl_expert_validation.jcl
+            job_steps:
+            - stepname: JES2
+              dataset: JESMSGLG
+              format: UA
+              length: '133'
+              recnum: '20'
+              dsid: '2'
+              msg: |-
+                1                    J E S 2  J O B  L O G  --  S Y S T E M  Z T 0 1  --  N O D E  M O P Z T 0 0
+                0
+                 12.34.07 JOB06432 ---- WEDNESDAY, 25 JUN 2025 ----
+                 12.34.07 JOB06432  IRR010I  USERID DBEHM    IS ASSIGNED TO THIS JOB.
+                 12.34.07 JOB06432  ICH70001I DBEHM    LAST ACCESS AT 12:33:43 ON WEDNESDAY, JUNE 25, 2025
+                 12.34.07 JOB06432  $HASP373 CXPS0200 STARTED - INIT 1    - CLASS A        - SYS ZT01
+                 12.34.07 JOB06432  IEF403I CXPS0200 - STARTED - TIME=12.34.07
+                 12.34.07 JOB06432  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+                 12.34.07 JOB06432  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    CPU    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS STEPNO
+                 12.34.07 JOB06432  -CXPS0200          EXPERT      08    785    .00    .00    .00    778   0      0      0      0     0     1
+                 12.34.07 JOB06432  IEF404I CXPS0200 - ENDED - TIME=12.34.07
+                 12.34.07 JOB06432  -CXPS0200 ENDED.  NAME-                     TOTAL CPU TIME=   .00  TOTAL ELAPSED TIME=   .00
+                 12.34.07 JOB06432  $HASP395 CXPS0200 ENDED - RC=0008
+                0------ JES2 JOB STATISTICS ------
+                -  25 JUN 2025 JOB EXECUTION DATE
+                -           43 CARDS READ
+                -          145 SYSOUT PRINT RECORDS
+                -            0 SYSOUT PUNCH RECORDS
+                -           13 SYSOUT SPOOL KBYTES
+                -         0.00 MINUTES EXECUTION TIME
+            - stepname: JES2
+              dataset: JESJCL
+              format: V
+              length: '136'
+              recnum: '41'
+              dsid: '3'
+              msg: |2-
+                        1 //CXPS0200 JOB ,                                                        JOB06432
+                          // MSGCLASS=H,MSGLEVEL=(1,1),TIME=NOLIMIT,REGION=0M,COND=(16,LT)
+                          //*********************************************************************
+                          //* PID 5698-J01                                                      *
+                          //* COPYRIGHT TERACLOUD APS 2022, 2024                                *
+                          //*********************************************************************
+                          //* Run JCL Expert on a single PDS member.                            *
+                          //*********************************************************************
+                          //* Add job statement parameters, and configure the SET statements    *
+                          //*  1.  CXPHLQ should point to the HLQ of the product install.       *
+                          //*  2.  CXPPATH should point to the zFS product install location.    *
+                          //*  3.  JCLMEMB should point to the JCL member that will be scanned. *
+                          //*  4.  (optional) If CEE.SCEERUN is not in your LINKLST or LPA then *
+                          //*        modify the STEPLIB accordingly.                            *
+                          //*********************************************************************
+                          //*******************************************
+                          //*
+                          //* Notes:
+                          //*
+                          //* This Jinja2 templates iterate over the variable that is passed in
+                          //* via the loop condition
+                          //*
+                          //* This template is processed for each artifact. It does
+                          //*  submit a JCL per member
+                          //*
+                          //* This template uses the JCL Expert interface to parse
+                          //* and validate a single JCL member
+                          //*
+                          //* Author DBEHM
+                          //*******************************************
+                          //* CUSTOMIZATION JOB
+                          //*******************************************
+                          //* Invoke JCL Expert
+                        2 //EXPERT   EXEC PGM=CXPJCLB,PARMDD=PARMS
+                        3 //STEPLIB  DD DSN=JCLEXP.V2R1.SCXPLOAD,DISP=SHR
+                        4 //CXPHOME  DD PATH='/var/jclexpert/V2R1M0',PATHOPTS=ORDONLY
+                        5 //INDD     DD DSN=DBEHM.BASETEST.JCL(BAD1),
+                          //         DISP=(SHR,KEEP)
+                        6 //PARMS DD *
+                          //*
+                          //*
+            - stepname: JES2
+              dataset: JESYSMSG
+              format: VA
+              length: '137'
+              recnum: '25'
+              dsid: '4'
+              msg: |2-
+                 ICH70001I DBEHM    LAST ACCESS AT 12:33:43 ON WEDNESDAY, JUNE 25, 2025
+                 IEFA111I CXPS0200 IS USING THE FOLLOWING JOB RELATED SETTINGS:
+                          SWA=ABOVE,TIOT SIZE=64K,DSENQSHR=DISALLOW,GDGBIAS=JOB
+                 IEF236I ALLOC. FOR CXPS0200 EXPERT
+                 IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+                 IGD103I SMS UNIX FILE ALLOCATED TO DDNAME CXPHOME
+                 IGD103I SMS ALLOCATED TO DDNAME INDD
+                 IEF237I JES2 ALLOCATED TO PARMS
+                 IEF237I JES2 ALLOCATED TO SYS00005
+                 IEF285I   DBEHM.CXPS0200.JOB06432.D0000102.?           SYSOUT
+                 IEF142I CXPS0200 EXPERT - STEP WAS EXECUTED - COND CODE 0008
+                 IGD104I JCLEXP.V2R1.SCXPLOAD                         RETAINED,  DDNAME=STEPLIB
+                 IGD104I UNIX FILE WAS RETAINED, DDNAME IS (CXPHOME )
+                 FILENAME IS (/var/jclexpert/V2R1M0)
+                 IGD104I DBEHM.BASETEST.JCL                           RETAINED,  DDNAME=INDD
+                 IEF285I   DBEHM.CXPS0200.JOB06432.D0000101.?           SYSIN
+                 IEF373I STEP/EXPERT  /START 2025176.1234
+                 IEF032I STEP/EXPERT  /STOP  2025176.1234
+                         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+                         VIRT:    20K  SYS:   316K  EXT:     4196K  SYS:    11744K
+                         ATB- REAL:                   280K  SLOTS:                     0K
+                              VIRT- ALLOC:      21M SHRD:       0M
+                 IEF375I  JOB/CXPS0200/START 2025176.1234
+                 IEF033I  JOB/CXPS0200/STOP  2025176.1234
+                         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+            - stepname: EXPERT
+              dataset: SYS00005
+              format: VBA
+              length: '137'
+              recnum: '55'
+              dsid: '102'
+              msg: |2-
+                 ________________________________________________________________________
+                0                            IBM Z JCL Expert
+                                                2.1.0.003
+                0                         2025/06/25 - 10:34:07
+                0________________________________________________________________________
+                                                 SETTINGS
+                 CXPS0388I Inputs
+                             INDD                : //DD:INDD
+                0CXPS0389I Parameters
+                             OUTPUT              : TEXT
+                             LOGLEVEL            : FATAL
+                             DSN                 : ON
+                             USER                : DBEHM
+                             SYSTEM              : ZT01
+                0________________________________________________________________________
+                                                 DD:INDD
+                 ________________________________________________________________________
+                 (DD:INDD              :001) //BAD1INS  JOB (ACCT),'INSERT BAD1',CLASS=A,MSGCLASS=A,NOTIFY=&SYSUID
+                   after symbol replacement: //BAD1INS JOB (ACCT),'INSERT BAD1',CLASS=A,MSGCLASS=A,NOTIFY=DBEHM
+                 (DD:INDD              :002) //*
+                 (DD:INDD              :003) //STEP01   EXEC PGM=IKJEFT01
+                 ******** CXPS0400I - Load module IKJEFT01 was resolved. Found in data set SYS1.LPALIB from origin PLPA.
+                 (DD:INDD              :004) //STEPLIB  DD DISP=SHR,DSN=YOUR.DB2.LOAD.LIBRARY
+                 ******** CXPS0477E - The data set YOUR.DB2.LOAD.LIBRARY in parameter DSNAME does not exist.
+                 (DD:INDD              :005) //         DD DISP=SHR,DSN=YOUR.DB2.RUN.LIBRARY
+                 ******** CXPS0477E - The data set YOUR.DB2.RUN.LIBRARY in parameter DSNAME does not exist.
+                 (DD:INDD              :006) //SYSTSPRT DD SYSOUT=*
+                 (DD:INDD              :007) //SYSPRINT DD SYSOUT=*
+                 (DD:INDD              :008) //SYSUDUMP DD SYSOUT=*
+                 (DD:INDD              :009) //SYSIN    DD DUMMY
+                 (DD:INDD              :010) //SYSTSIN  DD *
+                 (DD:INDD              :011)    DSN SYSTEM(DB2SSID)
+                 ******** CXPS0581E - Db2 subsystem name DB2SSID must not exceed 4 characters.
+                 (DD:INDD              :012)    RUN PROGRAM(DSNTEP2) PLAN(DSNTEP2) -
+                 (DD:INDD              :013)        LIB('YOUR.DB2.RUN.LIBRARY')
+                 (DD:INDD              :014) /*
+                 (DD:INDD              :015) //SYSIN    DD *
+                 ******** CXPS0420W - Statement with duplicate label SYSIN already exists in this step. On line 9 of DD:INDD.
+                 (DD:INDD              :016) INSERT INTO BAD1 (TRANSACTION_ID, TRANSACTION_DATE, TRANSACTION_USER)
+                 (DD:INDD              :017) VALUES ('1234567890', '2025-05-02', 'USER001');
+                 (DD:INDD              :018)
+                 (DD:INDD              :019) INSERT INTO BAD1 (TRANSACTION_ID, TRANSACTION_DATE, TRANSACTION_USER)
+                 (DD:INDD              :020) VALUES ('0987654321', '2025-05-03', 'USER002');
+                 (DD:INDD              :021)
+                 (DD:INDD              :022) INSERT INTO BAD1 (TRANSACTION_ID, TRANSACTION_DATE, TRANSACTION_USER)
+                 (DD:INDD              :023) VALUES ('1122334455', '2025-05-04', 'USER003');
+                 (DD:INDD              :024) /*
+                 ________________________________________________________________________
+                 CXPS0456I Results for DD:INDD
+                             Statements processed: 11
+                             Errors              : 3
+                             Warnings            : 1
+                             Info                : 1
+                0CXPX0043I Error opening YOUR.DB2.LOAD.LIBRARY during system search.
+                 CXPX0043I Error opening YOUR.DB2.RUN.LIBRARY during system search.
+            rc: 0008
+      when:
+      - wd_query[[ length ( current_plan_step.artifacts) ]] != 0
+      loop:
+        loop_query: current_plan_step.artifacts
+        loop_var: jcl_member
+      loop_index: 0
+    - name: SCAN_JCL
+      properties:
+      - key: template
+        value: job_submit
+      - key: var_job_submit
+        value: jcl_expert_verification
+      artifacts:
+      - name: BAD1
+        hash: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        properties:
+        - key: path
+          value: bin/jcl/BAD1.JCL
+        - key: githash
+          value: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        - key: giturl
+          value: https://github.com/dennis-behm/base.git
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: JCL
+      - name: BAB1
+        hash: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        properties:
+        - key: path
+          value: bin/jcl/BAB1.JCL
+        - key: githash
+          value: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+        - key: giturl
+          value: https://github.com/dennis-behm/base.git
+        - key: wd_manifest_index
+          value: 0
+        - key: type
+          value: JCL
+      step_result:
+        status: Ok
+        msg: Job submit succeeded
+        results:
+        - status: Ok
+          msg: Job JOB06433 succeeded
+          args:
+            src: /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/templates/jcl_expert_validation.jcl.j2
+            use_template: true
+            max_rc: 8
+            dest: /tmp/wazi-deploy/jcl_gen/jcl_expert_validation.jcl
+          results:
+            source_path: /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/templates/jcl_expert_validation.jcl.j2
+            dest_path: /tmp/wazi-deploy/jcl_gen/jcl_expert_validation.jcl
+            job_steps:
+            - stepname: JES2
+              dataset: JESMSGLG
+              format: UA
+              length: '133'
+              recnum: '20'
+              dsid: '2'
+              msg: |-
+                1                    J E S 2  J O B  L O G  --  S Y S T E M  Z T 0 1  --  N O D E  M O P Z T 0 0
+                0
+                 12.34.13 JOB06433 ---- WEDNESDAY, 25 JUN 2025 ----
+                 12.34.13 JOB06433  IRR010I  USERID DBEHM    IS ASSIGNED TO THIS JOB.
+                 12.34.13 JOB06433  ICH70001I DBEHM    LAST ACCESS AT 12:34:07 ON WEDNESDAY, JUNE 25, 2025
+                 12.34.13 JOB06433  $HASP373 CXPS0200 STARTED - INIT 1    - CLASS A        - SYS ZT01
+                 12.34.13 JOB06433  IEF403I CXPS0200 - STARTED - TIME=12.34.13
+                 12.34.14 JOB06433  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+                 12.34.14 JOB06433  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    CPU    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS STEPNO
+                 12.34.14 JOB06433  -CXPS0200          EXPERT      08    785    .00    .00    .01    809   0      0      0      0     0     1
+                 12.34.14 JOB06433  IEF404I CXPS0200 - ENDED - TIME=12.34.14
+                 12.34.14 JOB06433  -CXPS0200 ENDED.  NAME-                     TOTAL CPU TIME=   .00  TOTAL ELAPSED TIME=   .01
+                 12.34.14 JOB06433  $HASP395 CXPS0200 ENDED - RC=0008
+                0------ JES2 JOB STATISTICS ------
+                -  25 JUN 2025 JOB EXECUTION DATE
+                -           43 CARDS READ
+                -          124 SYSOUT PRINT RECORDS
+                -            0 SYSOUT PUNCH RECORDS
+                -           12 SYSOUT SPOOL KBYTES
+                -         0.01 MINUTES EXECUTION TIME
+            - stepname: JES2
+              dataset: JESJCL
+              format: V
+              length: '136'
+              recnum: '41'
+              dsid: '3'
+              msg: |2-
+                        1 //CXPS0200 JOB ,                                                        JOB06433
+                          // MSGCLASS=H,MSGLEVEL=(1,1),TIME=NOLIMIT,REGION=0M,COND=(16,LT)
+                          //*********************************************************************
+                          //* PID 5698-J01                                                      *
+                          //* COPYRIGHT TERACLOUD APS 2022, 2024                                *
+                          //*********************************************************************
+                          //* Run JCL Expert on a single PDS member.                            *
+                          //*********************************************************************
+                          //* Add job statement parameters, and configure the SET statements    *
+                          //*  1.  CXPHLQ should point to the HLQ of the product install.       *
+                          //*  2.  CXPPATH should point to the zFS product install location.    *
+                          //*  3.  JCLMEMB should point to the JCL member that will be scanned. *
+                          //*  4.  (optional) If CEE.SCEERUN is not in your LINKLST or LPA then *
+                          //*        modify the STEPLIB accordingly.                            *
+                          //*********************************************************************
+                          //*******************************************
+                          //*
+                          //* Notes:
+                          //*
+                          //* This Jinja2 templates iterate over the variable that is passed in
+                          //* via the loop condition
+                          //*
+                          //* This template is processed for each artifact. It does
+                          //*  submit a JCL per member
+                          //*
+                          //* This template uses the JCL Expert interface to parse
+                          //* and validate a single JCL member
+                          //*
+                          //* Author DBEHM
+                          //*******************************************
+                          //* CUSTOMIZATION JOB
+                          //*******************************************
+                          //* Invoke JCL Expert
+                        2 //EXPERT   EXEC PGM=CXPJCLB,PARMDD=PARMS
+                        3 //STEPLIB  DD DSN=JCLEXP.V2R1.SCXPLOAD,DISP=SHR
+                        4 //CXPHOME  DD PATH='/var/jclexpert/V2R1M0',PATHOPTS=ORDONLY
+                        5 //INDD     DD DSN=DBEHM.BASETEST.JCL(BAB1),
+                          //         DISP=(SHR,KEEP)
+                        6 //PARMS DD *
+                          //*
+                          //*
+            - stepname: JES2
+              dataset: JESYSMSG
+              format: VA
+              length: '137'
+              recnum: '25'
+              dsid: '4'
+              msg: |2-
+                 ICH70001I DBEHM    LAST ACCESS AT 12:34:07 ON WEDNESDAY, JUNE 25, 2025
+                 IEFA111I CXPS0200 IS USING THE FOLLOWING JOB RELATED SETTINGS:
+                          SWA=ABOVE,TIOT SIZE=64K,DSENQSHR=DISALLOW,GDGBIAS=JOB
+                 IEF236I ALLOC. FOR CXPS0200 EXPERT
+                 IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+                 IGD103I SMS UNIX FILE ALLOCATED TO DDNAME CXPHOME
+                 IGD103I SMS ALLOCATED TO DDNAME INDD
+                 IEF237I JES2 ALLOCATED TO PARMS
+                 IEF237I JES2 ALLOCATED TO SYS00005
+                 IEF285I   DBEHM.CXPS0200.JOB06433.D0000102.?           SYSOUT
+                 IEF142I CXPS0200 EXPERT - STEP WAS EXECUTED - COND CODE 0008
+                 IGD104I JCLEXP.V2R1.SCXPLOAD                         RETAINED,  DDNAME=STEPLIB
+                 IGD104I UNIX FILE WAS RETAINED, DDNAME IS (CXPHOME )
+                 FILENAME IS (/var/jclexpert/V2R1M0)
+                 IGD104I DBEHM.BASETEST.JCL                           RETAINED,  DDNAME=INDD
+                 IEF285I   DBEHM.CXPS0200.JOB06433.D0000101.?           SYSIN
+                 IEF373I STEP/EXPERT  /START 2025176.1234
+                 IEF032I STEP/EXPERT  /STOP  2025176.1234
+                         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+                         VIRT:    20K  SYS:   316K  EXT:     4196K  SYS:    11744K
+                         ATB- REAL:                   280K  SLOTS:                     0K
+                              VIRT- ALLOC:      21M SHRD:       0M
+                 IEF375I  JOB/CXPS0200/START 2025176.1234
+                 IEF033I  JOB/CXPS0200/STOP  2025176.1234
+                         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+            - stepname: EXPERT
+              dataset: SYS00005
+              format: VBA
+              length: '137'
+              recnum: '34'
+              dsid: '102'
+              msg: |2-
+                 ________________________________________________________________________
+                0                            IBM Z JCL Expert
+                                                2.1.0.003
+                0                         2025/06/25 - 10:34:13
+                0________________________________________________________________________
+                                                 SETTINGS
+                 CXPS0388I Inputs
+                             INDD                : //DD:INDD
+                0CXPS0389I Parameters
+                             OUTPUT              : TEXT
+                             LOGLEVEL            : FATAL
+                             DSN                 : ON
+                             USER                : DBEHM
+                             SYSTEM              : ZT01
+                0________________________________________________________________________
+                                                 DD:INDD
+                 ________________________________________________________________________
+                 (DD:INDD              :001) //JOBNAME  JOB (ACCT),'RUN BAB1',CLASS=A,MSGCLASS=A,NOTIFY=&SYSUID
+                   after symbol replacement: //JOBNAME JOB (ACCT),'RUN BAB1',CLASS=A,MSGCLASS=A,NOTIFY=DBEHM
+                 (DD:INDD              :002) //*
+                 (DD:INDD              :003) //STEP01   EXEC PGM=BAB1
+                 ******** CXPS0403E - Could not resolve load module BAB1.
+                 (DD:INDD              :004) //STEPLIB  DD DISP=SHR,DSN=YOUR.LOAD.LIBRARY
+                 ******** CXPS0477E - The data set YOUR.LOAD.LIBRARY in parameter DSNAME does not exist.
+                 (DD:INDD              :005) //SYSPRINT DD SYSOUT=*
+                 (DD:INDD              :006) //SYSOUT   DD SYSOUT=*
+                 (DD:INDD              :007) //SYSIN    DD DUMMY
+                 ________________________________________________________________________
+                 CXPS0456I Results for DD:INDD
+                             Statements processed: 7
+                             Errors              : 2
+                             Warnings            : 0
+                             Info                : 0
+                0CXPX0043I Error opening YOUR.LOAD.LIBRARY during system search.
+            rc: 0008
+        duration: 11.31594729423523
+      when:
+      - wd_query[[ length ( current_plan_step.artifacts) ]] != 0
+      loop:
+        loop_query: current_plan_step.artifacts
+        loop_var: jcl_member
+      loop_index: 1
+    action_result:
+      status: Ok
+      msg: Ok
+      results: []
+    description: Invoke JCL expert interface for a single member of a dataset
+    loop_index: 0
+  activity_result:
+    status: Ok
+    msg: Ok
+    results: []
+  description: |-
+    This action block verifies that the deployed JCLs are correct.
+    It uses the JCL Expert to scan and validate them. This showcases
+    how the conditional deployment 'loop' keyword can be used.
+  loop_index: 0
+manifests:
+- name: base
+  description: base
+  version: 20250625.123312.660
+  annotations:
+    creationTimestamp: 20250625.123312.660
+    scmInfo:
+      type: git
+      uri: https://github.com/dennis-behm/base.git
+      branch: main
+      shortCommit: ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+    packageInfo:
+      uri: http://10.3.20.231:8081/artifactory/base-dbehm-repo-local/release/rel-1.0.0/base-rel-1.0.0-2025-06-25_12-32-36.tar
+      type: artifactRepository
+    external_dependencies: []
