@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<!--
+    Licensed Materials - Property of IBM
+    (c) Copyright IBM Corporation 2023. All Rights Reserved.
+
+    Note to U.S. Government Users Restricted Rights:
+    Use, duplication or disclosure restricted by GSA ADP Schedule
+    Contract with IBM Corp.
+ -->
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+<title>IBM Deploy Evidences</title>
+<style type="text/css">
+body {
+    font: 12px Arial, sans-serif;
+}
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+    vertical-align: top;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+tr.even {
+    background-color: #f2f2f2
+}
+th {
+    background-color: #ddd;
+    color: black !important;
+}
+td.label {
+    font-weight: bold;
+}
+span.vlabel {
+    float: left;
+    font-weight: bold;
+    width: 10em;
+    margin-left: 20px;
+}
+span.vlabel_ok {
+    font-weight: bold;
+    color: green;
+}
+
+span.vlabel_skipped {
+    font-weight: bold;
+    color: orange;
+}
+
+span.vlabel_ko {
+    font-weight: bold;
+    color: red;
+}
+
+.bottomRight {
+   float:right;
+   text-align:right;
+   font: 10px Arial, sans-serif;
+}
+.dep {
+    font: 11px Arial, sans-serif;
+}
+.depType {
+    font: 9px Arial, sans-serif;
+    background-color: #81C4E8;
+}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+function toggle(log, text)
+{
+    if (document.getElementById(text).text == 'Show Log')
+        document.getElementById(text).text = 'Hide Log';
+    else
+        document.getElementById(text).text = 'Show Log';
+
+    if (document.getElementById(log).style.display == 'none')
+        document.getElementById(log).style.display = 'block';
+    else
+        document.getElementById(log).style.display = 'none';
+};
+</script>
+
+<div id="main">
+
+<hr>
+<h1>Deployments List</h1>
+<hr>
+<table border='1px solid #A9A9A9' style='width:100%;'><tr><th id=\"name\">Status</th><th id=\"name\">Name</th><th id=\"version\">Version</th><th id=\"deploydate\">Deployment Date</th><th id=\"environment\">Environment</th></tr>
+
+<tr>
+<td>
+<span class='vlabel_ok'>Success</span></br>
+
+</td>
+<td><a href="#20250627.144900.964">base</a></td>
+<td>20250627.164754.530</td>
+
+<td>20250627.144900.964</td>
+<td>EOLEB7-Integration</td>
+</tr>
+
+</table>
+
+<a id="20250627.144900.964"></a>
+<hr>
+<h1>Deployment base Version 20250627.164754.530</h1>
+
+<hr>
+<h2>Deployment Information:</h2>
+<span class='vlabel'>Name </span>: base</br>
+<span class='vlabel'>Version </span>: 20250627.164754.530</br>
+
+<span class='vlabel'>Deployment Date </span>: 20250627.144900.964</br>
+<span class='vlabel'>Environment </span>: EOLEB7-Integration</br>
+<span class='vlabel'>Evidence File </span>: data/evidence.yaml</br>
+
+<span class='vlabel'>Status </span>: <span class='vlabel_ok'>Success</span></br>
+
+<h2>Manifests:</h2>
+
+<span class='vlabel'>Name </span>: base</br>
+<span class='vlabel'>Version </span>: 20250627.164754.530</br>
+
+<span class='vlabel'>Description </span>: base</br>
+
+
+
+
+
+
+
+<p><h2>Deployment Details:</h2>
+<table border='1px solid #A9A9A9' style='width:100%;'><tr><th id=\"name\">Activities</th><th id=\"commands\">Actions</th><th id=\"rc\">Steps</th></tr>
+<tr>
+<td>
+CONFIG
+</td>
+<td>
+READ CONFIGURATION
+</td>
+<td>
+<table border='1px solid #A9A9A9' style='width:100%;'><tr><th id=\"name\">Steps</th><th id=\"commands\">Artifacts</th><th id=\"rc\">Status</th></tr>
+<tr>
+<td style='width:200px;'>
+INCLUDE APPLICATION VARIABLES
+</td>
+<td style='width:200px;'>
+
+</td>
+<td>
+<b>Status: </b>
+
+<span class='vlabel_ok'>Success</span>
+
+<br><a id='showDep20250627.144900.964CONFIGREAD CONFIGURATIONINCLUDE APPLICATION VARIABLES' class='bottomRight' href='javascript:onclick=toggle("dep20250627.144900.964CONFIGREAD CONFIGURATIONINCLUDE APPLICATION VARIABLES","showDep20250627.144900.964CONFIGREAD CONFIGURATIONINCLUDE APPLICATION VARIABLES")'>Show Log</a>
+<div id='dep20250627.144900.964CONFIGREAD CONFIGURATIONINCLUDE APPLICATION VARIABLES' style='display:none' class='dep'>
+<br><b>Details:</b>
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to find and access files in 'files_list' or files must not exist<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>files_list</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+/u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/global/environment-configuration/base/EOLEB7-Integration.yml<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>files_must_exist</b></span>:
+
+false<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+</ul>
+
+
+
+</div>
+</td>
+</tr>
+<tr>
+<td style='width:200px;'>
+INCLUDE MIDDLEWARE VARIABLES
+</td>
+<td style='width:200px;'>
+
+</td>
+<td>
+<b>Status: </b>
+
+<span class='vlabel_ok'>Success</span>
+
+<br><a id='showDep20250627.144900.964CONFIGREAD CONFIGURATIONINCLUDE MIDDLEWARE VARIABLES' class='bottomRight' href='javascript:onclick=toggle("dep20250627.144900.964CONFIGREAD CONFIGURATIONINCLUDE MIDDLEWARE VARIABLES","showDep20250627.144900.964CONFIGREAD CONFIGURATIONINCLUDE MIDDLEWARE VARIABLES")'>Show Log</a>
+<div id='dep20250627.144900.964CONFIGREAD CONFIGURATIONINCLUDE MIDDLEWARE VARIABLES' style='display:none' class='dep'>
+<br><b>Details:</b>
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to find and access files in 'files_list' or files must not exist<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>files_list</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+/u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/global/cics_config.yml<br>
+
+
+
+
+/u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/global/db2_config.yml<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>files_must_exist</b></span>:
+
+true<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+</ul>
+
+
+
+</div>
+</td>
+</tr>
+<tr>
+<td style='width:200px;'>
+INCLUDE COMMON VARIABLES
+</td>
+<td style='width:200px;'>
+
+</td>
+<td>
+<b>Status: </b>
+
+<span class='vlabel_ok'>Success</span>
+
+<br><a id='showDep20250627.144900.964CONFIGREAD CONFIGURATIONINCLUDE COMMON VARIABLES' class='bottomRight' href='javascript:onclick=toggle("dep20250627.144900.964CONFIGREAD CONFIGURATIONINCLUDE COMMON VARIABLES","showDep20250627.144900.964CONFIGREAD CONFIGURATIONINCLUDE COMMON VARIABLES")'>Show Log</a>
+<div id='dep20250627.144900.964CONFIGREAD CONFIGURATIONINCLUDE COMMON VARIABLES' style='display:none' class='dep'>
+<br><b>Details:</b>
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to find and access files in 'files_list' or files must not exist<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>files_list</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+/u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/global/jcl_verification.yml<br>
+
+
+
+
+/u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/global/pds_specification.yml<br>
+
+
+
+
+/u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/global/types_pattern_mapping.yml<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>files_must_exist</b></span>:
+
+true<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+</ul>
+
+
+
+</div>
+</td>
+</tr>
+
+</table>
+
+</tr>
+</td>
+<tr>
+<td>
+PACKAGE
+</td>
+<td>
+PACKAGE
+</td>
+<td>
+<table border='1px solid #A9A9A9' style='width:100%;'><tr><th id=\"name\">Steps</th><th id=\"commands\">Artifacts</th><th id=\"rc\">Status</th></tr>
+<tr>
+<td style='width:200px;'>
+PACKAGE
+</td>
+<td style='width:200px;'>
+
+</td>
+<td>
+<b>Status: </b>
+
+<span class='vlabel_ok'>Success</span>
+
+<br><a id='showDep20250627.144900.964PACKAGEPACKAGEPACKAGE' class='bottomRight' href='javascript:onclick=toggle("dep20250627.144900.964PACKAGEPACKAGEPACKAGE","showDep20250627.144900.964PACKAGEPACKAGEPACKAGE")'>Show Log</a>
+<div id='dep20250627.144900.964PACKAGEPACKAGEPACKAGE' style='display:none' class='dep'>
+<br><b>Details:</b>
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to expand the package /u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts2_partialrollback/base/main/dbbbuild_2025-06-27_16-48-54_rollback/deployPkgDir/applicationArchive.tar to /u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts2_partialrollback/base/main/dbbbuild_2025-06-27_16-48-54_rollback on system os OS/390<br>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>command</b></span>:
+
+subprocess.run(['tar', '-xvf', '/u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts2_partialrollback/base/main/dbbbuild_2025-06-27_16-48-54_rollback/deployPkgDir/applicationArchive.tar', '-L', 'T', '-C', '/u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts2_partialrollback/base/main/dbbbuild_2025-06-27_16-48-54_rollback'], capture_output=True, text=True)<br>
+
+
+
+<span class='vlabel_ko'><b>rc</b></span>:
+
+0<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</div>
+</td>
+</tr>
+
+</table>
+
+</tr>
+</td>
+<tr>
+<td>
+DB2
+</td>
+<td>
+
+</tr>
+</td>
+<tr>
+<td>
+DEPLOY_MODULES
+</td>
+<td>
+
+</tr>
+</td>
+<tr>
+<td>
+ROLLBACK_MODULES
+</td>
+<td>
+MODULES
+</td>
+<td>
+<table border='1px solid #A9A9A9' style='width:100%;'><tr><th id=\"name\">Steps</th><th id=\"commands\">Artifacts</th><th id=\"rc\">Status</th></tr>
+<tr>
+<td style='width:200px;'>
+MEMBER_RESTORE
+</td>
+<td style='width:200px;'>
+BAD1.JCL<br>
+</td>
+<td>
+<b>Status: </b>
+
+<span class='vlabel_ok'>Success</span>
+
+<br><a id='showDep20250627.144900.964ROLLBACK_MODULESMODULESMEMBER_RESTORE' class='bottomRight' href='javascript:onclick=toggle("dep20250627.144900.964ROLLBACK_MODULESMODULESMEMBER_RESTORE","showDep20250627.144900.964ROLLBACK_MODULESMODULESMEMBER_RESTORE")'>Show Log</a>
+<div id='dep20250627.144900.964ROLLBACK_MODULESMODULESMEMBER_RESTORE' style='display:none' class='dep'>
+<br><b>Details:</b>
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to restore 'DBEHM.BASETEST.BACK.JCL(BAD1)' in 'DBEHM.BASETEST.JCL(BAD1)'<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>pattern</b></span>:
+
+.*.JCL$<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+DBEHM.BASETEST.JCL<br>
+
+
+
+<span class='vlabel_ko'><b>dataset_backup</b></span>:
+
+DBEHM.BASETEST.BACK.JCL<br>
+
+
+
+<span class='vlabel_ko'><b>force_lock</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>aliases</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_load</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_binary</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_psb</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_dbd</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_asa_text</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>rename_subs</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>use_native_copy</b></span>:
+
+true<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>command</b></span>:
+
+cp -T //'DBEHM.BASETEST.BACK.JCL(BAD1)' //'DBEHM.BASETEST.JCL(BAD1)'<br>
+
+
+
+<span class='vlabel_ko'><b>result_command</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+cp<br>
+
+
+
+
+-T<br>
+
+
+
+
+//'DBEHM.BASETEST.BACK.JCL(BAD1)'<br>
+
+
+
+
+//'DBEHM.BASETEST.JCL(BAD1)'<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>returncode</b></span>:
+
+0<br>
+
+
+
+<span class='vlabel_ko'><b>stdout</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>stderr</b></span>:
+
+<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</div>
+</td>
+</tr>
+
+</table>
+BIND
+</td>
+<td>
+<table border='1px solid #A9A9A9' style='width:100%;'><tr><th id=\"name\">Steps</th><th id=\"commands\">Artifacts</th><th id=\"rc\">Status</th></tr>
+<tr>
+<td style='width:200px;'>
+DB2_BIND_PACKAGE
+</td>
+<td style='width:200px;'>
+
+</td>
+<td>
+<b>Status: </b>
+
+<span class='vlabel_ok'>Success</span>
+
+<br><a id='showDep20250627.144900.964ROLLBACK_MODULESBINDDB2_BIND_PACKAGE' class='bottomRight' href='javascript:onclick=toggle("dep20250627.144900.964ROLLBACK_MODULESBINDDB2_BIND_PACKAGE","showDep20250627.144900.964ROLLBACK_MODULESBINDDB2_BIND_PACKAGE")'>Show Log</a>
+<div id='dep20250627.144900.964ROLLBACK_MODULESBINDDB2_BIND_PACKAGE' style='display:none' class='dep'>
+<br><b>Details:</b>
+
+ymli_full_file_path<br>
+
+
+
+status<br>
+
+
+
+msg<br>
+
+
+
+</div>
+</td>
+</tr>
+<tr>
+<td style='width:200px;'>
+DB2_BIND_PLAN
+</td>
+<td style='width:200px;'>
+
+</td>
+<td>
+<b>Status: </b>
+
+<span class='vlabel_ok'>Success</span>
+
+<br><a id='showDep20250627.144900.964ROLLBACK_MODULESBINDDB2_BIND_PLAN' class='bottomRight' href='javascript:onclick=toggle("dep20250627.144900.964ROLLBACK_MODULESBINDDB2_BIND_PLAN","showDep20250627.144900.964ROLLBACK_MODULESBINDDB2_BIND_PLAN")'>Show Log</a>
+<div id='dep20250627.144900.964ROLLBACK_MODULESBINDDB2_BIND_PLAN' style='display:none' class='dep'>
+<br><b>Details:</b>
+
+ymli_full_file_path<br>
+
+
+
+status<br>
+
+
+
+msg<br>
+
+
+
+</div>
+</td>
+</tr>
+
+</table>
+
+</tr>
+</td>
+<tr>
+<td>
+VERIFICATION
+</td>
+<td>
+JCLEXPERT
+</td>
+<td>
+<table border='1px solid #A9A9A9' style='width:100%;'><tr><th id=\"name\">Steps</th><th id=\"commands\">Artifacts</th><th id=\"rc\">Status</th></tr>
+<tr>
+<td style='width:200px;'>
+SCAN_JCL
+</td>
+<td style='width:200px;'>
+BAD1.JCL<br>
+</td>
+<td>
+<b>Status: </b>
+
+<span class='vlabel_skipped'>Skipped</span><br>
+
+<br><a id='showDep20250627.144900.964VERIFICATIONJCLEXPERTSCAN_JCL' class='bottomRight' href='javascript:onclick=toggle("dep20250627.144900.964VERIFICATIONJCLEXPERTSCAN_JCL","showDep20250627.144900.964VERIFICATIONJCLEXPERTSCAN_JCL")'>Show Log</a>
+<div id='dep20250627.144900.964VERIFICATIONJCLEXPERTSCAN_JCL' style='display:none' class='dep'>
+<br><b>Details:</b>
+
+</div>
+</td>
+</tr>
+
+</table>
+
+</tr>
+</td>
+
+</table>
+<p>&nbsp;</p>
+
+
+</div></body></html>
