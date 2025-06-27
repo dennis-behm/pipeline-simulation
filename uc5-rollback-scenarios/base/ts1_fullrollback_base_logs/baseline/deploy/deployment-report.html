@@ -1,0 +1,4851 @@
+<!DOCTYPE html>
+<!--
+    Licensed Materials - Property of IBM
+    (c) Copyright IBM Corporation 2023. All Rights Reserved.
+
+    Note to U.S. Government Users Restricted Rights:
+    Use, duplication or disclosure restricted by GSA ADP Schedule
+    Contract with IBM Corp.
+ -->
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+<title>IBM Deploy Evidences</title>
+<style type="text/css">
+body {
+    font: 12px Arial, sans-serif;
+}
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+    vertical-align: top;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+tr.even {
+    background-color: #f2f2f2
+}
+th {
+    background-color: #ddd;
+    color: black !important;
+}
+td.label {
+    font-weight: bold;
+}
+span.vlabel {
+    float: left;
+    font-weight: bold;
+    width: 10em;
+    margin-left: 20px;
+}
+span.vlabel_ok {
+    font-weight: bold;
+    color: green;
+}
+
+span.vlabel_skipped {
+    font-weight: bold;
+    color: orange;
+}
+
+span.vlabel_ko {
+    font-weight: bold;
+    color: red;
+}
+
+.bottomRight {
+   float:right;
+   text-align:right;
+   font: 10px Arial, sans-serif;
+}
+.dep {
+    font: 11px Arial, sans-serif;
+}
+.depType {
+    font: 9px Arial, sans-serif;
+    background-color: #81C4E8;
+}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+function toggle(log, text)
+{
+    if (document.getElementById(text).text == 'Show Log')
+        document.getElementById(text).text = 'Hide Log';
+    else
+        document.getElementById(text).text = 'Show Log';
+
+    if (document.getElementById(log).style.display == 'none')
+        document.getElementById(log).style.display = 'block';
+    else
+        document.getElementById(log).style.display = 'none';
+};
+</script>
+
+<div id="main">
+
+<hr>
+<h1>Deployments List</h1>
+<hr>
+<table border='1px solid #A9A9A9' style='width:100%;'><tr><th id=\"name\">Status</th><th id=\"name\">Name</th><th id=\"version\">Version</th><th id=\"deploydate\">Deployment Date</th><th id=\"environment\">Environment</th></tr>
+
+<tr>
+<td>
+<span class='vlabel_ok'>Success</span></br>
+
+</td>
+<td><a href="#20250626.141214.411">base</a></td>
+<td>20250626.161204.112</td>
+
+<td>20250626.141214.411</td>
+<td>EOLEB7-Integration</td>
+</tr>
+
+</table>
+
+<a id="20250626.141214.411"></a>
+<hr>
+<h1>Deployment base Version 20250626.161204.112</h1>
+
+<hr>
+<h2>Deployment Information:</h2>
+<span class='vlabel'>Name </span>: base</br>
+<span class='vlabel'>Version </span>: 20250626.161204.112</br>
+
+<span class='vlabel'>Deployment Date </span>: 20250626.141214.411</br>
+<span class='vlabel'>Environment </span>: EOLEB7-Integration</br>
+<span class='vlabel'>Evidence File </span>: data/evidence.yaml</br>
+
+<span class='vlabel'>Status </span>: <span class='vlabel_ok'>Success</span></br>
+
+<h2>Manifests:</h2>
+
+<span class='vlabel'>Name </span>: base</br>
+<span class='vlabel'>Version </span>: 20250626.161204.112</br>
+
+<span class='vlabel'>Description </span>: base</br>
+
+
+
+
+
+
+
+<p><h2>Deployment Details:</h2>
+<table border='1px solid #A9A9A9' style='width:100%;'><tr><th id=\"name\">Activities</th><th id=\"commands\">Actions</th><th id=\"rc\">Steps</th></tr>
+<tr>
+<td>
+CONFIG
+</td>
+<td>
+READ CONFIGURATION
+</td>
+<td>
+<table border='1px solid #A9A9A9' style='width:100%;'><tr><th id=\"name\">Steps</th><th id=\"commands\">Artifacts</th><th id=\"rc\">Status</th></tr>
+<tr>
+<td style='width:200px;'>
+INCLUDE APPLICATION VARIABLES
+</td>
+<td style='width:200px;'>
+
+</td>
+<td>
+<b>Status: </b>
+
+<span class='vlabel_ok'>Success</span>
+
+<br><a id='showDep20250626.141214.411CONFIGREAD CONFIGURATIONINCLUDE APPLICATION VARIABLES' class='bottomRight' href='javascript:onclick=toggle("dep20250626.141214.411CONFIGREAD CONFIGURATIONINCLUDE APPLICATION VARIABLES","showDep20250626.141214.411CONFIGREAD CONFIGURATIONINCLUDE APPLICATION VARIABLES")'>Show Log</a>
+<div id='dep20250626.141214.411CONFIGREAD CONFIGURATIONINCLUDE APPLICATION VARIABLES' style='display:none' class='dep'>
+<br><b>Details:</b>
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to find and access files in 'files_list' or files must not exist<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>files_list</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+/u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/global/environment-configuration/base/EOLEB7-Integration.yml<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>files_must_exist</b></span>:
+
+false<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+</ul>
+
+
+
+</div>
+</td>
+</tr>
+<tr>
+<td style='width:200px;'>
+INCLUDE MIDDLEWARE VARIABLES
+</td>
+<td style='width:200px;'>
+
+</td>
+<td>
+<b>Status: </b>
+
+<span class='vlabel_ok'>Success</span>
+
+<br><a id='showDep20250626.141214.411CONFIGREAD CONFIGURATIONINCLUDE MIDDLEWARE VARIABLES' class='bottomRight' href='javascript:onclick=toggle("dep20250626.141214.411CONFIGREAD CONFIGURATIONINCLUDE MIDDLEWARE VARIABLES","showDep20250626.141214.411CONFIGREAD CONFIGURATIONINCLUDE MIDDLEWARE VARIABLES")'>Show Log</a>
+<div id='dep20250626.141214.411CONFIGREAD CONFIGURATIONINCLUDE MIDDLEWARE VARIABLES' style='display:none' class='dep'>
+<br><b>Details:</b>
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to find and access files in 'files_list' or files must not exist<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>files_list</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+/u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/global/cics_config.yml<br>
+
+
+
+
+/u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/global/db2_config.yml<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>files_must_exist</b></span>:
+
+true<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+</ul>
+
+
+
+</div>
+</td>
+</tr>
+<tr>
+<td style='width:200px;'>
+INCLUDE COMMON VARIABLES
+</td>
+<td style='width:200px;'>
+
+</td>
+<td>
+<b>Status: </b>
+
+<span class='vlabel_ok'>Success</span>
+
+<br><a id='showDep20250626.141214.411CONFIGREAD CONFIGURATIONINCLUDE COMMON VARIABLES' class='bottomRight' href='javascript:onclick=toggle("dep20250626.141214.411CONFIGREAD CONFIGURATIONINCLUDE COMMON VARIABLES","showDep20250626.141214.411CONFIGREAD CONFIGURATIONINCLUDE COMMON VARIABLES")'>Show Log</a>
+<div id='dep20250626.141214.411CONFIGREAD CONFIGURATIONINCLUDE COMMON VARIABLES' style='display:none' class='dep'>
+<br><b>Details:</b>
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to find and access files in 'files_list' or files must not exist<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>files_list</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+/u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/global/jcl_verification.yml<br>
+
+
+
+
+/u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/global/pds_specification.yml<br>
+
+
+
+
+/u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/global/types_pattern_mapping.yml<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>files_must_exist</b></span>:
+
+true<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+</ul>
+
+
+
+</div>
+</td>
+</tr>
+
+</table>
+
+</tr>
+</td>
+<tr>
+<td>
+PACKAGE
+</td>
+<td>
+PACKAGE
+</td>
+<td>
+<table border='1px solid #A9A9A9' style='width:100%;'><tr><th id=\"name\">Steps</th><th id=\"commands\">Artifacts</th><th id=\"rc\">Status</th></tr>
+<tr>
+<td style='width:200px;'>
+PACKAGE
+</td>
+<td style='width:200px;'>
+
+</td>
+<td>
+<b>Status: </b>
+
+<span class='vlabel_ok'>Success</span>
+
+<br><a id='showDep20250626.141214.411PACKAGEPACKAGEPACKAGE' class='bottomRight' href='javascript:onclick=toggle("dep20250626.141214.411PACKAGEPACKAGEPACKAGE","showDep20250626.141214.411PACKAGEPACKAGEPACKAGE")'>Show Log</a>
+<div id='dep20250626.141214.411PACKAGEPACKAGEPACKAGE' style='display:none' class='dep'>
+<br><b>Details:</b>
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to expand the package /u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/deployPkgDir/applicationArchive.tar to /u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline on system os OS/390<br>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>command</b></span>:
+
+subprocess.run(['tar', '-xvf', '/u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/deployPkgDir/applicationArchive.tar', '-L', 'T', '-C', '/u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline'], capture_output=True, text=True)<br>
+
+
+
+<span class='vlabel_ko'><b>rc</b></span>:
+
+0<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</div>
+</td>
+</tr>
+
+</table>
+
+</tr>
+</td>
+<tr>
+<td>
+DB2
+</td>
+<td>
+UPDATE
+</td>
+<td>
+<table border='1px solid #A9A9A9' style='width:100%;'><tr><th id=\"name\">Steps</th><th id=\"commands\">Artifacts</th><th id=\"rc\">Status</th></tr>
+<tr>
+<td style='width:200px;'>
+MEMBER_COPY
+</td>
+<td style='width:200px;'>
+BAM1.DBRM<br>
+</td>
+<td>
+<b>Status: </b>
+
+<span class='vlabel_ok'>Success</span>
+
+<br><a id='showDep20250626.141214.411DB2UPDATEMEMBER_COPY' class='bottomRight' href='javascript:onclick=toggle("dep20250626.141214.411DB2UPDATEMEMBER_COPY","showDep20250626.141214.411DB2UPDATEMEMBER_COPY")'>Show Log</a>
+<div id='dep20250626.141214.411DB2UPDATEMEMBER_COPY' style='display:none' class='dep'>
+<br><b>Details:</b>
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to copy /u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/dbrm/BAM1.DBRM to 'DBEHM.BASETEST.TMP.DBRM(BAM1)'<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>pattern</b></span>:
+
+.*.DBRM$<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+DBEHM.BASETEST.TMP.DBRM<br>
+
+
+
+<span class='vlabel_ko'><b>force_lock</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>aliases</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_load</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_binary</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_psb</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_dbd</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_asa_text</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>rename_subs</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>text_subs</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>use_native_copy</b></span>:
+
+false<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>command</b></span>:
+
+datasets._copy(/u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/dbrm/BAM1.DBRM, DBEHM.BASETEST.TMP.DBRM(BAM1), None, **{'options': '-B'})<br>
+
+
+
+<span class='vlabel_ko'><b>result_command</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>rc</b></span>:
+
+0<br>
+
+
+
+<span class='vlabel_ko'><b>response_format</b></span>:
+
+UTF-8<br>
+
+
+
+<span class='vlabel_ko'><b>stdout_response</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>stderr_response</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>command</b></span>:
+
+dcp -B -- "/u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/dbrm/BAM1.DBRM" "DBEHM.BASETEST.TMP.DBRM(BAM1)"<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</div>
+</td>
+</tr>
+
+</table>
+BIND
+</td>
+<td>
+<table border='1px solid #A9A9A9' style='width:100%;'><tr><th id=\"name\">Steps</th><th id=\"commands\">Artifacts</th><th id=\"rc\">Status</th></tr>
+<tr>
+<td style='width:200px;'>
+DB2_BIND_PACKAGE
+</td>
+<td style='width:200px;'>
+BAM1.DBRM<br>
+</td>
+<td>
+<b>Status: </b>
+
+<span class='vlabel_ok'>Success</span>
+
+<br><a id='showDep20250626.141214.411DB2BINDDB2_BIND_PACKAGE' class='bottomRight' href='javascript:onclick=toggle("dep20250626.141214.411DB2BINDDB2_BIND_PACKAGE","showDep20250626.141214.411DB2BINDDB2_BIND_PACKAGE")'>Show Log</a>
+<div id='dep20250626.141214.411DB2BINDDB2_BIND_PACKAGE' style='display:none' class='dep'>
+<br><b>Details:</b>
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Job JOB06666 succeeded<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>db2_system</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>package_maxrc</b></span>:
+
+4<br>
+
+
+
+<span class='vlabel_ko'><b>plan_maxrc</b></span>:
+
+4<br>
+
+
+
+<span class='vlabel_ko'><b>user</b></span>:
+
+JENKINS<br>
+
+
+
+<span class='vlabel_ko'><b>package</b></span>:
+
+DEFAULT<br>
+
+
+
+<span class='vlabel_ko'><b>plan</b></span>:
+
+DEFAULT<br>
+
+
+
+<span class='vlabel_ko'><b>qualifier</b></span>:
+
+QUAL<br>
+
+
+
+<span class='vlabel_ko'><b>subsys</b></span>:
+
+DBC1<br>
+
+
+
+<span class='vlabel_ko'><b>package_jobcard</b></span>:
+
+BINDPKG JOB 'WD-PKGBIND',MSGLEVEL=(1,1),MSGCLASS=R,NOTIFY=&SYSUID<br>
+
+
+
+<span class='vlabel_ko'><b>plan_jobcard</b></span>:
+
+BINDPLA JOB 'WD-PLANBIND',MSGLEVEL=(1,1),MSGCLASS=R,NOTIFY=&SYSUID<br>
+
+
+
+<span class='vlabel_ko'><b>package_action</b></span>:
+
+REPLACE<br>
+
+
+
+<span class='vlabel_ko'><b>plan_action</b></span>:
+
+REPLACE<br>
+
+
+
+<span class='vlabel_ko'><b>sdsnload</b></span>:
+
+DBC0CFG.DB2.V12.SDSNLOAD<br>
+
+
+
+<span class='vlabel_ko'><b>plan_pklist</b></span>:
+
+*.CBSAPK.*<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>template_file</b></span>:
+
+/ZT01/var/python-envs/wazi-deploy-v3.0.5/lib/python3.10/site-packages/wazideploy_translator/templates/db2_bind_package.jcl.j2<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>job_steps</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>stepname</b></span>:
+
+JES2<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+JESMSGLG<br>
+
+
+
+<span class='vlabel_ko'><b>format</b></span>:
+
+UA<br>
+
+
+
+<span class='vlabel_ko'><b>length</b></span>:
+
+133<br>
+
+
+
+<span class='vlabel_ko'><b>recnum</b></span>:
+
+20<br>
+
+
+
+<span class='vlabel_ko'><b>dsid</b></span>:
+
+2<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+1                    J E S 2  J O B  L O G  --  S Y S T E M  Z T 0 1  --  N O D E  M O P Z T 0 0<br>0<br> 16.12.21 JOB06666 ---- THURSDAY,  26 JUN 2025 ----<br> 16.12.21 JOB06666  IRR010I  USERID DBEHM    IS ASSIGNED TO THIS JOB.<br> 16.12.21 JOB06666  ICH70001I DBEHM    LAST ACCESS AT 16:04:08 ON THURSDAY, JUNE 26, 2025<br> 16.12.21 JOB06666  $HASP373 BINDPKG  STARTED - INIT 1    - CLASS A        - SYS ZT01<br> 16.12.21 JOB06666  IEF403I BINDPKG - STARTED - TIME=16.12.21<br> 16.12.21 JOB06666  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---<br> 16.12.21 JOB06666  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    CPU    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS STEPNO<br> 16.12.21 JOB06666  -BINDPKG           PKGBIND     04    206    .00    .00    .00    946   0      0      0      0     0     1<br> 16.12.21 JOB06666  IEF404I BINDPKG - ENDED - TIME=16.12.21<br> 16.12.21 JOB06666  -BINDPKG  ENDED.  NAME-                     TOTAL CPU TIME=   .00  TOTAL ELAPSED TIME=   .00<br> 16.12.21 JOB06666  $HASP395 BINDPKG  ENDED - RC=0004<br>0------ JES2 JOB STATISTICS ------<br>-  26 JUN 2025 JOB EXECUTION DATE<br>-           21 CARDS READ<br>-          122 SYSOUT PRINT RECORDS<br>-            0 SYSOUT PUNCH RECORDS<br>-           10 SYSOUT SPOOL KBYTES<br>-         0.00 MINUTES EXECUTION TIME<br>
+
+
+
+</ul>
+
+
+
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>stepname</b></span>:
+
+JES2<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+JESJCL<br>
+
+
+
+<span class='vlabel_ko'><b>format</b></span>:
+
+V<br>
+
+
+
+<span class='vlabel_ko'><b>length</b></span>:
+
+136<br>
+
+
+
+<span class='vlabel_ko'><b>recnum</b></span>:
+
+10<br>
+
+
+
+<span class='vlabel_ko'><b>dsid</b></span>:
+
+3<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+        1 //BINDPKG JOB 'WD-PKGBIND',MSGLEVEL=(1,1),MSGCLASS=R,NOTIFY=&SYSUID     JOB06666<br>          IEFC653I SUBSTITUTION JCL - 'WD-PKGBIND',MSGLEVEL=(1,1),MSGCLASS=R,NOTIFY=DBEHM<br>        2 //JOBLIB   DD  DISP=SHR,<br>          //             DSN=DBC0CFG.DB2.V12.SDSNLOAD<br>        3 //PKGBIND EXEC PGM=IKJEFT01,DYNAMNBR=20,COND=(4,LT)<br>        4 //SYSTSPRT DD  SYSOUT=*<br>        5 //SYSPRINT DD  SYSOUT=*<br>        6 //SYSUDUMP DD  SYSOUT=*<br>        7 //SYSIN    DD  DUMMY<br>        8 //SYSTSIN  DD  *<br>
+
+
+
+</ul>
+
+
+
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>stepname</b></span>:
+
+JES2<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+JESYSMSG<br>
+
+
+
+<span class='vlabel_ko'><b>format</b></span>:
+
+VA<br>
+
+
+
+<span class='vlabel_ko'><b>length</b></span>:
+
+137<br>
+
+
+
+<span class='vlabel_ko'><b>recnum</b></span>:
+
+27<br>
+
+
+
+<span class='vlabel_ko'><b>dsid</b></span>:
+
+4<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+ ICH70001I DBEHM    LAST ACCESS AT 16:04:08 ON THURSDAY, JUNE 26, 2025<br> IEFA111I BINDPKG IS USING THE FOLLOWING JOB RELATED SETTINGS:<br>          SWA=ABOVE,TIOT SIZE=64K,DSENQSHR=DISALLOW,GDGBIAS=JOB<br> IEF236I ALLOC. FOR BINDPKG PKGBIND<br> IGD103I SMS ALLOCATED TO DDNAME JOBLIB<br> IEF237I JES2 ALLOCATED TO SYSTSPRT<br> IEF237I JES2 ALLOCATED TO SYSPRINT<br> IEF237I JES2 ALLOCATED TO SYSUDUMP<br> IEF237I DMY  ALLOCATED TO SYSIN<br> IEF237I JES2 ALLOCATED TO SYSTSIN<br> IGD103I SMS ALLOCATED TO DDNAME SYS00001<br> IGD104I DBEHM.BASETEST.DBRM                          RETAINED,  DDNAME=SYS00001<br> IEF142I BINDPKG PKGBIND - STEP WAS EXECUTED - COND CODE 0004<br> IEF285I   DBEHM.BINDPKG.JOB06666.D0000102.?            SYSOUT<br> IEF285I   DBEHM.BINDPKG.JOB06666.D0000103.?            SYSOUT<br> IEF285I   DBEHM.BINDPKG.JOB06666.D0000104.?            SYSOUT<br> IEF285I   DBEHM.BINDPKG.JOB06666.D0000101.?            SYSIN<br> IEF373I STEP/PKGBIND /START 2025177.1612<br> IEF032I STEP/PKGBIND /STOP  2025177.1612<br>         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC<br>         VIRT:   504K  SYS:   448K  EXT:      496K  SYS:    11968K<br>         ATB- REAL:                   256K  SLOTS:                     0K<br>              VIRT- ALLOC:      17M SHRD:       0M<br> IGD104I DBC0CFG.DB2.V12.SDSNLOAD                     RETAINED,  DDNAME=JOBLIB<br> IEF375I  JOB/BINDPKG /START 2025177.1612<br> IEF033I  JOB/BINDPKG /STOP  2025177.1612<br>         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC<br>
+
+
+
+</ul>
+
+
+
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>stepname</b></span>:
+
+PKGBIND<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+SYSTSPRT<br>
+
+
+
+<span class='vlabel_ko'><b>format</b></span>:
+
+VBA<br>
+
+
+
+<span class='vlabel_ko'><b>length</b></span>:
+
+137<br>
+
+
+
+<span class='vlabel_ko'><b>recnum</b></span>:
+
+61<br>
+
+
+
+<span class='vlabel_ko'><b>dsid</b></span>:
+
+102<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+1READY<br> DSN SYSTEM (DBC1)<br> DSN<br> BIND  PACKAGE(DEFAULT) MEMBER(BAM1) LIBRARY('DBEHM.BASETEST.DBRM') QUALIFIER(QUAL) OWNER(JENKINS) ACTION(REPLACE) ISOLATION(CS) RELE<br> ASE(COMMIT) ENCODING(EBCDIC)<br> DSNX100I  -DBC1 BIND SQL WARNING<br>            USING JENKINS AUTHORITY<br>            PLAN=(NOT APPLICABLE)<br>            DBRM=BAM1<br>            STATEMENT=104<br>            QUAL.BAD1 IS NOT DEFINED<br> DSNT254I  -DBC1 DSNTBCM2 BIND OPTIONS FOR<br>            PACKAGE = MOPDBC0.DEFAULT.BAM1.()<br>            ACTION        REPLACE<br>            OWNER         JENKINS<br>            QUALIFIER     QUAL<br>            VALIDATE      RUN<br>            EXPLAIN       NO<br>            ISOLATION     CS<br>            RELEASE       COMMIT<br>            COPY<br>            APREUSE<br>            APCOMPARE<br>            APRETAINDUP<br>            BUSTIMESENSITIVE YES<br>            SYSTIMESENSITIVE YES<br>            ARCHIVESENSITIVE YES<br>            APPLCOMPAT V12R1M500<br>            DESCSTAT YES<br>            APREUSESOURCE<br> DSNT255I  -DBC1 DSNTBCM2 BIND OPTIONS FOR<br>            PACKAGE = MOPDBC0.DEFAULT.BAM1.()<br>            SQLERROR      NOPACKAGE<br>            CURRENTDATA   NO<br>            DEGREE        1<br>            DYNAMICRULES<br>            DEFER<br>            NOREOPT       VARS<br>            KEEPDYNAMIC   NO<br>            IMMEDWRITE    INHERITFROMPLAN<br>            DBPROTOCOL    DRDA<br>            OPTHINT<br>            ENCODING      EBCDIC(00500)<br>            PLANMGMT      OFF<br>            PLANMGMTSCOPE STATIC<br>            CONCURRENTACCESSRESOLUTION<br>            EXTENDEDINDICATOR<br>            PATH<br> DSNT275I  -DBC1 DSNTBCM2 BIND OPTIONS FOR<br>            PACKAGE = MOPDBC0.DEFAULT.BAM1.()<br>            QUERYACCELERATION<br>            GETACCELARCHIVE<br>            ACCELERATOR<br>            CONCENTRATESTMT<br>1           ACCELERATIONWAITFORDATA<br> DSNT232I  -DBC1 SUCCESSFUL BIND FOR<br>            PACKAGE = MOPDBC0.DEFAULT.BAM1.()<br> DSN<br> END<br> READY<br> END<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>rc</b></span>:
+
+0004<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</div>
+</td>
+</tr>
+<tr>
+<td style='width:200px;'>
+DB2_BIND_PLAN
+</td>
+<td style='width:200px;'>
+BAM1.DBRM<br>
+</td>
+<td>
+<b>Status: </b>
+
+<span class='vlabel_ok'>Success</span>
+
+<br><a id='showDep20250626.141214.411DB2BINDDB2_BIND_PLAN' class='bottomRight' href='javascript:onclick=toggle("dep20250626.141214.411DB2BINDDB2_BIND_PLAN","showDep20250626.141214.411DB2BINDDB2_BIND_PLAN")'>Show Log</a>
+<div id='dep20250626.141214.411DB2BINDDB2_BIND_PLAN' style='display:none' class='dep'>
+<br><b>Details:</b>
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Job JOB06667 succeeded<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>db2_system</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>package_maxrc</b></span>:
+
+4<br>
+
+
+
+<span class='vlabel_ko'><b>plan_maxrc</b></span>:
+
+4<br>
+
+
+
+<span class='vlabel_ko'><b>user</b></span>:
+
+JENKINS<br>
+
+
+
+<span class='vlabel_ko'><b>package</b></span>:
+
+DEFAULT<br>
+
+
+
+<span class='vlabel_ko'><b>plan</b></span>:
+
+DEFAULT<br>
+
+
+
+<span class='vlabel_ko'><b>qualifier</b></span>:
+
+QUAL<br>
+
+
+
+<span class='vlabel_ko'><b>subsys</b></span>:
+
+DBC1<br>
+
+
+
+<span class='vlabel_ko'><b>package_jobcard</b></span>:
+
+BINDPKG JOB 'WD-PKGBIND',MSGLEVEL=(1,1),MSGCLASS=R,NOTIFY=&SYSUID<br>
+
+
+
+<span class='vlabel_ko'><b>plan_jobcard</b></span>:
+
+BINDPLA JOB 'WD-PLANBIND',MSGLEVEL=(1,1),MSGCLASS=R,NOTIFY=&SYSUID<br>
+
+
+
+<span class='vlabel_ko'><b>package_action</b></span>:
+
+REPLACE<br>
+
+
+
+<span class='vlabel_ko'><b>plan_action</b></span>:
+
+REPLACE<br>
+
+
+
+<span class='vlabel_ko'><b>sdsnload</b></span>:
+
+DBC0CFG.DB2.V12.SDSNLOAD<br>
+
+
+
+<span class='vlabel_ko'><b>plan_pklist</b></span>:
+
+*.CBSAPK.*<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>template_file</b></span>:
+
+/ZT01/var/python-envs/wazi-deploy-v3.0.5/lib/python3.10/site-packages/wazideploy_translator/templates/db2_bind_plan.jcl.j2<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>job_steps</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>stepname</b></span>:
+
+JES2<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+JESMSGLG<br>
+
+
+
+<span class='vlabel_ko'><b>format</b></span>:
+
+UA<br>
+
+
+
+<span class='vlabel_ko'><b>length</b></span>:
+
+133<br>
+
+
+
+<span class='vlabel_ko'><b>recnum</b></span>:
+
+20<br>
+
+
+
+<span class='vlabel_ko'><b>dsid</b></span>:
+
+2<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+1                    J E S 2  J O B  L O G  --  S Y S T E M  Z T 0 1  --  N O D E  M O P Z T 0 0<br>0<br> 16.12.26 JOB06667 ---- THURSDAY,  26 JUN 2025 ----<br> 16.12.26 JOB06667  IRR010I  USERID DBEHM    IS ASSIGNED TO THIS JOB.<br> 16.12.26 JOB06667  ICH70001I DBEHM    LAST ACCESS AT 16:12:21 ON THURSDAY, JUNE 26, 2025<br> 16.12.26 JOB06667  $HASP373 BINDPLA  STARTED - INIT 1    - CLASS A        - SYS ZT01<br> 16.12.26 JOB06667  IEF403I BINDPLA - STARTED - TIME=16.12.26<br> 16.12.26 JOB06667  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---<br> 16.12.26 JOB06667  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    CPU    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS STEPNO<br> 16.12.26 JOB06667  -BINDPLA           PLABIND     00    184    .00    .00    .00    582   0      0      0      0     0     1<br> 16.12.26 JOB06667  IEF404I BINDPLA - ENDED - TIME=16.12.26<br> 16.12.26 JOB06667  -BINDPLA  ENDED.  NAME-                     TOTAL CPU TIME=   .00  TOTAL ELAPSED TIME=   .00<br> 16.12.26 JOB06667  $HASP395 BINDPLA  ENDED - RC=0000<br>0------ JES2 JOB STATISTICS ------<br>-  26 JUN 2025 JOB EXECUTION DATE<br>-           20 CARDS READ<br>-           95 SYSOUT PRINT RECORDS<br>-            0 SYSOUT PUNCH RECORDS<br>-            9 SYSOUT SPOOL KBYTES<br>-         0.00 MINUTES EXECUTION TIME<br>
+
+
+
+</ul>
+
+
+
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>stepname</b></span>:
+
+JES2<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+JESJCL<br>
+
+
+
+<span class='vlabel_ko'><b>format</b></span>:
+
+V<br>
+
+
+
+<span class='vlabel_ko'><b>length</b></span>:
+
+136<br>
+
+
+
+<span class='vlabel_ko'><b>recnum</b></span>:
+
+10<br>
+
+
+
+<span class='vlabel_ko'><b>dsid</b></span>:
+
+3<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+        1 //BINDPLA JOB 'WD-PLANBIND',MSGLEVEL=(1,1),MSGCLASS=R,NOTIFY=&SYSUID    JOB06667<br>          IEFC653I SUBSTITUTION JCL - 'WD-PLANBIND',MSGLEVEL=(1,1),MSGCLASS=R,NOTIFY=DBEHM<br>        2 //JOBLIB   DD  DISP=SHR,<br>          //             DSN=DBC0CFG.DB2.V12.SDSNLOAD<br>        3 //PLABIND EXEC PGM=IKJEFT01,DYNAMNBR=20,COND=(4,LT)<br>        4 //SYSTSPRT DD  SYSOUT=*<br>        5 //SYSPRINT DD  SYSOUT=*<br>        6 //SYSUDUMP DD  SYSOUT=*<br>        7 //SYSIN    DD  DUMMY<br>        8 //SYSTSIN  DD  *<br>
+
+
+
+</ul>
+
+
+
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>stepname</b></span>:
+
+JES2<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+JESYSMSG<br>
+
+
+
+<span class='vlabel_ko'><b>format</b></span>:
+
+VA<br>
+
+
+
+<span class='vlabel_ko'><b>length</b></span>:
+
+137<br>
+
+
+
+<span class='vlabel_ko'><b>recnum</b></span>:
+
+25<br>
+
+
+
+<span class='vlabel_ko'><b>dsid</b></span>:
+
+4<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+ ICH70001I DBEHM    LAST ACCESS AT 16:12:21 ON THURSDAY, JUNE 26, 2025<br> IEFA111I BINDPLA IS USING THE FOLLOWING JOB RELATED SETTINGS:<br>          SWA=ABOVE,TIOT SIZE=64K,DSENQSHR=DISALLOW,GDGBIAS=JOB<br> IEF236I ALLOC. FOR BINDPLA PLABIND<br> IGD103I SMS ALLOCATED TO DDNAME JOBLIB<br> IEF237I JES2 ALLOCATED TO SYSTSPRT<br> IEF237I JES2 ALLOCATED TO SYSPRINT<br> IEF237I JES2 ALLOCATED TO SYSUDUMP<br> IEF237I DMY  ALLOCATED TO SYSIN<br> IEF237I JES2 ALLOCATED TO SYSTSIN<br> IEF142I BINDPLA PLABIND - STEP WAS EXECUTED - COND CODE 0000<br> IEF285I   DBEHM.BINDPLA.JOB06667.D0000102.?            SYSOUT<br> IEF285I   DBEHM.BINDPLA.JOB06667.D0000103.?            SYSOUT<br> IEF285I   DBEHM.BINDPLA.JOB06667.D0000104.?            SYSOUT<br> IEF285I   DBEHM.BINDPLA.JOB06667.D0000101.?            SYSIN<br> IEF373I STEP/PLABIND /START 2025177.1612<br> IEF032I STEP/PLABIND /STOP  2025177.1612<br>         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC<br>         VIRT:   496K  SYS:   392K  EXT:      496K  SYS:    11840K<br>         ATB- REAL:                   244K  SLOTS:                     0K<br>              VIRT- ALLOC:      15M SHRD:       0M<br> IGD104I DBC0CFG.DB2.V12.SDSNLOAD                     RETAINED,  DDNAME=JOBLIB<br> IEF375I  JOB/BINDPLA /START 2025177.1612<br> IEF033I  JOB/BINDPLA /STOP  2025177.1612<br>         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC<br>
+
+
+
+</ul>
+
+
+
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>stepname</b></span>:
+
+PLABIND<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+SYSTSPRT<br>
+
+
+
+<span class='vlabel_ko'><b>format</b></span>:
+
+VBA<br>
+
+
+
+<span class='vlabel_ko'><b>length</b></span>:
+
+137<br>
+
+
+
+<span class='vlabel_ko'><b>recnum</b></span>:
+
+36<br>
+
+
+
+<span class='vlabel_ko'><b>dsid</b></span>:
+
+102<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+1READY<br> DSN SYSTEM (DBC1)<br> DSN<br> BIND  PLAN(DEFAULT) PKLIST(*.CBSAPK.*) QUALIFIER(QUAL) OWNER(JENKINS) ACTION(REPLACE) ISOLATION(CS) RELEASE(COMMIT) ENCODING(EBCDIC)<br> DSNT252I  -DBC1 DSNTBCM1 BIND OPTIONS FOR PLAN DEFAULT<br>            ACTION        REPLACE<br>            OWNER         JENKINS<br>            VALIDATE      RUN<br>            ISOLATION     CS<br>            ACQUIRE       USE<br>            RELEASE       COMMIT<br>            EXPLAIN       NO<br>            DYNAMICRULES  RUN<br>            PROGAUTH      DISABLE<br> DSNT253I  -DBC1 DSNTBCM1 BIND OPTIONS FOR PLAN DEFAULT<br>            NODEFER       PREPARE<br>            CACHESIZE     3072<br>            QUALIFIER     QUAL<br>            CURRENTSERVER<br>            CURRENTDATA   NO<br>            DEGREE        1<br>            SQLRULES      DB2<br>            DISCONNECT    EXPLICIT<br>            NOREOPT       VARS<br>            KEEPDYNAMIC   NO<br>            IMMEDWRITE    NO<br>            DBPROTOCOL    DRDA<br>            OPTHINT<br>            ENCODING      EBCDIC(00500)<br>            CONCURRENTACCESSRESOLUTION<br>            PATH<br> DSNT200I  -DBC1  BIND FOR PLAN DEFAULT  SUCCESSFUL<br> DSN<br> END<br> READY<br> END<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>rc</b></span>:
+
+0000<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</div>
+</td>
+</tr>
+
+</table>
+
+</tr>
+</td>
+<tr>
+<td>
+DEPLOY_MODULES
+</td>
+<td>
+UPDATE
+</td>
+<td>
+<table border='1px solid #A9A9A9' style='width:100%;'><tr><th id=\"name\">Steps</th><th id=\"commands\">Artifacts</th><th id=\"rc\">Status</th></tr>
+<tr>
+<td style='width:200px;'>
+MEMBER_ARCHIVE
+</td>
+<td style='width:200px;'>
+BAM1.DBRM<br>BAO1.LOAD<br>BAB1.JCL<br>BAM1.LOAD<br>BAB1.LOAD<br>BAD1.JCL<br>
+</td>
+<td>
+<b>Status: </b>
+
+<span class='vlabel_ok'>Success</span>
+
+<br><a id='showDep20250626.141214.411DEPLOY_MODULESUPDATEMEMBER_ARCHIVE' class='bottomRight' href='javascript:onclick=toggle("dep20250626.141214.411DEPLOY_MODULESUPDATEMEMBER_ARCHIVE","showDep20250626.141214.411DEPLOY_MODULESUPDATEMEMBER_ARCHIVE")'>Show Log</a>
+<div id='dep20250626.141214.411DEPLOY_MODULESUPDATEMEMBER_ARCHIVE' style='display:none' class='dep'>
+<br><b>Details:</b>
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to copy 'DBEHM.BASETEST.DBRM(BAM1)' to 'DBEHM.BASETEST.BACK.DBRM(BAM1)'<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>pattern</b></span>:
+
+.*.DBRM$<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+DBEHM.BASETEST.DBRM<br>
+
+
+
+<span class='vlabel_ko'><b>dataset_backup</b></span>:
+
+DBEHM.BASETEST.BACK.DBRM<br>
+
+
+
+<span class='vlabel_ko'><b>force_lock</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>aliases</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_load</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_binary</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_psb</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_dbd</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_asa_text</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>rename_subs</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>use_native_copy</b></span>:
+
+false<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>command</b></span>:
+
+datasets._copy(DBEHM.BASETEST.DBRM(BAM1), DBEHM.BASETEST.BACK.DBRM(BAM1), None, **{'options': '-B'})<br>
+
+
+
+<span class='vlabel_ko'><b>result_command</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>rc</b></span>:
+
+0<br>
+
+
+
+<span class='vlabel_ko'><b>response_format</b></span>:
+
+UTF-8<br>
+
+
+
+<span class='vlabel_ko'><b>stdout_response</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>stderr_response</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>command</b></span>:
+
+dcp -B -- "DBEHM.BASETEST.DBRM(BAM1)" "DBEHM.BASETEST.BACK.DBRM(BAM1)"<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to copy 'DBEHM.BASETEST.LOAD(BAO1)' to 'DBEHM.BASETEST.BACK.LOAD(BAO1)'<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>pattern</b></span>:
+
+.*\.LOAD$<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+DBEHM.BASETEST.LOAD<br>
+
+
+
+<span class='vlabel_ko'><b>dataset_backup</b></span>:
+
+DBEHM.BASETEST.BACK.LOAD<br>
+
+
+
+<span class='vlabel_ko'><b>force_lock</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>aliases</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_load</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_binary</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_psb</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_dbd</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_asa_text</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>rename_subs</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>use_native_copy</b></span>:
+
+true<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>command</b></span>:
+
+cp -XI //'DBEHM.BASETEST.LOAD(BAO1)' //'DBEHM.BASETEST.BACK.LOAD(BAO1)'<br>
+
+
+
+<span class='vlabel_ko'><b>result_command</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+cp<br>
+
+
+
+
+-XI<br>
+
+
+
+
+//'DBEHM.BASETEST.LOAD(BAO1)'<br>
+
+
+
+
+//'DBEHM.BASETEST.BACK.LOAD(BAO1)'<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>returncode</b></span>:
+
+0<br>
+
+
+
+<span class='vlabel_ko'><b>stdout</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>stderr</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+WARNING: force_lock=True is ineffective with native copy<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to copy 'DBEHM.BASETEST.LOAD(BAM1)' to 'DBEHM.BASETEST.BACK.LOAD(BAM1)'<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>pattern</b></span>:
+
+.*\.LOAD$<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+DBEHM.BASETEST.LOAD<br>
+
+
+
+<span class='vlabel_ko'><b>dataset_backup</b></span>:
+
+DBEHM.BASETEST.BACK.LOAD<br>
+
+
+
+<span class='vlabel_ko'><b>force_lock</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>aliases</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_load</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_binary</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_psb</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_dbd</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_asa_text</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>rename_subs</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>use_native_copy</b></span>:
+
+true<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>command</b></span>:
+
+cp -XI //'DBEHM.BASETEST.LOAD(BAM1)' //'DBEHM.BASETEST.BACK.LOAD(BAM1)'<br>
+
+
+
+<span class='vlabel_ko'><b>result_command</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+cp<br>
+
+
+
+
+-XI<br>
+
+
+
+
+//'DBEHM.BASETEST.LOAD(BAM1)'<br>
+
+
+
+
+//'DBEHM.BASETEST.BACK.LOAD(BAM1)'<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>returncode</b></span>:
+
+0<br>
+
+
+
+<span class='vlabel_ko'><b>stdout</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>stderr</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+WARNING: force_lock=True is ineffective with native copy<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to copy 'DBEHM.BASETEST.LOAD(BAB1)' to 'DBEHM.BASETEST.BACK.LOAD(BAB1)'<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>pattern</b></span>:
+
+.*\.LOAD$<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+DBEHM.BASETEST.LOAD<br>
+
+
+
+<span class='vlabel_ko'><b>dataset_backup</b></span>:
+
+DBEHM.BASETEST.BACK.LOAD<br>
+
+
+
+<span class='vlabel_ko'><b>force_lock</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>aliases</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_load</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_binary</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_psb</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_dbd</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_asa_text</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>rename_subs</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>use_native_copy</b></span>:
+
+true<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>command</b></span>:
+
+cp -XI //'DBEHM.BASETEST.LOAD(BAB1)' //'DBEHM.BASETEST.BACK.LOAD(BAB1)'<br>
+
+
+
+<span class='vlabel_ko'><b>result_command</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+cp<br>
+
+
+
+
+-XI<br>
+
+
+
+
+//'DBEHM.BASETEST.LOAD(BAB1)'<br>
+
+
+
+
+//'DBEHM.BASETEST.BACK.LOAD(BAB1)'<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>returncode</b></span>:
+
+0<br>
+
+
+
+<span class='vlabel_ko'><b>stdout</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>stderr</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+WARNING: force_lock=True is ineffective with native copy<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to copy 'DBEHM.BASETEST.JCL(BAB1)' to 'DBEHM.BASETEST.BACK.JCL(BAB1)'<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>pattern</b></span>:
+
+.*.JCL$<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+DBEHM.BASETEST.JCL<br>
+
+
+
+<span class='vlabel_ko'><b>dataset_backup</b></span>:
+
+DBEHM.BASETEST.BACK.JCL<br>
+
+
+
+<span class='vlabel_ko'><b>force_lock</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>aliases</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_load</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_binary</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_psb</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_dbd</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_asa_text</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>rename_subs</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>use_native_copy</b></span>:
+
+true<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>command</b></span>:
+
+cp -T //'DBEHM.BASETEST.JCL(BAB1)' //'DBEHM.BASETEST.BACK.JCL(BAB1)'<br>
+
+
+
+<span class='vlabel_ko'><b>result_command</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+cp<br>
+
+
+
+
+-T<br>
+
+
+
+
+//'DBEHM.BASETEST.JCL(BAB1)'<br>
+
+
+
+
+//'DBEHM.BASETEST.BACK.JCL(BAB1)'<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>returncode</b></span>:
+
+0<br>
+
+
+
+<span class='vlabel_ko'><b>stdout</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>stderr</b></span>:
+
+<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to copy 'DBEHM.BASETEST.JCL(BAD1)' to 'DBEHM.BASETEST.BACK.JCL(BAD1)'<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>pattern</b></span>:
+
+.*.JCL$<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+DBEHM.BASETEST.JCL<br>
+
+
+
+<span class='vlabel_ko'><b>dataset_backup</b></span>:
+
+DBEHM.BASETEST.BACK.JCL<br>
+
+
+
+<span class='vlabel_ko'><b>force_lock</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>aliases</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_load</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_binary</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_psb</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_dbd</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_asa_text</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>rename_subs</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>use_native_copy</b></span>:
+
+true<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>command</b></span>:
+
+cp -T //'DBEHM.BASETEST.JCL(BAD1)' //'DBEHM.BASETEST.BACK.JCL(BAD1)'<br>
+
+
+
+<span class='vlabel_ko'><b>result_command</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+cp<br>
+
+
+
+
+-T<br>
+
+
+
+
+//'DBEHM.BASETEST.JCL(BAD1)'<br>
+
+
+
+
+//'DBEHM.BASETEST.BACK.JCL(BAD1)'<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>returncode</b></span>:
+
+0<br>
+
+
+
+<span class='vlabel_ko'><b>stdout</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>stderr</b></span>:
+
+<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</div>
+</td>
+</tr>
+<tr>
+<td style='width:200px;'>
+MEMBER_COPY
+</td>
+<td style='width:200px;'>
+BAM1.DBRM<br>BAO1.LOAD<br>BAB1.JCL<br>BAM1.LOAD<br>BAB1.LOAD<br>BAD1.JCL<br>
+</td>
+<td>
+<b>Status: </b>
+
+<span class='vlabel_ok'>Success</span>
+
+<br><a id='showDep20250626.141214.411DEPLOY_MODULESUPDATEMEMBER_COPY' class='bottomRight' href='javascript:onclick=toggle("dep20250626.141214.411DEPLOY_MODULESUPDATEMEMBER_COPY","showDep20250626.141214.411DEPLOY_MODULESUPDATEMEMBER_COPY")'>Show Log</a>
+<div id='dep20250626.141214.411DEPLOY_MODULESUPDATEMEMBER_COPY' style='display:none' class='dep'>
+<br><b>Details:</b>
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to copy /u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/dbrm/BAM1.DBRM to 'DBEHM.BASETEST.DBRM(BAM1)'<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>pattern</b></span>:
+
+.*.DBRM$<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+DBEHM.BASETEST.DBRM<br>
+
+
+
+<span class='vlabel_ko'><b>force_lock</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>aliases</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_load</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_binary</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_psb</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_dbd</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_asa_text</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>rename_subs</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>text_subs</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>use_native_copy</b></span>:
+
+false<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>command</b></span>:
+
+datasets._copy(/u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/dbrm/BAM1.DBRM, DBEHM.BASETEST.DBRM(BAM1), None, **{'options': '-B'})<br>
+
+
+
+<span class='vlabel_ko'><b>result_command</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>rc</b></span>:
+
+0<br>
+
+
+
+<span class='vlabel_ko'><b>response_format</b></span>:
+
+UTF-8<br>
+
+
+
+<span class='vlabel_ko'><b>stdout_response</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>stderr_response</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>command</b></span>:
+
+dcp -B -- "/u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/dbrm/BAM1.DBRM" "DBEHM.BASETEST.DBRM(BAM1)"<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to copy /u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/load/BAO1.LOAD to 'DBEHM.BASETEST.LOAD(BAO1)'<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>pattern</b></span>:
+
+.*\.LOAD$<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+DBEHM.BASETEST.LOAD<br>
+
+
+
+<span class='vlabel_ko'><b>force_lock</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>aliases</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_load</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_binary</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_psb</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_dbd</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_asa_text</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>rename_subs</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>text_subs</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>use_native_copy</b></span>:
+
+true<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>command</b></span>:
+
+cp -XI /u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/load/BAO1.LOAD //'DBEHM.BASETEST.LOAD(BAO1)'<br>
+
+
+
+<span class='vlabel_ko'><b>result_command</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+cp<br>
+
+
+
+
+-XI<br>
+
+
+
+
+/u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/load/BAO1.LOAD<br>
+
+
+
+
+//'DBEHM.BASETEST.LOAD(BAO1)'<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>returncode</b></span>:
+
+0<br>
+
+
+
+<span class='vlabel_ko'><b>stdout</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>stderr</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+WARNING: force_lock=True is ineffective with native copy<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to copy /u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/load/BAM1.LOAD to 'DBEHM.BASETEST.LOAD(BAM1)'<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>pattern</b></span>:
+
+.*\.LOAD$<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+DBEHM.BASETEST.LOAD<br>
+
+
+
+<span class='vlabel_ko'><b>force_lock</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>aliases</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_load</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_binary</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_psb</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_dbd</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_asa_text</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>rename_subs</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>text_subs</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>use_native_copy</b></span>:
+
+true<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>command</b></span>:
+
+cp -XI /u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/load/BAM1.LOAD //'DBEHM.BASETEST.LOAD(BAM1)'<br>
+
+
+
+<span class='vlabel_ko'><b>result_command</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+cp<br>
+
+
+
+
+-XI<br>
+
+
+
+
+/u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/load/BAM1.LOAD<br>
+
+
+
+
+//'DBEHM.BASETEST.LOAD(BAM1)'<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>returncode</b></span>:
+
+0<br>
+
+
+
+<span class='vlabel_ko'><b>stdout</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>stderr</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+WARNING: force_lock=True is ineffective with native copy<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to copy /u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/load/BAB1.LOAD to 'DBEHM.BASETEST.LOAD(BAB1)'<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>pattern</b></span>:
+
+.*\.LOAD$<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+DBEHM.BASETEST.LOAD<br>
+
+
+
+<span class='vlabel_ko'><b>force_lock</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>aliases</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_load</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_binary</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_psb</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_dbd</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_asa_text</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>rename_subs</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>text_subs</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>use_native_copy</b></span>:
+
+true<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>command</b></span>:
+
+cp -XI /u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/load/BAB1.LOAD //'DBEHM.BASETEST.LOAD(BAB1)'<br>
+
+
+
+<span class='vlabel_ko'><b>result_command</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+cp<br>
+
+
+
+
+-XI<br>
+
+
+
+
+/u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/load/BAB1.LOAD<br>
+
+
+
+
+//'DBEHM.BASETEST.LOAD(BAB1)'<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>returncode</b></span>:
+
+0<br>
+
+
+
+<span class='vlabel_ko'><b>stdout</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>stderr</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+WARNING: force_lock=True is ineffective with native copy<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to convert  /u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/jcl/BAB1.JCL from encoding 'IBM-1047' to encoding 'IBM-1047'<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>pattern</b></span>:
+
+.*.JCL$<br>
+
+
+
+<span class='vlabel_ko'><b>encoding</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>from</b></span>:
+
+IBM-1047<br>
+
+
+
+<span class='vlabel_ko'><b>to</b></span>:
+
+IBM-1047<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>command</b></span>:
+
+iconv -f IBM-1047 -t IBM-1047 /u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/jcl/BAB1.JCL<br>
+
+
+
+<span class='vlabel_ko'><b>rc</b></span>:
+
+0<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to copy /u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/jcl/BAB1.JCL to 'DBEHM.BASETEST.JCL(BAB1)'<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>pattern</b></span>:
+
+.*.JCL$<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+DBEHM.BASETEST.JCL<br>
+
+
+
+<span class='vlabel_ko'><b>force_lock</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>aliases</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_load</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_binary</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_psb</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_dbd</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_asa_text</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>rename_subs</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>text_subs</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>pattern</b></span>:
+
+@PGMLIB<br>
+
+
+
+<span class='vlabel_ko'><b>replace</b></span>:
+
+DBEHM.BASETEST<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>use_native_copy</b></span>:
+
+true<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>command</b></span>:
+
+cp -T /u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/jcl/BAB1.JCL.IBM-1047.sub //'DBEHM.BASETEST.JCL(BAB1)'<br>
+
+
+
+<span class='vlabel_ko'><b>result_command</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+cp<br>
+
+
+
+
+-T<br>
+
+
+
+
+/u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/jcl/BAB1.JCL.IBM-1047.sub<br>
+
+
+
+
+//'DBEHM.BASETEST.JCL(BAB1)'<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>returncode</b></span>:
+
+0<br>
+
+
+
+<span class='vlabel_ko'><b>stdout</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>stderr</b></span>:
+
+<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to convert  /u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/jcl/BAD1.JCL from encoding 'IBM-1047' to encoding 'IBM-1047'<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>pattern</b></span>:
+
+.*.JCL$<br>
+
+
+
+<span class='vlabel_ko'><b>encoding</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>from</b></span>:
+
+IBM-1047<br>
+
+
+
+<span class='vlabel_ko'><b>to</b></span>:
+
+IBM-1047<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>command</b></span>:
+
+iconv -f IBM-1047 -t IBM-1047 /u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/jcl/BAD1.JCL<br>
+
+
+
+<span class='vlabel_ko'><b>rc</b></span>:
+
+0<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Succeeded to copy /u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/jcl/BAD1.JCL to 'DBEHM.BASETEST.JCL(BAD1)'<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>pattern</b></span>:
+
+.*.JCL$<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+DBEHM.BASETEST.JCL<br>
+
+
+
+<span class='vlabel_ko'><b>force_lock</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>aliases</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>is_load</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_binary</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_psb</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_dbd</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>is_asa_text</b></span>:
+
+false<br>
+
+
+
+<span class='vlabel_ko'><b>rename_subs</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>text_subs</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>pattern</b></span>:
+
+@PGMLIB<br>
+
+
+
+<span class='vlabel_ko'><b>replace</b></span>:
+
+DBEHM.BASETEST<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>use_native_copy</b></span>:
+
+true<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>command</b></span>:
+
+cp -T /u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/jcl/BAD1.JCL.IBM-1047.sub //'DBEHM.BASETEST.JCL(BAD1)'<br>
+
+
+
+<span class='vlabel_ko'><b>result_command</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+cp<br>
+
+
+
+
+-T<br>
+
+
+
+
+/u/dbehm/git/june-engagement-workspace/uc5-rollback-scenarios/ts1_fullrollback/base/main/dbbbuild_2025-06-26_16-11-27_baseline/bin/jcl/BAD1.JCL.IBM-1047.sub<br>
+
+
+
+
+//'DBEHM.BASETEST.JCL(BAD1)'<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>returncode</b></span>:
+
+0<br>
+
+
+
+<span class='vlabel_ko'><b>stdout</b></span>:
+
+<br>
+
+
+
+<span class='vlabel_ko'><b>stderr</b></span>:
+
+<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</div>
+</td>
+</tr>
+
+</table>
+
+</tr>
+</td>
+<tr>
+<td>
+ROLLBACK_MODULES
+</td>
+<td>
+
+</tr>
+</td>
+<tr>
+<td>
+VERIFICATION
+</td>
+<td>
+JCLEXPERT
+</td>
+<td>
+<table border='1px solid #A9A9A9' style='width:100%;'><tr><th id=\"name\">Steps</th><th id=\"commands\">Artifacts</th><th id=\"rc\">Status</th></tr>
+<tr>
+<td style='width:200px;'>
+SCAN_JCL
+</td>
+<td style='width:200px;'>
+BAB1.JCL<br>BAD1.JCL<br>
+</td>
+<td>
+<b>Status: </b>
+
+<span class='vlabel_ok'>Success</span>
+
+<br><a id='showDep20250626.141214.411VERIFICATIONJCLEXPERTSCAN_JCL' class='bottomRight' href='javascript:onclick=toggle("dep20250626.141214.411VERIFICATIONJCLEXPERTSCAN_JCL","showDep20250626.141214.411VERIFICATIONJCLEXPERTSCAN_JCL")'>Show Log</a>
+<div id='dep20250626.141214.411VERIFICATIONJCLEXPERTSCAN_JCL' style='display:none' class='dep'>
+<br><b>Details:</b>
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Job JOB06668 succeeded<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>src</b></span>:
+
+/u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/templates/jcl_expert_validation.jcl.j2<br>
+
+
+
+<span class='vlabel_ko'><b>use_template</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>max_rc</b></span>:
+
+8<br>
+
+
+
+<span class='vlabel_ko'><b>dest</b></span>:
+
+/tmp/wazi-deploy/jcl_gen/jcl_expert_validation.jcl<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>source_path</b></span>:
+
+/u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/templates/jcl_expert_validation.jcl.j2<br>
+
+
+
+<span class='vlabel_ko'><b>dest_path</b></span>:
+
+/tmp/wazi-deploy/jcl_gen/jcl_expert_validation.jcl<br>
+
+
+
+<span class='vlabel_ko'><b>job_steps</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>stepname</b></span>:
+
+JES2<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+JESMSGLG<br>
+
+
+
+<span class='vlabel_ko'><b>format</b></span>:
+
+UA<br>
+
+
+
+<span class='vlabel_ko'><b>length</b></span>:
+
+133<br>
+
+
+
+<span class='vlabel_ko'><b>recnum</b></span>:
+
+20<br>
+
+
+
+<span class='vlabel_ko'><b>dsid</b></span>:
+
+2<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+1                    J E S 2  J O B  L O G  --  S Y S T E M  Z T 0 1  --  N O D E  M O P Z T 0 0<br>0<br> 16.12.50 JOB06668 ---- THURSDAY,  26 JUN 2025 ----<br> 16.12.50 JOB06668  IRR010I  USERID DBEHM    IS ASSIGNED TO THIS JOB.<br> 16.12.50 JOB06668  ICH70001I DBEHM    LAST ACCESS AT 16:12:26 ON THURSDAY, JUNE 26, 2025<br> 16.12.50 JOB06668  $HASP373 CXPS0200 STARTED - INIT 1    - CLASS A        - SYS ZT01<br> 16.12.50 JOB06668  IEF403I CXPS0200 - STARTED - TIME=16.12.50<br> 16.12.51 JOB06668  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---<br> 16.12.51 JOB06668  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    CPU    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS STEPNO<br> 16.12.51 JOB06668  -CXPS0200          EXPERT      08    785    .00    .00    .01    819   0      0      0      0     0     1<br> 16.12.51 JOB06668  IEF404I CXPS0200 - ENDED - TIME=16.12.51<br> 16.12.51 JOB06668  -CXPS0200 ENDED.  NAME-                     TOTAL CPU TIME=   .00  TOTAL ELAPSED TIME=   .01<br> 16.12.51 JOB06668  $HASP395 CXPS0200 ENDED - RC=0008<br>0------ JES2 JOB STATISTICS ------<br>-  26 JUN 2025 JOB EXECUTION DATE<br>-           43 CARDS READ<br>-          124 SYSOUT PRINT RECORDS<br>-            0 SYSOUT PUNCH RECORDS<br>-           12 SYSOUT SPOOL KBYTES<br>-         0.01 MINUTES EXECUTION TIME<br>
+
+
+
+</ul>
+
+
+
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>stepname</b></span>:
+
+JES2<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+JESJCL<br>
+
+
+
+<span class='vlabel_ko'><b>format</b></span>:
+
+V<br>
+
+
+
+<span class='vlabel_ko'><b>length</b></span>:
+
+136<br>
+
+
+
+<span class='vlabel_ko'><b>recnum</b></span>:
+
+41<br>
+
+
+
+<span class='vlabel_ko'><b>dsid</b></span>:
+
+3<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+        1 //CXPS0200 JOB ,                                                        JOB06668<br>          // MSGCLASS=H,MSGLEVEL=(1,1),TIME=NOLIMIT,REGION=0M,COND=(16,LT)<br>          //*********************************************************************<br>          //* PID 5698-J01                                                      *<br>          //* COPYRIGHT TERACLOUD APS 2022, 2024                                *<br>          //*********************************************************************<br>          //* Run JCL Expert on a single PDS member.                            *<br>          //*********************************************************************<br>          //* Add job statement parameters, and configure the SET statements    *<br>          //*  1.  CXPHLQ should point to the HLQ of the product install.       *<br>          //*  2.  CXPPATH should point to the zFS product install location.    *<br>          //*  3.  JCLMEMB should point to the JCL member that will be scanned. *<br>          //*  4.  (optional) If CEE.SCEERUN is not in your LINKLST or LPA then *<br>          //*        modify the STEPLIB accordingly.                            *<br>          //*********************************************************************<br>          //*******************************************<br>          //*<br>          //* Notes:<br>          //*<br>          //* This Jinja2 templates iterate over the variable that is passed in<br>          //* via the loop condition<br>          //*<br>          //* This template is processed for each artifact. It does<br>          //*  submit a JCL per member<br>          //*<br>          //* This template uses the JCL Expert interface to parse<br>          //* and validate a single JCL member<br>          //*<br>          //* Author DBEHM<br>          //*******************************************<br>          //* CUSTOMIZATION JOB<br>          //*******************************************<br>          //* Invoke JCL Expert<br>        2 //EXPERT   EXEC PGM=CXPJCLB,PARMDD=PARMS<br>        3 //STEPLIB  DD DSN=JCLEXP.V2R1.SCXPLOAD,DISP=SHR<br>        4 //CXPHOME  DD PATH='/var/jclexpert/V2R1M0',PATHOPTS=ORDONLY<br>        5 //INDD     DD DSN=DBEHM.BASETEST.JCL(BAB1),<br>          //         DISP=(SHR,KEEP)<br>        6 //PARMS DD *<br>          //*<br>          //*<br>
+
+
+
+</ul>
+
+
+
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>stepname</b></span>:
+
+JES2<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+JESYSMSG<br>
+
+
+
+<span class='vlabel_ko'><b>format</b></span>:
+
+VA<br>
+
+
+
+<span class='vlabel_ko'><b>length</b></span>:
+
+137<br>
+
+
+
+<span class='vlabel_ko'><b>recnum</b></span>:
+
+25<br>
+
+
+
+<span class='vlabel_ko'><b>dsid</b></span>:
+
+4<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+ ICH70001I DBEHM    LAST ACCESS AT 16:12:26 ON THURSDAY, JUNE 26, 2025<br> IEFA111I CXPS0200 IS USING THE FOLLOWING JOB RELATED SETTINGS:<br>          SWA=ABOVE,TIOT SIZE=64K,DSENQSHR=DISALLOW,GDGBIAS=JOB<br> IEF236I ALLOC. FOR CXPS0200 EXPERT<br> IGD103I SMS ALLOCATED TO DDNAME STEPLIB<br> IGD103I SMS UNIX FILE ALLOCATED TO DDNAME CXPHOME<br> IGD103I SMS ALLOCATED TO DDNAME INDD<br> IEF237I JES2 ALLOCATED TO PARMS<br> IEF237I JES2 ALLOCATED TO SYS00005<br> IEF285I   DBEHM.CXPS0200.JOB06668.D0000102.?           SYSOUT<br> IEF142I CXPS0200 EXPERT - STEP WAS EXECUTED - COND CODE 0008<br> IGD104I JCLEXP.V2R1.SCXPLOAD                         RETAINED,  DDNAME=STEPLIB<br> IGD104I UNIX FILE WAS RETAINED, DDNAME IS (CXPHOME )<br> FILENAME IS (/var/jclexpert/V2R1M0)<br> IGD104I DBEHM.BASETEST.JCL                           RETAINED,  DDNAME=INDD<br> IEF285I   DBEHM.CXPS0200.JOB06668.D0000101.?           SYSIN<br> IEF373I STEP/EXPERT  /START 2025177.1612<br> IEF032I STEP/EXPERT  /STOP  2025177.1612<br>         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC<br>         VIRT:    20K  SYS:   316K  EXT:     4196K  SYS:    11744K<br>         ATB- REAL:                   280K  SLOTS:                     0K<br>              VIRT- ALLOC:      21M SHRD:       0M<br> IEF375I  JOB/CXPS0200/START 2025177.1612<br> IEF033I  JOB/CXPS0200/STOP  2025177.1612<br>         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC<br>
+
+
+
+</ul>
+
+
+
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>stepname</b></span>:
+
+EXPERT<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+SYS00005<br>
+
+
+
+<span class='vlabel_ko'><b>format</b></span>:
+
+VBA<br>
+
+
+
+<span class='vlabel_ko'><b>length</b></span>:
+
+137<br>
+
+
+
+<span class='vlabel_ko'><b>recnum</b></span>:
+
+34<br>
+
+
+
+<span class='vlabel_ko'><b>dsid</b></span>:
+
+102<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+ ________________________________________________________________________<br>0                            IBM Z JCL Expert<br>                                2.1.0.003<br>0                         2025/06/26 - 14:12:50<br>0________________________________________________________________________<br>                                 SETTINGS<br> CXPS0388I Inputs<br>             INDD                : //DD:INDD<br>0CXPS0389I Parameters<br>             OUTPUT              : TEXT<br>             LOGLEVEL            : FATAL<br>             DSN                 : ON<br>             USER                : DBEHM<br>             SYSTEM              : ZT01<br>0________________________________________________________________________<br>                                 DD:INDD<br> ________________________________________________________________________<br> (DD:INDD              :001) //JOBNAME  JOB (ACCT),'RUN BAB1',CLASS=A,MSGCLASS=A,NOTIFY=&SYSUID<br>   after symbol replacement: //JOBNAME JOB (ACCT),'RUN BAB1',CLASS=A,MSGCLASS=A,NOTIFY=DBEHM<br> (DD:INDD              :002) //*<br> (DD:INDD              :003) //STEP01   EXEC PGM=BAB1<br> ******** CXPS0403E - Could not resolve load module BAB1.<br> (DD:INDD              :004) //STEPLIB  DD DISP=SHR,DSN=YOUR.LOAD.LIBRARY<br> ******** CXPS0477E - The data set YOUR.LOAD.LIBRARY in parameter DSNAME does not exist.<br> (DD:INDD              :005) //SYSPRINT DD SYSOUT=*<br> (DD:INDD              :006) //SYSOUT   DD SYSOUT=*<br> (DD:INDD              :007) //SYSIN    DD DUMMY<br> ________________________________________________________________________<br> CXPS0456I Results for DD:INDD<br>             Statements processed: 7<br>             Errors              : 2<br>             Warnings            : 0<br>             Info                : 0<br>0CXPX0043I Error opening YOUR.LOAD.LIBRARY during system search.<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>rc</b></span>:
+
+0008<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</div>
+</td>
+</tr>
+<tr>
+<td style='width:200px;'>
+SCAN_JCL
+</td>
+<td style='width:200px;'>
+BAB1.JCL<br>BAD1.JCL<br>
+</td>
+<td>
+<b>Status: </b>
+
+<span class='vlabel_ok'>Success</span>
+
+<br><a id='showDep20250626.141214.411VERIFICATIONJCLEXPERTSCAN_JCL' class='bottomRight' href='javascript:onclick=toggle("dep20250626.141214.411VERIFICATIONJCLEXPERTSCAN_JCL","showDep20250626.141214.411VERIFICATIONJCLEXPERTSCAN_JCL")'>Show Log</a>
+<div id='dep20250626.141214.411VERIFICATIONJCLEXPERTSCAN_JCL' style='display:none' class='dep'>
+<br><b>Details:</b>
+
+<ul style="margin-left: 0px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>status</b></span>:
+
+Ok<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+Job JOB06669 succeeded<br>
+
+
+
+<span class='vlabel_ko'><b>args</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>src</b></span>:
+
+/u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos//deployment-method/templates/jcl_expert_validation.jcl.j2<br>
+
+
+
+<span class='vlabel_ko'><b>use_template</b></span>:
+
+true<br>
+
+
+
+<span class='vlabel_ko'><b>max_rc</b></span>:
+
+8<br>
+
+
+
+<span class='vlabel_ko'><b>dest</b></span>:
+
+/tmp/wazi-deploy/jcl_gen/jcl_expert_validation.jcl<br>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>results</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>source_path</b></span>:
+
+/u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/templates/jcl_expert_validation.jcl.j2<br>
+
+
+
+<span class='vlabel_ko'><b>dest_path</b></span>:
+
+/tmp/wazi-deploy/jcl_gen/jcl_expert_validation.jcl<br>
+
+
+
+<span class='vlabel_ko'><b>job_steps</b></span>:
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>stepname</b></span>:
+
+JES2<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+JESMSGLG<br>
+
+
+
+<span class='vlabel_ko'><b>format</b></span>:
+
+UA<br>
+
+
+
+<span class='vlabel_ko'><b>length</b></span>:
+
+133<br>
+
+
+
+<span class='vlabel_ko'><b>recnum</b></span>:
+
+20<br>
+
+
+
+<span class='vlabel_ko'><b>dsid</b></span>:
+
+2<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+1                    J E S 2  J O B  L O G  --  S Y S T E M  Z T 0 1  --  N O D E  M O P Z T 0 0<br>0<br> 16.12.56 JOB06669 ---- THURSDAY,  26 JUN 2025 ----<br> 16.12.56 JOB06669  IRR010I  USERID DBEHM    IS ASSIGNED TO THIS JOB.<br> 16.12.56 JOB06669  ICH70001I DBEHM    LAST ACCESS AT 16:12:50 ON THURSDAY, JUNE 26, 2025<br> 16.12.56 JOB06669  $HASP373 CXPS0200 STARTED - INIT 1    - CLASS A        - SYS ZT01<br> 16.12.56 JOB06669  IEF403I CXPS0200 - STARTED - TIME=16.12.56<br> 16.12.56 JOB06669  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---<br> 16.12.56 JOB06669  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    CPU    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS STEPNO<br> 16.12.56 JOB06669  -CXPS0200          EXPERT      08    785    .00    .00    .00    797   0      0      0      0     0     1<br> 16.12.56 JOB06669  IEF404I CXPS0200 - ENDED - TIME=16.12.56<br> 16.12.56 JOB06669  -CXPS0200 ENDED.  NAME-                     TOTAL CPU TIME=   .00  TOTAL ELAPSED TIME=   .00<br> 16.12.56 JOB06669  $HASP395 CXPS0200 ENDED - RC=0008<br>0------ JES2 JOB STATISTICS ------<br>-  26 JUN 2025 JOB EXECUTION DATE<br>-           43 CARDS READ<br>-          145 SYSOUT PRINT RECORDS<br>-            0 SYSOUT PUNCH RECORDS<br>-           13 SYSOUT SPOOL KBYTES<br>-         0.00 MINUTES EXECUTION TIME<br>
+
+
+
+</ul>
+
+
+
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>stepname</b></span>:
+
+JES2<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+JESJCL<br>
+
+
+
+<span class='vlabel_ko'><b>format</b></span>:
+
+V<br>
+
+
+
+<span class='vlabel_ko'><b>length</b></span>:
+
+136<br>
+
+
+
+<span class='vlabel_ko'><b>recnum</b></span>:
+
+41<br>
+
+
+
+<span class='vlabel_ko'><b>dsid</b></span>:
+
+3<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+        1 //CXPS0200 JOB ,                                                        JOB06669<br>          // MSGCLASS=H,MSGLEVEL=(1,1),TIME=NOLIMIT,REGION=0M,COND=(16,LT)<br>          //*********************************************************************<br>          //* PID 5698-J01                                                      *<br>          //* COPYRIGHT TERACLOUD APS 2022, 2024                                *<br>          //*********************************************************************<br>          //* Run JCL Expert on a single PDS member.                            *<br>          //*********************************************************************<br>          //* Add job statement parameters, and configure the SET statements    *<br>          //*  1.  CXPHLQ should point to the HLQ of the product install.       *<br>          //*  2.  CXPPATH should point to the zFS product install location.    *<br>          //*  3.  JCLMEMB should point to the JCL member that will be scanned. *<br>          //*  4.  (optional) If CEE.SCEERUN is not in your LINKLST or LPA then *<br>          //*        modify the STEPLIB accordingly.                            *<br>          //*********************************************************************<br>          //*******************************************<br>          //*<br>          //* Notes:<br>          //*<br>          //* This Jinja2 templates iterate over the variable that is passed in<br>          //* via the loop condition<br>          //*<br>          //* This template is processed for each artifact. It does<br>          //*  submit a JCL per member<br>          //*<br>          //* This template uses the JCL Expert interface to parse<br>          //* and validate a single JCL member<br>          //*<br>          //* Author DBEHM<br>          //*******************************************<br>          //* CUSTOMIZATION JOB<br>          //*******************************************<br>          //* Invoke JCL Expert<br>        2 //EXPERT   EXEC PGM=CXPJCLB,PARMDD=PARMS<br>        3 //STEPLIB  DD DSN=JCLEXP.V2R1.SCXPLOAD,DISP=SHR<br>        4 //CXPHOME  DD PATH='/var/jclexpert/V2R1M0',PATHOPTS=ORDONLY<br>        5 //INDD     DD DSN=DBEHM.BASETEST.JCL(BAD1),<br>          //         DISP=(SHR,KEEP)<br>        6 //PARMS DD *<br>          //*<br>          //*<br>
+
+
+
+</ul>
+
+
+
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>stepname</b></span>:
+
+JES2<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+JESYSMSG<br>
+
+
+
+<span class='vlabel_ko'><b>format</b></span>:
+
+VA<br>
+
+
+
+<span class='vlabel_ko'><b>length</b></span>:
+
+137<br>
+
+
+
+<span class='vlabel_ko'><b>recnum</b></span>:
+
+25<br>
+
+
+
+<span class='vlabel_ko'><b>dsid</b></span>:
+
+4<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+ ICH70001I DBEHM    LAST ACCESS AT 16:12:50 ON THURSDAY, JUNE 26, 2025<br> IEFA111I CXPS0200 IS USING THE FOLLOWING JOB RELATED SETTINGS:<br>          SWA=ABOVE,TIOT SIZE=64K,DSENQSHR=DISALLOW,GDGBIAS=JOB<br> IEF236I ALLOC. FOR CXPS0200 EXPERT<br> IGD103I SMS ALLOCATED TO DDNAME STEPLIB<br> IGD103I SMS UNIX FILE ALLOCATED TO DDNAME CXPHOME<br> IGD103I SMS ALLOCATED TO DDNAME INDD<br> IEF237I JES2 ALLOCATED TO PARMS<br> IEF237I JES2 ALLOCATED TO SYS00005<br> IEF285I   DBEHM.CXPS0200.JOB06669.D0000102.?           SYSOUT<br> IEF142I CXPS0200 EXPERT - STEP WAS EXECUTED - COND CODE 0008<br> IGD104I JCLEXP.V2R1.SCXPLOAD                         RETAINED,  DDNAME=STEPLIB<br> IGD104I UNIX FILE WAS RETAINED, DDNAME IS (CXPHOME )<br> FILENAME IS (/var/jclexpert/V2R1M0)<br> IGD104I DBEHM.BASETEST.JCL                           RETAINED,  DDNAME=INDD<br> IEF285I   DBEHM.CXPS0200.JOB06669.D0000101.?           SYSIN<br> IEF373I STEP/EXPERT  /START 2025177.1612<br> IEF032I STEP/EXPERT  /STOP  2025177.1612<br>         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC<br>         VIRT:    20K  SYS:   316K  EXT:     4196K  SYS:    11744K<br>         ATB- REAL:                   280K  SLOTS:                     0K<br>              VIRT- ALLOC:      21M SHRD:       0M<br> IEF375I  JOB/CXPS0200/START 2025177.1612<br> IEF033I  JOB/CXPS0200/STOP  2025177.1612<br>         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC<br>
+
+
+
+</ul>
+
+
+
+
+<ul style="margin-left: 10px;padding-left: 0;">
+
+<span class='vlabel_ko'><b>ymli_full_file_path</b></span>:
+
+data/evidence.yaml<br>
+
+
+
+<span class='vlabel_ko'><b>stepname</b></span>:
+
+EXPERT<br>
+
+
+
+<span class='vlabel_ko'><b>dataset</b></span>:
+
+SYS00005<br>
+
+
+
+<span class='vlabel_ko'><b>format</b></span>:
+
+VBA<br>
+
+
+
+<span class='vlabel_ko'><b>length</b></span>:
+
+137<br>
+
+
+
+<span class='vlabel_ko'><b>recnum</b></span>:
+
+55<br>
+
+
+
+<span class='vlabel_ko'><b>dsid</b></span>:
+
+102<br>
+
+
+
+<span class='vlabel_ko'><b>msg</b></span>:
+
+ ________________________________________________________________________<br>0                            IBM Z JCL Expert<br>                                2.1.0.003<br>0                         2025/06/26 - 14:12:56<br>0________________________________________________________________________<br>                                 SETTINGS<br> CXPS0388I Inputs<br>             INDD                : //DD:INDD<br>0CXPS0389I Parameters<br>             OUTPUT              : TEXT<br>             LOGLEVEL            : FATAL<br>             DSN                 : ON<br>             USER                : DBEHM<br>             SYSTEM              : ZT01<br>0________________________________________________________________________<br>                                 DD:INDD<br> ________________________________________________________________________<br> (DD:INDD              :001) //BAD1INS  JOB (ACCT),'INSERT BAD1',CLASS=A,MSGCLASS=A,NOTIFY=&SYSUID<br>   after symbol replacement: //BAD1INS JOB (ACCT),'INSERT BAD1',CLASS=A,MSGCLASS=A,NOTIFY=DBEHM<br> (DD:INDD              :002) //*<br> (DD:INDD              :003) //STEP01   EXEC PGM=IKJEFT01<br> ******** CXPS0400I - Load module IKJEFT01 was resolved. Found in data set SYS1.LPALIB from origin PLPA.<br> (DD:INDD              :004) //STEPLIB  DD DISP=SHR,DSN=YOUR.DB2.LOAD.LIBRARY<br> ******** CXPS0477E - The data set YOUR.DB2.LOAD.LIBRARY in parameter DSNAME does not exist.<br> (DD:INDD              :005) //         DD DISP=SHR,DSN=YOUR.DB2.RUN.LIBRARY<br> ******** CXPS0477E - The data set YOUR.DB2.RUN.LIBRARY in parameter DSNAME does not exist.<br> (DD:INDD              :006) //SYSTSPRT DD SYSOUT=*<br> (DD:INDD              :007) //SYSPRINT DD SYSOUT=*<br> (DD:INDD              :008) //SYSUDUMP DD SYSOUT=*<br> (DD:INDD              :009) //SYSIN    DD DUMMY<br> (DD:INDD              :010) //SYSTSIN  DD *<br> (DD:INDD              :011)    DSN SYSTEM(DB2SSID)<br> ******** CXPS0581E - Db2 subsystem name DB2SSID must not exceed 4 characters.<br> (DD:INDD              :012)    RUN PROGRAM(DSNTEP2) PLAN(DSNTEP2) -<br> (DD:INDD              :013)        LIB('YOUR.DB2.RUN.LIBRARY')<br> (DD:INDD              :014) /*<br> (DD:INDD              :015) //SYSIN    DD *<br> ******** CXPS0420W - Statement with duplicate label SYSIN already exists in this step. On line 9 of DD:INDD.<br> (DD:INDD              :016) INSERT INTO BAD1 (TRANSACTION_ID, TRANSACTION_DATE, TRANSACTION_USER)<br> (DD:INDD              :017) VALUES ('1234567890', '2025-05-02', 'USER001');<br> (DD:INDD              :018)<br> (DD:INDD              :019) INSERT INTO BAD1 (TRANSACTION_ID, TRANSACTION_DATE, TRANSACTION_USER)<br> (DD:INDD              :020) VALUES ('0987654321', '2025-05-03', 'USER002');<br> (DD:INDD              :021)<br> (DD:INDD              :022) INSERT INTO BAD1 (TRANSACTION_ID, TRANSACTION_DATE, TRANSACTION_USER)<br> (DD:INDD              :023) VALUES ('1122334455', '2025-05-04', 'USER003');<br> (DD:INDD              :024) /*<br> ________________________________________________________________________<br> CXPS0456I Results for DD:INDD<br>             Statements processed: 11<br>             Errors              : 3<br>             Warnings            : 1<br>             Info                : 1<br>0CXPX0043I Error opening YOUR.DB2.LOAD.LIBRARY during system search.<br> CXPX0043I Error opening YOUR.DB2.RUN.LIBRARY during system search.<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+<span class='vlabel_ko'><b>rc</b></span>:
+
+0008<br>
+
+
+
+</ul>
+
+
+
+</ul>
+
+
+
+</div>
+</td>
+</tr>
+
+</table>
+
+</tr>
+</td>
+
+</table>
+<p>&nbsp;</p>
+
+
+</div></body></html>
