@@ -1,0 +1,10 @@
+#################################################################################
+# This file configures the CICS actions for the deployment
+#################################################################################
+
+cics_sys_def:
+  context: "{{ app_cics_context if app_cics_context is defined and app_cics_context else default_cics_context}}"
+  cmci_url: "{{ app_cmci_url if app_cmci_url is defined and app_cmci_url else default_cmci_url }}"
+  cmci_user: "{{ app_cmci_user if app_cmci_user is defined and app_cmci_user else 'MDALBIN' }}"
+  cmci_password: "{{ app_cmci_password if app_cmci_password is defined and app_cmci_password else 'password' }}"
+  csd_group: "{{ app_csd_group if app_csd_group is defined and app_csd_group else 'DEFAULT' }}"

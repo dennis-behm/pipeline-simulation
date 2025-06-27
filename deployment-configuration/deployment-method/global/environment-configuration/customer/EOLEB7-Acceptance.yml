@@ -1,0 +1,22 @@
+# Application level settings
+# When defined they are overriding the default values
+
+# retirement calculator does not have db2 or cics - values can be left undefined / or deleted
+
+# db2 bind settings
+
+app_db2_plan:
+app_db2_package:
+app_db2_qualifier:
+app_db2_subsys:
+
+# cics settings
+app_cics_context:
+app_cmci_user:
+app_cmci_password:
+app_csd_group:
+
+# jcl text substitutions
+app_jcl_text_subs_patterns:
+  - pattern: "@PGMLIB"
+    replace: "{{ hlq }}"

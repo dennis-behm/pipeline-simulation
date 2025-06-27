@@ -1,0 +1,5 @@
+  jcl_expert_verification:
+   src: "{{ deploy_cfg_home }}/deployment-method/templates/jcl_expert_validation.jcl.j2"
+   use_template: True
+   max_rc: 4
+   dest: "{{ uss_root }}/jcl_gen/jcl_expert_validation.jcl"

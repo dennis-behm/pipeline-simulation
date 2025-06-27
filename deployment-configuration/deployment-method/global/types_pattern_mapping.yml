@@ -1,0 +1,108 @@
+# Notes:
+# 
+# Upload strategy:
+#  Default: Upload files is via ZOAU python APIs by. native_copy only on selected operations where datasets
+#  without any shared allocations can be guaranteed (probably JCL).
+#
+# Concurrent access check:
+#  Default: Check for concurrent allocations on target datasets (not applicable when using native_copy). Deployment fails on concurrent access.
+#  Exceptions: Deploying into Online regions where concurrent allocations are expected
+# 
+
+types:
+  - pattern: .*\.LOAD$
+    dataset: "{{ hlq }}.LOAD"
+    dataset_backup: "{{ hlq }}.BACK.LOAD"
+    spec: "{{ common_pds_load_spec }}"
+    is_load: true
+    force_lock: true
+    force: true
+    use_native_copy: true
+  - pattern: .*\.CICSLOAD$
+    dataset: "{{ hlq }}.LOAD"
+    dataset_backup: "{{ hlq }}.BACK.LOAD"
+    spec: "{{ common_pds_load_spec }}"
+    is_load: true
+    force_lock: True
+    force: true
+    use_native_copy: true
+    cics_systems:
+      - "{{ cics_sys_def }}"
+  - pattern: .*\.MAPLOAD$
+    dataset: "{{ hlq }}.LOAD"
+    dataset_backup: "{{ hlq }}.BACK.LOAD"
+    spec: "{{ common_pds_load_spec }}"
+    is_load: true
+    force_lock: true
+    use_native_copy: false
+    cics_systems:
+      - "{{ cics_sys_def }}"
+  - pattern: .*.DBRM$
+    dataset: "{{ hlq }}.DBRM"
+    dataset_backup: "{{ hlq }}.BACK.DBRM"
+    spec: "{{ common_pds_binary_spec }}"
+    is_binary: True
+    force_lock: false
+    use_native_copy: false
+    db2_systems:
+      - "{{ db2_sys_def }}"
+  - pattern: .*.JCL$
+    dataset: "{{ hlq }}.JCL"
+    dataset_backup: "{{ hlq }}.BACK.JCL"
+    spec: "{{ common_pds_txt_spec }}"
+    force_lock: false
+    use_native_copy: true
+    encoding: # no code page conversion necessary
+      from: IBM-1047
+      to: IBM-1047
+    text_subs: "{{ app_jcl_text_subs_patterns if app_jcl_text_subs_patterns is defined else [] }}"
+  - pattern: .*.BIN$
+    directory: "{{ uss_root }}/bin/"
+    directory_backup: "{{ uss_root }}/bin/back/"
+    dest_mode: 0777
+    artifact_mode: 0755
+    is_binary: True
+  - pattern: .*.SH$
+    directory: "{{ uss_root }}/sh/"
+    directory_backup: "{{ uss_root }}/sh/back/"
+    dest_mode: 0777
+    artifact_mode: 0755
+  - pattern: .*.TXT$
+    directory: "{{ uss_root }}/txt/"
+    directory_backup: "{{ uss_root }}/txt/back/"
+    encoding:
+      from: UTF-8
+      to: IBM-1047
+    dest_mode: 0777
+    artifact_mode: 0755
+  - pattern: .*.SEQ$
+    dataset_prefix: "{{ hlq }}.SEQ"
+    dataset_backup_prefix: "{{ hlq }}.BACK.SEQ"
+    encoding:
+      from: UTF-8
+      to: IBM-037
+    is_binary: False
+    force_lock: false
+    use_native_copy: false
+    is_sequential: True
+    spec: "{{seq_spec}}"
+  - pattern: .*.SEQA$
+    dataset_prefix: "{{ hlq }}.SEQ"
+    dataset_backup_prefix: "{{ hlq }}.BACK.SEQ"
+    encoding:
+      from: UTF-8
+      to: IBM-037
+    is_binary: False
+    is_sequential: True
+    spec: "{{seq_spec_a}}"
+
+type_dbrm_temp:    
+  - pattern: .*.DBRM$
+    dataset: "{{ hlq }}.TMP.DBRM"
+    dataset_backup: "{{ hlq }}.BACK.TMP.DBRM"
+    spec: "{{ common_pds_binary_spec }}"
+    is_binary: True
+    force_lock: false
+    use_native_copy: false
+    db2_systems:
+      - "{{ db2_sys_def }}"
