@@ -78,17 +78,17 @@ span.vlabel {
     "metadata": {
         "name": "base",
         "description": "base",
-        "version": "20250625.123312.660",
+        "version": "20250627.085247.296",
         "annotations": {
-            "creation_timestamp": "20250625.103321.265",
+            "creation_timestamp": "20250627.065256.149",
             "engine": {
                 "version": "3.0.5",
                 "build": "manual",
                 "date": "Thu Apr 24 00:41:15 CEST 2025"
             },
             "package": {
-                "path": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/applicationArchive.tar",
-                "sha256": "341cd4ddfac0309a97d1c3c40ca26f8a666e92bb925a33958a97590e7b6edccd"
+                "path": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/applicationArchive.tar",
+                "sha256": "f54d28c90cb6167e06265e4df91d80667d78ddb90ca799081be74b4a44f13bb8"
             }
         }
     },
@@ -190,7 +190,7 @@ span.vlabel {
             "properties": [],
             "actions": [
                 {
-                    "name": "UPADTE",
+                    "name": "UPDATE",
                     "description": "This action is applicable when we add new or changed artifacts.",
                     "properties": [
                         {
@@ -200,98 +200,14 @@ span.vlabel {
                     ],
                     "steps": [
                         {
-                            "name": "MEMBER_ARCHIVE",
-                            "description": "This step backs up already installed artifacts into the backup PDS",
-                            "properties": [],
-                            "artifacts": [
-                                {
-                                    "name": "BAM1",
-                                    "properties": [
-                                        {
-                                            "key": "path",
-                                            "value": "bin/dbrm/BAM1.DBRM"
-                                        },
-                                        {
-                                            "key": "githash",
-                                            "value": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
-                                        },
-                                        {
-                                            "key": "giturl",
-                                            "value": "https://github.com/dennis-behm/base.git"
-                                        },
-                                        {
-                                            "key": "dependency_set",
-                                            "value": [
-                                                {
-                                                    "lname": "BAD1SQL",
-                                                    "library": "SYSLIB",
-                                                    "category": "COPY",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
-                                                    "file": "base/src/copy/BAD1SQL.cpy",
-                                                    "resolved": true,
-                                                    "excluded": false
-                                                },
-                                                {
-                                                    "lname": "BAM1",
-                                                    "library": "SYSLIB",
-                                                    "category": "COPY",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
-                                                    "file": "base/src/copy/BAM1.cpy",
-                                                    "resolved": true,
-                                                    "excluded": false
-                                                },
-                                                {
-                                                    "lname": "BAD1REC",
-                                                    "library": "SYSLIB",
-                                                    "category": "SQL INCLUDE",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
-                                                    "file": "base/src/copy/BAD1REC.cpy",
-                                                    "resolved": true,
-                                                    "excluded": false
-                                                },
-                                                {
-                                                    "lname": "SQLCA",
-                                                    "library": "SYSLIB",
-                                                    "category": "SQL INCLUDE",
-                                                    "resolved": false,
-                                                    "excluded": false
-                                                },
-                                                {
-                                                    "lname": "BAM1",
-                                                    "library": "DBEHM.BASE.MAIN.BLD.OBJ",
-                                                    "category": "LINK",
-                                                    "file": "DBEHM.BASE.MAIN.BLD.OBJ(BAM1)",
-                                                    "resolved": true,
-                                                    "excluded": false
-                                                },
-                                                {
-                                                    "lname": "DSNHLI",
-                                                    "library": "DBC0CFG.DB2.V12.SDSNLOAD",
-                                                    "category": "LINK",
-                                                    "file": "DBC0CFG.DB2.V12.SDSNLOAD(DSNHLI)",
-                                                    "resolved": true,
-                                                    "excluded": false
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "key": "wd_manifest_index",
-                                            "value": 0
-                                        },
-                                        {
-                                            "key": "type",
-                                            "value": "DBRM"
-                                        }
-                                    ],
-                                    "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
-                                }
-                            ],
-                            "types": []
-                        },
-                        {
                             "name": "MEMBER_COPY",
                             "description": "This step do the copy of artifacts into PDSs",
-                            "properties": [],
+                            "properties": [
+                                {
+                                    "key": "var_type",
+                                    "value": "type_dbrm_temp"
+                                }
+                            ],
                             "artifacts": [
                                 {
                                     "name": "BAM1",
@@ -315,7 +231,7 @@ span.vlabel {
                                                     "lname": "BAD1SQL",
                                                     "library": "SYSLIB",
                                                     "category": "COPY",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
                                                     "file": "base/src/copy/BAD1SQL.cpy",
                                                     "resolved": true,
                                                     "excluded": false
@@ -324,7 +240,7 @@ span.vlabel {
                                                     "lname": "BAM1",
                                                     "library": "SYSLIB",
                                                     "category": "COPY",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
                                                     "file": "base/src/copy/BAM1.cpy",
                                                     "resolved": true,
                                                     "excluded": false
@@ -333,7 +249,7 @@ span.vlabel {
                                                     "lname": "BAD1REC",
                                                     "library": "SYSLIB",
                                                     "category": "SQL INCLUDE",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
                                                     "file": "base/src/copy/BAD1REC.cpy",
                                                     "resolved": true,
                                                     "excluded": false
@@ -411,7 +327,7 @@ span.vlabel {
                                                     "lname": "BAD1SQL",
                                                     "library": "SYSLIB",
                                                     "category": "COPY",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
                                                     "file": "base/src/copy/BAD1SQL.cpy",
                                                     "resolved": true,
                                                     "excluded": false
@@ -420,7 +336,7 @@ span.vlabel {
                                                     "lname": "BAM1",
                                                     "library": "SYSLIB",
                                                     "category": "COPY",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
                                                     "file": "base/src/copy/BAM1.cpy",
                                                     "resolved": true,
                                                     "excluded": false
@@ -429,7 +345,7 @@ span.vlabel {
                                                     "lname": "BAD1REC",
                                                     "library": "SYSLIB",
                                                     "category": "SQL INCLUDE",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
                                                     "file": "base/src/copy/BAD1REC.cpy",
                                                     "resolved": true,
                                                     "excluded": false
@@ -499,7 +415,7 @@ span.vlabel {
                                                     "lname": "BAD1SQL",
                                                     "library": "SYSLIB",
                                                     "category": "COPY",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
                                                     "file": "base/src/copy/BAD1SQL.cpy",
                                                     "resolved": true,
                                                     "excluded": false
@@ -508,7 +424,7 @@ span.vlabel {
                                                     "lname": "BAM1",
                                                     "library": "SYSLIB",
                                                     "category": "COPY",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
                                                     "file": "base/src/copy/BAM1.cpy",
                                                     "resolved": true,
                                                     "excluded": false
@@ -517,7 +433,7 @@ span.vlabel {
                                                     "lname": "BAD1REC",
                                                     "library": "SYSLIB",
                                                     "category": "SQL INCLUDE",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
                                                     "file": "base/src/copy/BAD1REC.cpy",
                                                     "resolved": true,
                                                     "excluded": false
@@ -581,153 +497,15 @@ span.vlabel {
             "properties": [],
             "actions": [
                 {
-                    "name": "UPADTE",
+                    "name": "UPDATE",
                     "description": "This action is applicable when we add new or changed artifacts.",
-                    "properties": [
-                        {
-                            "key": "my_action_prop",
-                            "value": "my_value"
-                        }
-                    ],
+                    "properties": [],
                     "steps": [
                         {
                             "name": "MEMBER_ARCHIVE",
                             "description": "This step backs up already installed artifacts into the backup PDS",
                             "properties": [],
                             "artifacts": [
-                                {
-                                    "name": "BAM1",
-                                    "properties": [
-                                        {
-                                            "key": "path",
-                                            "value": "bin/load/BAM1.LOAD"
-                                        },
-                                        {
-                                            "key": "githash",
-                                            "value": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
-                                        },
-                                        {
-                                            "key": "giturl",
-                                            "value": "https://github.com/dennis-behm/base.git"
-                                        },
-                                        {
-                                            "key": "dependency_set",
-                                            "value": [
-                                                {
-                                                    "lname": "BAD1SQL",
-                                                    "library": "SYSLIB",
-                                                    "category": "COPY",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
-                                                    "file": "base/src/copy/BAD1SQL.cpy",
-                                                    "resolved": true,
-                                                    "excluded": false
-                                                },
-                                                {
-                                                    "lname": "BAM1",
-                                                    "library": "SYSLIB",
-                                                    "category": "COPY",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
-                                                    "file": "base/src/copy/BAM1.cpy",
-                                                    "resolved": true,
-                                                    "excluded": false
-                                                },
-                                                {
-                                                    "lname": "BAD1REC",
-                                                    "library": "SYSLIB",
-                                                    "category": "SQL INCLUDE",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
-                                                    "file": "base/src/copy/BAD1REC.cpy",
-                                                    "resolved": true,
-                                                    "excluded": false
-                                                },
-                                                {
-                                                    "lname": "SQLCA",
-                                                    "library": "SYSLIB",
-                                                    "category": "SQL INCLUDE",
-                                                    "resolved": false,
-                                                    "excluded": false
-                                                },
-                                                {
-                                                    "lname": "BAM1",
-                                                    "library": "DBEHM.BASE.MAIN.BLD.OBJ",
-                                                    "category": "LINK",
-                                                    "file": "DBEHM.BASE.MAIN.BLD.OBJ(BAM1)",
-                                                    "resolved": true,
-                                                    "excluded": false
-                                                },
-                                                {
-                                                    "lname": "DSNHLI",
-                                                    "library": "DBC0CFG.DB2.V12.SDSNLOAD",
-                                                    "category": "LINK",
-                                                    "file": "DBC0CFG.DB2.V12.SDSNLOAD(DSNHLI)",
-                                                    "resolved": true,
-                                                    "excluded": false
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "key": "wd_manifest_index",
-                                            "value": 0
-                                        },
-                                        {
-                                            "key": "type",
-                                            "value": "LOAD"
-                                        }
-                                    ],
-                                    "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
-                                },
-                                {
-                                    "name": "BAD1",
-                                    "properties": [
-                                        {
-                                            "key": "path",
-                                            "value": "bin/jcl/BAD1.JCL"
-                                        },
-                                        {
-                                            "key": "githash",
-                                            "value": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
-                                        },
-                                        {
-                                            "key": "giturl",
-                                            "value": "https://github.com/dennis-behm/base.git"
-                                        },
-                                        {
-                                            "key": "wd_manifest_index",
-                                            "value": 0
-                                        },
-                                        {
-                                            "key": "type",
-                                            "value": "JCL"
-                                        }
-                                    ],
-                                    "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
-                                },
-                                {
-                                    "name": "BAB1",
-                                    "properties": [
-                                        {
-                                            "key": "path",
-                                            "value": "bin/jcl/BAB1.JCL"
-                                        },
-                                        {
-                                            "key": "githash",
-                                            "value": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
-                                        },
-                                        {
-                                            "key": "giturl",
-                                            "value": "https://github.com/dennis-behm/base.git"
-                                        },
-                                        {
-                                            "key": "wd_manifest_index",
-                                            "value": 0
-                                        },
-                                        {
-                                            "key": "type",
-                                            "value": "JCL"
-                                        }
-                                    ],
-                                    "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
-                                },
                                 {
                                     "name": "BAM1",
                                     "properties": [
@@ -750,7 +528,7 @@ span.vlabel {
                                                     "lname": "BAD1SQL",
                                                     "library": "SYSLIB",
                                                     "category": "COPY",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
                                                     "file": "base/src/copy/BAD1SQL.cpy",
                                                     "resolved": true,
                                                     "excluded": false
@@ -759,7 +537,7 @@ span.vlabel {
                                                     "lname": "BAM1",
                                                     "library": "SYSLIB",
                                                     "category": "COPY",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
                                                     "file": "base/src/copy/BAM1.cpy",
                                                     "resolved": true,
                                                     "excluded": false
@@ -768,7 +546,7 @@ span.vlabel {
                                                     "lname": "BAD1REC",
                                                     "library": "SYSLIB",
                                                     "category": "SQL INCLUDE",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
                                                     "file": "base/src/copy/BAD1REC.cpy",
                                                     "resolved": true,
                                                     "excluded": false
@@ -831,7 +609,7 @@ span.vlabel {
                                                     "lname": "BAM1",
                                                     "library": "SYSLIB",
                                                     "category": "COPY",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
                                                     "file": "base/src/copy/BAM1.cpy",
                                                     "resolved": true,
                                                     "excluded": false
@@ -879,7 +657,7 @@ span.vlabel {
                                                     "lname": "BAM1",
                                                     "library": "SYSLIB",
                                                     "category": "COPY",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
                                                     "file": "base/src/copy/BAM1.cpy",
                                                     "resolved": true,
                                                     "excluded": false
@@ -889,6 +667,139 @@ span.vlabel {
                                                     "library": "DBEHM.BASE.MAIN.BLD.OBJ",
                                                     "category": "LINK",
                                                     "file": "DBEHM.BASE.MAIN.BLD.OBJ(BAO1)",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "wd_manifest_index",
+                                            "value": 0
+                                        },
+                                        {
+                                            "key": "type",
+                                            "value": "LOAD"
+                                        }
+                                    ],
+                                    "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                },
+                                {
+                                    "name": "BAB1",
+                                    "properties": [
+                                        {
+                                            "key": "path",
+                                            "value": "bin/jcl/BAB1.JCL"
+                                        },
+                                        {
+                                            "key": "githash",
+                                            "value": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                        },
+                                        {
+                                            "key": "giturl",
+                                            "value": "https://github.com/dennis-behm/base.git"
+                                        },
+                                        {
+                                            "key": "wd_manifest_index",
+                                            "value": 0
+                                        },
+                                        {
+                                            "key": "type",
+                                            "value": "JCL"
+                                        }
+                                    ],
+                                    "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                },
+                                {
+                                    "name": "BAD1",
+                                    "properties": [
+                                        {
+                                            "key": "path",
+                                            "value": "bin/jcl/BAD1.JCL"
+                                        },
+                                        {
+                                            "key": "githash",
+                                            "value": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                        },
+                                        {
+                                            "key": "giturl",
+                                            "value": "https://github.com/dennis-behm/base.git"
+                                        },
+                                        {
+                                            "key": "wd_manifest_index",
+                                            "value": 0
+                                        },
+                                        {
+                                            "key": "type",
+                                            "value": "JCL"
+                                        }
+                                    ],
+                                    "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                },
+                                {
+                                    "name": "BAM1",
+                                    "properties": [
+                                        {
+                                            "key": "path",
+                                            "value": "bin/load/BAM1.LOAD"
+                                        },
+                                        {
+                                            "key": "githash",
+                                            "value": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                        },
+                                        {
+                                            "key": "giturl",
+                                            "value": "https://github.com/dennis-behm/base.git"
+                                        },
+                                        {
+                                            "key": "dependency_set",
+                                            "value": [
+                                                {
+                                                    "lname": "BAD1SQL",
+                                                    "library": "SYSLIB",
+                                                    "category": "COPY",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
+                                                    "file": "base/src/copy/BAD1SQL.cpy",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "BAM1",
+                                                    "library": "SYSLIB",
+                                                    "category": "COPY",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
+                                                    "file": "base/src/copy/BAM1.cpy",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "BAD1REC",
+                                                    "library": "SYSLIB",
+                                                    "category": "SQL INCLUDE",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
+                                                    "file": "base/src/copy/BAD1REC.cpy",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "SQLCA",
+                                                    "library": "SYSLIB",
+                                                    "category": "SQL INCLUDE",
+                                                    "resolved": false,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "BAM1",
+                                                    "library": "DBEHM.BASE.MAIN.BLD.OBJ",
+                                                    "category": "LINK",
+                                                    "file": "DBEHM.BASE.MAIN.BLD.OBJ(BAM1)",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "DSNHLI",
+                                                    "library": "DBC0CFG.DB2.V12.SDSNLOAD",
+                                                    "category": "LINK",
+                                                    "file": "DBC0CFG.DB2.V12.SDSNLOAD(DSNHLI)",
                                                     "resolved": true,
                                                     "excluded": false
                                                 }
@@ -918,139 +829,6 @@ span.vlabel {
                                     "properties": [
                                         {
                                             "key": "path",
-                                            "value": "bin/load/BAM1.LOAD"
-                                        },
-                                        {
-                                            "key": "githash",
-                                            "value": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
-                                        },
-                                        {
-                                            "key": "giturl",
-                                            "value": "https://github.com/dennis-behm/base.git"
-                                        },
-                                        {
-                                            "key": "dependency_set",
-                                            "value": [
-                                                {
-                                                    "lname": "BAD1SQL",
-                                                    "library": "SYSLIB",
-                                                    "category": "COPY",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
-                                                    "file": "base/src/copy/BAD1SQL.cpy",
-                                                    "resolved": true,
-                                                    "excluded": false
-                                                },
-                                                {
-                                                    "lname": "BAM1",
-                                                    "library": "SYSLIB",
-                                                    "category": "COPY",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
-                                                    "file": "base/src/copy/BAM1.cpy",
-                                                    "resolved": true,
-                                                    "excluded": false
-                                                },
-                                                {
-                                                    "lname": "BAD1REC",
-                                                    "library": "SYSLIB",
-                                                    "category": "SQL INCLUDE",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
-                                                    "file": "base/src/copy/BAD1REC.cpy",
-                                                    "resolved": true,
-                                                    "excluded": false
-                                                },
-                                                {
-                                                    "lname": "SQLCA",
-                                                    "library": "SYSLIB",
-                                                    "category": "SQL INCLUDE",
-                                                    "resolved": false,
-                                                    "excluded": false
-                                                },
-                                                {
-                                                    "lname": "BAM1",
-                                                    "library": "DBEHM.BASE.MAIN.BLD.OBJ",
-                                                    "category": "LINK",
-                                                    "file": "DBEHM.BASE.MAIN.BLD.OBJ(BAM1)",
-                                                    "resolved": true,
-                                                    "excluded": false
-                                                },
-                                                {
-                                                    "lname": "DSNHLI",
-                                                    "library": "DBC0CFG.DB2.V12.SDSNLOAD",
-                                                    "category": "LINK",
-                                                    "file": "DBC0CFG.DB2.V12.SDSNLOAD(DSNHLI)",
-                                                    "resolved": true,
-                                                    "excluded": false
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "key": "wd_manifest_index",
-                                            "value": 0
-                                        },
-                                        {
-                                            "key": "type",
-                                            "value": "LOAD"
-                                        }
-                                    ],
-                                    "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
-                                },
-                                {
-                                    "name": "BAD1",
-                                    "properties": [
-                                        {
-                                            "key": "path",
-                                            "value": "bin/jcl/BAD1.JCL"
-                                        },
-                                        {
-                                            "key": "githash",
-                                            "value": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
-                                        },
-                                        {
-                                            "key": "giturl",
-                                            "value": "https://github.com/dennis-behm/base.git"
-                                        },
-                                        {
-                                            "key": "wd_manifest_index",
-                                            "value": 0
-                                        },
-                                        {
-                                            "key": "type",
-                                            "value": "JCL"
-                                        }
-                                    ],
-                                    "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
-                                },
-                                {
-                                    "name": "BAB1",
-                                    "properties": [
-                                        {
-                                            "key": "path",
-                                            "value": "bin/jcl/BAB1.JCL"
-                                        },
-                                        {
-                                            "key": "githash",
-                                            "value": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
-                                        },
-                                        {
-                                            "key": "giturl",
-                                            "value": "https://github.com/dennis-behm/base.git"
-                                        },
-                                        {
-                                            "key": "wd_manifest_index",
-                                            "value": 0
-                                        },
-                                        {
-                                            "key": "type",
-                                            "value": "JCL"
-                                        }
-                                    ],
-                                    "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
-                                },
-                                {
-                                    "name": "BAM1",
-                                    "properties": [
-                                        {
-                                            "key": "path",
                                             "value": "bin/dbrm/BAM1.DBRM"
                                         },
                                         {
@@ -1068,7 +846,7 @@ span.vlabel {
                                                     "lname": "BAD1SQL",
                                                     "library": "SYSLIB",
                                                     "category": "COPY",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
                                                     "file": "base/src/copy/BAD1SQL.cpy",
                                                     "resolved": true,
                                                     "excluded": false
@@ -1077,7 +855,7 @@ span.vlabel {
                                                     "lname": "BAM1",
                                                     "library": "SYSLIB",
                                                     "category": "COPY",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
                                                     "file": "base/src/copy/BAM1.cpy",
                                                     "resolved": true,
                                                     "excluded": false
@@ -1086,7 +864,7 @@ span.vlabel {
                                                     "lname": "BAD1REC",
                                                     "library": "SYSLIB",
                                                     "category": "SQL INCLUDE",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
                                                     "file": "base/src/copy/BAD1REC.cpy",
                                                     "resolved": true,
                                                     "excluded": false
@@ -1149,7 +927,7 @@ span.vlabel {
                                                     "lname": "BAM1",
                                                     "library": "SYSLIB",
                                                     "category": "COPY",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
                                                     "file": "base/src/copy/BAM1.cpy",
                                                     "resolved": true,
                                                     "excluded": false
@@ -1197,7 +975,7 @@ span.vlabel {
                                                     "lname": "BAM1",
                                                     "library": "SYSLIB",
                                                     "category": "COPY",
-                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
                                                     "file": "base/src/copy/BAM1.cpy",
                                                     "resolved": true,
                                                     "excluded": false
@@ -1207,6 +985,139 @@ span.vlabel {
                                                     "library": "DBEHM.BASE.MAIN.BLD.OBJ",
                                                     "category": "LINK",
                                                     "file": "DBEHM.BASE.MAIN.BLD.OBJ(BAO1)",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "wd_manifest_index",
+                                            "value": 0
+                                        },
+                                        {
+                                            "key": "type",
+                                            "value": "LOAD"
+                                        }
+                                    ],
+                                    "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                },
+                                {
+                                    "name": "BAB1",
+                                    "properties": [
+                                        {
+                                            "key": "path",
+                                            "value": "bin/jcl/BAB1.JCL"
+                                        },
+                                        {
+                                            "key": "githash",
+                                            "value": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                        },
+                                        {
+                                            "key": "giturl",
+                                            "value": "https://github.com/dennis-behm/base.git"
+                                        },
+                                        {
+                                            "key": "wd_manifest_index",
+                                            "value": 0
+                                        },
+                                        {
+                                            "key": "type",
+                                            "value": "JCL"
+                                        }
+                                    ],
+                                    "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                },
+                                {
+                                    "name": "BAD1",
+                                    "properties": [
+                                        {
+                                            "key": "path",
+                                            "value": "bin/jcl/BAD1.JCL"
+                                        },
+                                        {
+                                            "key": "githash",
+                                            "value": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                        },
+                                        {
+                                            "key": "giturl",
+                                            "value": "https://github.com/dennis-behm/base.git"
+                                        },
+                                        {
+                                            "key": "wd_manifest_index",
+                                            "value": 0
+                                        },
+                                        {
+                                            "key": "type",
+                                            "value": "JCL"
+                                        }
+                                    ],
+                                    "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                },
+                                {
+                                    "name": "BAM1",
+                                    "properties": [
+                                        {
+                                            "key": "path",
+                                            "value": "bin/load/BAM1.LOAD"
+                                        },
+                                        {
+                                            "key": "githash",
+                                            "value": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                        },
+                                        {
+                                            "key": "giturl",
+                                            "value": "https://github.com/dennis-behm/base.git"
+                                        },
+                                        {
+                                            "key": "dependency_set",
+                                            "value": [
+                                                {
+                                                    "lname": "BAD1SQL",
+                                                    "library": "SYSLIB",
+                                                    "category": "COPY",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
+                                                    "file": "base/src/copy/BAD1SQL.cpy",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "BAM1",
+                                                    "library": "SYSLIB",
+                                                    "category": "COPY",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
+                                                    "file": "base/src/copy/BAM1.cpy",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "BAD1REC",
+                                                    "library": "SYSLIB",
+                                                    "category": "SQL INCLUDE",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
+                                                    "file": "base/src/copy/BAD1REC.cpy",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "SQLCA",
+                                                    "library": "SYSLIB",
+                                                    "category": "SQL INCLUDE",
+                                                    "resolved": false,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "BAM1",
+                                                    "library": "DBEHM.BASE.MAIN.BLD.OBJ",
+                                                    "category": "LINK",
+                                                    "file": "DBEHM.BASE.MAIN.BLD.OBJ(BAM1)",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "DSNHLI",
+                                                    "library": "DBC0CFG.DB2.V12.SDSNLOAD",
+                                                    "category": "LINK",
+                                                    "file": "DBC0CFG.DB2.V12.SDSNLOAD(DSNHLI)",
                                                     "resolved": true,
                                                     "excluded": false
                                                 }
@@ -1253,28 +1164,223 @@ span.vlabel {
             ]
         },
         {
-            "name": "VERIFICATION",
-            "description": "This action block verifies that the deployed JCLs are correct.\nIt uses the JCL Expert to scan and validate them. This showcases\nhow the conditional deployment 'loop' keyword can be used.",
+            "name": "ROLLBACK_MODULES",
+            "description": "This activity is restores artifacts from back PDS libraries",
             "properties": [],
             "actions": [
                 {
-                    "name": "JCLEXPERT",
-                    "description": "Invoke JCL expert interface for a single member of a dataset",
+                    "name": "MODULES",
+                    "description": "This action is applicable when when restoring files from the backup\ndatasets. It is only executed when plan_tags 'restore' is provided.",
                     "properties": [],
                     "steps": [
                         {
-                            "name": "SCAN_JCL",
-                            "properties": [
+                            "name": "MEMBER_RESTORE",
+                            "description": "This step restored the backup from the backup PDS.\n  # Invoke Bind operations",
+                            "properties": [],
+                            "artifacts": [
                                 {
-                                    "key": "template",
-                                    "value": "job_submit"
+                                    "name": "BAM1",
+                                    "properties": [
+                                        {
+                                            "key": "path",
+                                            "value": "bin/dbrm/BAM1.DBRM"
+                                        },
+                                        {
+                                            "key": "githash",
+                                            "value": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                        },
+                                        {
+                                            "key": "giturl",
+                                            "value": "https://github.com/dennis-behm/base.git"
+                                        },
+                                        {
+                                            "key": "dependency_set",
+                                            "value": [
+                                                {
+                                                    "lname": "BAD1SQL",
+                                                    "library": "SYSLIB",
+                                                    "category": "COPY",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
+                                                    "file": "base/src/copy/BAD1SQL.cpy",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "BAM1",
+                                                    "library": "SYSLIB",
+                                                    "category": "COPY",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
+                                                    "file": "base/src/copy/BAM1.cpy",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "BAD1REC",
+                                                    "library": "SYSLIB",
+                                                    "category": "SQL INCLUDE",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
+                                                    "file": "base/src/copy/BAD1REC.cpy",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "SQLCA",
+                                                    "library": "SYSLIB",
+                                                    "category": "SQL INCLUDE",
+                                                    "resolved": false,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "BAM1",
+                                                    "library": "DBEHM.BASE.MAIN.BLD.OBJ",
+                                                    "category": "LINK",
+                                                    "file": "DBEHM.BASE.MAIN.BLD.OBJ(BAM1)",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "DSNHLI",
+                                                    "library": "DBC0CFG.DB2.V12.SDSNLOAD",
+                                                    "category": "LINK",
+                                                    "file": "DBC0CFG.DB2.V12.SDSNLOAD(DSNHLI)",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "wd_manifest_index",
+                                            "value": 0
+                                        },
+                                        {
+                                            "key": "type",
+                                            "value": "DBRM"
+                                        }
+                                    ],
+                                    "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
                                 },
                                 {
-                                    "key": "var_job_submit",
-                                    "value": "jcl_expert_verification"
-                                }
-                            ],
-                            "artifacts": [
+                                    "name": "BAB1",
+                                    "properties": [
+                                        {
+                                            "key": "path",
+                                            "value": "bin/load/BAB1.LOAD"
+                                        },
+                                        {
+                                            "key": "githash",
+                                            "value": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                        },
+                                        {
+                                            "key": "giturl",
+                                            "value": "https://github.com/dennis-behm/base.git"
+                                        },
+                                        {
+                                            "key": "dependency_set",
+                                            "value": [
+                                                {
+                                                    "lname": "BAM1",
+                                                    "library": "SYSLIB",
+                                                    "category": "COPY",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
+                                                    "file": "base/src/copy/BAM1.cpy",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "BAB1",
+                                                    "library": "DBEHM.BASE.MAIN.BLD.OBJ",
+                                                    "category": "LINK",
+                                                    "file": "DBEHM.BASE.MAIN.BLD.OBJ(BAB1)",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "wd_manifest_index",
+                                            "value": 0
+                                        },
+                                        {
+                                            "key": "type",
+                                            "value": "LOAD"
+                                        }
+                                    ],
+                                    "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                },
+                                {
+                                    "name": "BAO1",
+                                    "properties": [
+                                        {
+                                            "key": "path",
+                                            "value": "bin/load/BAO1.LOAD"
+                                        },
+                                        {
+                                            "key": "githash",
+                                            "value": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                        },
+                                        {
+                                            "key": "giturl",
+                                            "value": "https://github.com/dennis-behm/base.git"
+                                        },
+                                        {
+                                            "key": "dependency_set",
+                                            "value": [
+                                                {
+                                                    "lname": "BAM1",
+                                                    "library": "SYSLIB",
+                                                    "category": "COPY",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
+                                                    "file": "base/src/copy/BAM1.cpy",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "BAO1",
+                                                    "library": "DBEHM.BASE.MAIN.BLD.OBJ",
+                                                    "category": "LINK",
+                                                    "file": "DBEHM.BASE.MAIN.BLD.OBJ(BAO1)",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "wd_manifest_index",
+                                            "value": 0
+                                        },
+                                        {
+                                            "key": "type",
+                                            "value": "LOAD"
+                                        }
+                                    ],
+                                    "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                },
+                                {
+                                    "name": "BAB1",
+                                    "properties": [
+                                        {
+                                            "key": "path",
+                                            "value": "bin/jcl/BAB1.JCL"
+                                        },
+                                        {
+                                            "key": "githash",
+                                            "value": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                        },
+                                        {
+                                            "key": "giturl",
+                                            "value": "https://github.com/dennis-behm/base.git"
+                                        },
+                                        {
+                                            "key": "wd_manifest_index",
+                                            "value": 0
+                                        },
+                                        {
+                                            "key": "type",
+                                            "value": "JCL"
+                                        }
+                                    ],
+                                    "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                },
                                 {
                                     "name": "BAD1",
                                     "properties": [
@@ -1302,11 +1408,359 @@ span.vlabel {
                                     "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
                                 },
                                 {
+                                    "name": "BAM1",
+                                    "properties": [
+                                        {
+                                            "key": "path",
+                                            "value": "bin/load/BAM1.LOAD"
+                                        },
+                                        {
+                                            "key": "githash",
+                                            "value": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                        },
+                                        {
+                                            "key": "giturl",
+                                            "value": "https://github.com/dennis-behm/base.git"
+                                        },
+                                        {
+                                            "key": "dependency_set",
+                                            "value": [
+                                                {
+                                                    "lname": "BAD1SQL",
+                                                    "library": "SYSLIB",
+                                                    "category": "COPY",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
+                                                    "file": "base/src/copy/BAD1SQL.cpy",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "BAM1",
+                                                    "library": "SYSLIB",
+                                                    "category": "COPY",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
+                                                    "file": "base/src/copy/BAM1.cpy",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "BAD1REC",
+                                                    "library": "SYSLIB",
+                                                    "category": "SQL INCLUDE",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
+                                                    "file": "base/src/copy/BAD1REC.cpy",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "SQLCA",
+                                                    "library": "SYSLIB",
+                                                    "category": "SQL INCLUDE",
+                                                    "resolved": false,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "BAM1",
+                                                    "library": "DBEHM.BASE.MAIN.BLD.OBJ",
+                                                    "category": "LINK",
+                                                    "file": "DBEHM.BASE.MAIN.BLD.OBJ(BAM1)",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "DSNHLI",
+                                                    "library": "DBC0CFG.DB2.V12.SDSNLOAD",
+                                                    "category": "LINK",
+                                                    "file": "DBC0CFG.DB2.V12.SDSNLOAD(DSNHLI)",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "wd_manifest_index",
+                                            "value": 0
+                                        },
+                                        {
+                                            "key": "type",
+                                            "value": "LOAD"
+                                        }
+                                    ],
+                                    "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                }
+                            ],
+                            "types": []
+                        }
+                    ],
+                    "types": []
+                },
+                {
+                    "name": "BIND",
+                    "description": "This action is applicable when we update a DBRM modules",
+                    "properties": [],
+                    "steps": [
+                        {
+                            "name": "DB2_BIND_PACKAGE",
+                            "properties": [],
+                            "artifacts": [
+                                {
+                                    "name": "BAM1",
+                                    "properties": [
+                                        {
+                                            "key": "path",
+                                            "value": "bin/dbrm/BAM1.DBRM"
+                                        },
+                                        {
+                                            "key": "githash",
+                                            "value": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                        },
+                                        {
+                                            "key": "giturl",
+                                            "value": "https://github.com/dennis-behm/base.git"
+                                        },
+                                        {
+                                            "key": "dependency_set",
+                                            "value": [
+                                                {
+                                                    "lname": "BAD1SQL",
+                                                    "library": "SYSLIB",
+                                                    "category": "COPY",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
+                                                    "file": "base/src/copy/BAD1SQL.cpy",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "BAM1",
+                                                    "library": "SYSLIB",
+                                                    "category": "COPY",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
+                                                    "file": "base/src/copy/BAM1.cpy",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "BAD1REC",
+                                                    "library": "SYSLIB",
+                                                    "category": "SQL INCLUDE",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
+                                                    "file": "base/src/copy/BAD1REC.cpy",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "SQLCA",
+                                                    "library": "SYSLIB",
+                                                    "category": "SQL INCLUDE",
+                                                    "resolved": false,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "BAM1",
+                                                    "library": "DBEHM.BASE.MAIN.BLD.OBJ",
+                                                    "category": "LINK",
+                                                    "file": "DBEHM.BASE.MAIN.BLD.OBJ(BAM1)",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "DSNHLI",
+                                                    "library": "DBC0CFG.DB2.V12.SDSNLOAD",
+                                                    "category": "LINK",
+                                                    "file": "DBC0CFG.DB2.V12.SDSNLOAD(DSNHLI)",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "wd_manifest_index",
+                                            "value": 0
+                                        },
+                                        {
+                                            "key": "type",
+                                            "value": "DBRM"
+                                        }
+                                    ],
+                                    "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                }
+                            ],
+                            "types": []
+                        },
+                        {
+                            "name": "DB2_BIND_PLAN",
+                            "properties": [],
+                            "artifacts": [
+                                {
+                                    "name": "BAM1",
+                                    "properties": [
+                                        {
+                                            "key": "path",
+                                            "value": "bin/dbrm/BAM1.DBRM"
+                                        },
+                                        {
+                                            "key": "githash",
+                                            "value": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                        },
+                                        {
+                                            "key": "giturl",
+                                            "value": "https://github.com/dennis-behm/base.git"
+                                        },
+                                        {
+                                            "key": "dependency_set",
+                                            "value": [
+                                                {
+                                                    "lname": "BAD1SQL",
+                                                    "library": "SYSLIB",
+                                                    "category": "COPY",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
+                                                    "file": "base/src/copy/BAD1SQL.cpy",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "BAM1",
+                                                    "library": "SYSLIB",
+                                                    "category": "COPY",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
+                                                    "file": "base/src/copy/BAM1.cpy",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "BAD1REC",
+                                                    "library": "SYSLIB",
+                                                    "category": "SQL INCLUDE",
+                                                    "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
+                                                    "file": "base/src/copy/BAD1REC.cpy",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "SQLCA",
+                                                    "library": "SYSLIB",
+                                                    "category": "SQL INCLUDE",
+                                                    "resolved": false,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "BAM1",
+                                                    "library": "DBEHM.BASE.MAIN.BLD.OBJ",
+                                                    "category": "LINK",
+                                                    "file": "DBEHM.BASE.MAIN.BLD.OBJ(BAM1)",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                },
+                                                {
+                                                    "lname": "DSNHLI",
+                                                    "library": "DBC0CFG.DB2.V12.SDSNLOAD",
+                                                    "category": "LINK",
+                                                    "file": "DBC0CFG.DB2.V12.SDSNLOAD(DSNHLI)",
+                                                    "resolved": true,
+                                                    "excluded": false
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "wd_manifest_index",
+                                            "value": 0
+                                        },
+                                        {
+                                            "key": "type",
+                                            "value": "DBRM"
+                                        }
+                                    ],
+                                    "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                }
+                            ],
+                            "types": []
+                        }
+                    ],
+                    "types": [
+                        {
+                            "name": "DBRM"
+                        }
+                    ]
+                }
+            ],
+            "is_artifact": true,
+            "types": [
+                {
+                    "name": "LOAD"
+                },
+                {
+                    "name": "DBRM"
+                },
+                {
+                    "name": "CICSLOAD"
+                },
+                {
+                    "name": "MAPLOAD"
+                },
+                {
+                    "name": "JCL"
+                }
+            ],
+            "tags": [
+                "restore",
+                "never"
+            ]
+        },
+        {
+            "name": "VERIFICATION",
+            "description": "This action block verifies that the deployed JCLs are correct.\nIt uses the JCL Expert to scan and validate them. This showcases\nhow the conditional deployment 'loop' keyword can be used.",
+            "properties": [],
+            "actions": [
+                {
+                    "name": "JCLEXPERT",
+                    "description": "Invoke JCL expert interface for a single member of a dataset",
+                    "properties": [],
+                    "steps": [
+                        {
+                            "name": "SCAN_JCL",
+                            "properties": [
+                                {
+                                    "key": "template",
+                                    "value": "job_submit"
+                                },
+                                {
+                                    "key": "var_job_submit",
+                                    "value": "jcl_expert_verification"
+                                }
+                            ],
+                            "artifacts": [
+                                {
                                     "name": "BAB1",
                                     "properties": [
                                         {
                                             "key": "path",
                                             "value": "bin/jcl/BAB1.JCL"
+                                        },
+                                        {
+                                            "key": "githash",
+                                            "value": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                        },
+                                        {
+                                            "key": "giturl",
+                                            "value": "https://github.com/dennis-behm/base.git"
+                                        },
+                                        {
+                                            "key": "wd_manifest_index",
+                                            "value": 0
+                                        },
+                                        {
+                                            "key": "type",
+                                            "value": "JCL"
+                                        }
+                                    ],
+                                    "hash": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
+                                },
+                                {
+                                    "name": "BAD1",
+                                    "properties": [
+                                        {
+                                            "key": "path",
+                                            "value": "bin/jcl/BAD1.JCL"
                                         },
                                         {
                                             "key": "githash",
@@ -1357,9 +1811,9 @@ span.vlabel {
         {
             "name": "base",
             "description": "base",
-            "version": "20250625.123312.660",
+            "version": "20250627.085247.296",
             "annotations": {
-                "creationTimestamp": "20250625.123312.660",
+                "creationTimestamp": "20250627.085247.296",
                 "scmInfo": {
                     "type": "git",
                     "uri": "https://github.com/dennis-behm/base.git",
@@ -1367,7 +1821,7 @@ span.vlabel {
                     "shortCommit": "ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6"
                 },
                 "packageInfo": {
-                    "uri": "http://10.3.20.231:8081/artifactory/base-dbehm-repo-local/release/rel-1.0.0/base-rel-1.0.0-2025-06-25_12-32-36.tar",
+                    "uri": "http://10.3.20.231:8081/artifactory/base-dbehm-repo-local/release/rel-1.0.0/base-rel-1.0.0-2025-06-27_08-52-10.tar",
                     "type": "artifactRepository"
                 },
                 "external_dependencies": []

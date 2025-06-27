@@ -2,12 +2,12 @@ gitClone.sh: [INFO] Git Clone Wrapper. Version=1.2.0
 gitClone.sh: [INFO] **************************************************************
 gitClone.sh: [INFO] ** Start Git Clone on HOST/USER: z/OS ZT01 01.00 03 8561/BPXROOT
 gitClone.sh: [INFO] **          Repo: https://github.com/dennis-behm/base.git
-gitClone.sh: [INFO] **       WorkDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36
+gitClone.sh: [INFO] **       WorkDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10
 gitClone.sh: [INFO] **        GitDir: base
 gitClone.sh: [INFO] **           Ref: main -> main
 gitClone.sh: [INFO] **************************************************************
 
-gitClone.sh: [INFO] Preforming Git Clone of Repo https://github.com/dennis-behm/base.git, Ref main to /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36
+gitClone.sh: [INFO] Preforming Git Clone of Repo https://github.com/dennis-behm/base.git, Ref main to /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10
 gitClone.sh: [INFO] git clone -b main https://github.com/dennis-behm/base.git
 Cloning into 'base'...
 gitClone.sh: [INFO] Git Status for base
@@ -25,19 +25,19 @@ dbbBuild.sh: [WARNING] Db2 JDBC User not set. It is recommended to use Db2 for t
 dbbBuild.sh: [WARNING] Db2 JDBC Password file not set. It is recommended to use Db2 for the DBB Metadatastore.
 dbbBuild.sh: [INFO] **************************************************************
 dbbBuild.sh: [INFO] ** Start Fetch Build Dependencies on HOST/USER: z/OS ZT01 01.00 03 8561/DBEHM
-dbbBuild.sh: [INFO] **                     WorkDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36
+dbbBuild.sh: [INFO] **                     WorkDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10
 dbbBuild.sh: [INFO] **                 Application: base
 dbbBuild.sh: [INFO] **                      Branch: main
-dbbBuild.sh: [INFO] **     Application Descriptor : /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/applicationDescriptor.yml
+dbbBuild.sh: [INFO] **     Application Descriptor : /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/applicationDescriptor.yml
 dbbBuild.sh: [INFO] **          Use Package Cache : true
 dbbBuild.sh: [INFO] **     Archive Cache Location : /u/dbehm/cbs/.archiveCache
-dbbBuild.sh: [INFO] **    External Dependency Log : /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/externalDependenciesLog.yml
+dbbBuild.sh: [INFO] **    External Dependency Log : /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/externalDependenciesLog.yml
 dbbBuild.sh: [INFO] **************************************************************
 
 dbbBuild.sh: [INFO] ** Fetch Application Dependencies from Artifact Repository
-dbbBuild.sh: [INFO] ** CMD : groovyz /u/dbehm/git/dbb/Templates/Common-Backend-Scripts/utilities/fetchBuildDependencies.groovy -w /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36 -a /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/applicationDescriptor.yml -p /u/dbehm/git/dbb/Templates/Common-Backend-Scripts/pipelineBackend.config -b main -d /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/externalDependenciesLog.yml -c /u/dbehm/cbs/.archiveCache
+dbbBuild.sh: [INFO] ** CMD : groovyz /u/dbehm/git/dbb/Templates/Common-Backend-Scripts/utilities/fetchBuildDependencies.groovy -w /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10 -a /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/applicationDescriptor.yml -p /u/dbehm/git/dbb/Templates/Common-Backend-Scripts/pipelineBackend.config -b main -d /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/externalDependenciesLog.yml -c /u/dbehm/cbs/.archiveCache
 ** Script configuration:
-   applicationDescriptor -> /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/applicationDescriptor.yml
+   applicationDescriptor -> /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/applicationDescriptor.yml
    archiveCache -> /u/dbehm/cbs/.archiveCache
    artifactRepository.password -> xxxxxx 
    artifactRepository.url -> http://10.3.20.231:8081/artifactory
@@ -45,23 +45,23 @@ dbbBuild.sh: [INFO] ** CMD : groovyz /u/dbehm/git/dbb/Templates/Common-Backend-S
    artifactRepositoryNameSuffix -> dbehm-repo-local
    branch -> main
    enablePackageCache -> true
-   externalDependenciesFilePath -> /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/externalDependenciesLog.yml
+   externalDependenciesFilePath -> /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/externalDependenciesLog.yml
    pipelineBackendConfigFile -> /u/dbehm/git/dbb/Templates/Common-Backend-Scripts/pipelineBackend.config
-   workspace -> /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36
+   workspace -> /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10
 ** [INFO] No baseline record found for application 'base'.
-** Write ExternalDependency Record to /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/externalDependenciesLog.yml
+** Write ExternalDependency Record to /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/externalDependenciesLog.yml
 ** Build finished
 dbbBuild.sh: [INFO] Fetch Build Dependencies Completed. rc=0
 
 dbbBuild.sh: [INFO] **************************************************************
 dbbBuild.sh: [INFO] ** Started - DBB Build on HOST/USER: z/OS ZT01 01.00 03 8561/DBEHM
-dbbBuild.sh: [INFO] **          Workspace: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36
+dbbBuild.sh: [INFO] **          Workspace: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10
 dbbBuild.sh: [INFO] **        Application: base
 dbbBuild.sh: [INFO] **             Branch: main
 dbbBuild.sh: [INFO] **         Build Type: --fullBuild --debug
 dbbBuild.sh: [INFO] **                HLQ: DBEHM.BASE.MAIN.BLD
-dbbBuild.sh: [INFO] **             AppDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base
-dbbBuild.sh: [INFO] **             LogDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs
+dbbBuild.sh: [INFO] **             AppDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base
+dbbBuild.sh: [INFO] **             LogDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs
 dbbBuild.sh: [INFO] **     zAppBuild Path: /u/dbehm/git/dbb-zappbuild
 dbbBuild.sh: [INFO] **           DBB_HOME: /tmp/dbb_v302_patch_national_chars
 dbbBuild.sh: [INFO] **      DBB JDBC USER:
@@ -71,11 +71,11 @@ dbbBuild.sh: [INFO] **         DBB Logger: No
 dbbBuild.sh: [INFO] **************************************************************
 
 dbbBuild.sh: [INFO] Invoking the zAppBuild Build Framework.
-dbbBuild.sh: [INFO] /tmp/dbb_v302_patch_national_chars/bin/groovyz  /u/dbehm/git/dbb-zappbuild/build.groovy --workspace /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36 --application base --outDir /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs --hlq DBEHM.BASE.MAIN.BLD --verbose --logEncoding UTF-8 --propFiles /var/dbb/dbb-zappbuild-config/build.properties,/var/dbb/dbb-zappbuild-config/datasets.properties,/var/dbb/dbb-zappbuild-config/buildFolder.properties,/u/dbehm/git/workspace_test/skipJCL.properties --fullBuild --debug
+dbbBuild.sh: [INFO] /tmp/dbb_v302_patch_national_chars/bin/groovyz  /u/dbehm/git/dbb-zappbuild/build.groovy --workspace /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10 --application base --outDir /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs --hlq DBEHM.BASE.MAIN.BLD --verbose --logEncoding UTF-8 --propFiles /var/dbb/dbb-zappbuild-config/build.properties,/var/dbb/dbb-zappbuild-config/datasets.properties,/var/dbb/dbb-zappbuild-config/buildFolder.properties,/u/dbehm/git/workspace_test/skipJCL.properties --fullBuild --debug
 
-** Build start at 20250625.123255.096
+** Build start at 20250627.085229.803
 **************** Initialization of the build process ****************
-** Input args = --workspace /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36 --application base --outDir /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs --hlq DBEHM.BASE.MAIN.BLD --verbose --logEncoding UTF-8 --propFiles /var/dbb/dbb-zappbuild-config/build.properties,/var/dbb/dbb-zappbuild-config/datasets.properties,/var/dbb/dbb-zappbuild-config/buildFolder.properties,/u/dbehm/git/workspace_test/skipJCL.properties --fullBuild --debug
+** Input args = --workspace /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10 --application base --outDir /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs --hlq DBEHM.BASE.MAIN.BLD --verbose --logEncoding UTF-8 --propFiles /var/dbb/dbb-zappbuild-config/build.properties,/var/dbb/dbb-zappbuild-config/datasets.properties,/var/dbb/dbb-zappbuild-config/buildFolder.properties,/u/dbehm/git/workspace_test/skipJCL.properties --fullBuild --debug
 ** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/build.properties
 ** Loading zAppBuild build properties
 ** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/datasets.properties
@@ -101,27 +101,27 @@ dbbBuild.sh: [INFO] /tmp/dbb_v302_patch_national_chars/bin/groovyz  /u/dbehm/git
 ** Loading default application properties
 ** Loading property file /u/dbehm/git/dbb-zappbuild/build-conf/defaultzAppBuildConf.properties
 ** Loading application specific properties
-** applicationConfDir = /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf
-** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf/application.properties
-** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf/file.properties
-** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf/bind.properties
-** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf/Assembler.properties
-** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf/BMS.properties
-** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf/Cobol.properties
-** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf/LinkEdit.properties
-** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf/bind.properties
-** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf/PLI.properties
-** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf/MFS.properties
-** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf/PSBgen.properties
-** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf/DBDgen.properties
-** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf/ACBgen.properties
-** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf/REXX.properties
-** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf/TazUnitTest.properties
-** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf/Transfer.properties
-** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf/CRB.properties
-** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf/CPP.properties
-** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf/reports.properties
-** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf/languageConfigurationMapping.properties
+** applicationConfDir = /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf/application.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf/file.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf/bind.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf/Assembler.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf/BMS.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf/Cobol.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf/LinkEdit.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf/bind.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf/PLI.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf/MFS.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf/PSBgen.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf/DBDgen.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf/ACBgen.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf/REXX.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf/TazUnitTest.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf/Transfer.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf/CRB.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf/CPP.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf/reports.properties
+** Loading property file /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf/languageConfigurationMapping.properties
 ** Loading property file /var/dbb/dbb-zappbuild-config/build.properties
 ** Loading property file /var/dbb/dbb-zappbuild-config/datasets.properties
 ** Loading property file /var/dbb/dbb-zappbuild-config/buildFolder.properties
@@ -177,17 +177,17 @@ acbgen_tempOptions=cyl space(5,5) unit(vio) lrecl(80) recfm(f,b) new
 addSubmodulesToBuildList=false::**/*.cbl
 application=base
 applicationBuildGroup=base-main
-applicationBuildLabel=build.20250625.123255.096
+applicationBuildLabel=build.20250627.085229.803
 applicationCollectionName=base-main
-applicationConfDir=/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/application-conf
+applicationConfDir=/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/application-conf
 applicationConfRootDir=
 applicationCurrentBranch=main
 applicationDefaultPropFiles=defaultzAppBuildConf.properties
 applicationOutputsCollectionName=base-main-outputs
 applicationPropFiles=file.properties,bind.properties,Assembler.properties,BMS.properties,Cobol.properties,LinkEdit.properties,bind.properties,PLI.properties,MFS.properties,PSBgen.properties,DBDgen.properties,ACBgen.properties,REXX.properties,TazUnitTest.properties,Transfer.properties,CRB.properties,CPP.properties,reports.properties,languageConfigurationMapping.properties
 applicationSrcDirs=base
-asmCopySearch=search:[SYSLIB:COPY]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/maclib/*.mac
-asmMacroSearch=search:[SYSLIB:MACRO]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/maclib/*.mac
+asmCopySearch=search:[SYSLIB:COPY]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/maclib/*.mac
+asmMacroSearch=search:[SYSLIB:MACRO]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/maclib/*.mac
 assember_cicsprecompiler=DFHEAP1$
 assembler_asmaOptFile=
 assembler_assemblySyslibConcatenation=
@@ -201,7 +201,7 @@ assembler_debugPDS=DBEHM.BASE.MAIN.BLD.EQALANGX
 assembler_debugParms=ADATA
 assembler_dependenciesCopyMode=TEXT
 assembler_dependenciesDatasetMapping=assembler_macroPDS
-assembler_dependencySearch=search:[SYSLIB:MACRO]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/maclib/*.macsearch:[SYSLIB:COPY]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/maclib/*.mac
+assembler_dependencySearch=search:[SYSLIB:MACRO]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/maclib/*.macsearch:[SYSLIB:COPY]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/maclib/*.mac
 assembler_deployType=LOAD
 assembler_deployTypeCICS=CICSLOAD
 assembler_deployTypeDLI=IMSLOAD
@@ -251,7 +251,7 @@ bind_performBindPlan=false
 bind_plan=
 bind_plan_pklist=
 bind_qualifier=
-bmsSearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/bms/*.bms
+bmsSearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/bms/*.bms
 bms_assembler=ASMA90
 bms_compileParms=SYSPARM(MAP),DECK,NOOBJECT
 bms_copyGenParms=SYSPARM(DSECT),DECK,NOOBJECT
@@ -275,7 +275,7 @@ bms_storeSSI=true
 bms_tempOptions=cyl space(5,5) unit(vio) lrecl(80) recfm(f,b) new
 buildListFileExt=txt
 buildOrder=BMS.groovy,MFS.groovy,Cobol.groovy,Assembler.groovy,PLI.groovy,LinkEdit.groovy,DBDgen.groovy,PSBgen.groovy,Transfer.groovy,CRB.groovy,zCEE2.groovy
-buildOutDir=/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs
+buildOutDir=/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs
 buildPropFiles=datasets.properties,Assembler.properties,BMS.properties,MFS.properties,PSBgen.properties,DBDgen.properties,ACBgen.properties,Cobol.properties,LinkEdit.properties,PLI.properties,ZunitConfig.properties
 cobol_BMS_PDS=${team}.BMS.COPY
 cobol_compileCICSParms=CICS
@@ -296,7 +296,7 @@ cobol_dependenciesCopyMode=BINARY::**/*.OBJ
 cobol_dependenciesCopyMode=TEXT
 cobol_dependenciesDatasetMapping=cobol_cpyPDS
 cobol_dependenciesDatasetMapping=cobol_import_objPDS::**/*.OBJ
-cobol_dependencySearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/src/copy/*.cpy
+cobol_dependencySearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/src/copy/*.cpy
 cobol_deployType=LOAD
 cobol_deployTypeCICS=CICSLOAD
 cobol_deployTypeDLI=IMSLOAD
@@ -336,8 +336,8 @@ cobol_test_srcOptions=cyl space(1,1) lrecl(80) dsorg(PO) recfm(F,B) dsntype(libr
 cobol_testcase_loadPDS=DBEHM.BASE.MAIN.BLD.TEST.LOAD
 cobol_testcase_srcPDS=DBEHM.BASE.MAIN.BLD.TEST.COBOL
 continueOnScanFailure=true
-copybookSearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/src/copy/*.cpy
-cppHeaderSearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/headers/*.h
+copybookSearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/src/copy/*.cpy
+cppHeaderSearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/headers/*.h
 cpp_assemblySyslibConcatenation=
 cpp_compileCICSParms=CICS
 cpp_compileDebugParms=TEST
@@ -347,7 +347,7 @@ cpp_compileSQLParms=SQL
 cpp_compileSyslibConcatenation=
 cpp_dependenciesCopyMode=TEXT
 cpp_dependenciesDatasetMapping=cpp_headerPDS
-cpp_dependencySearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/headers/*.h
+cpp_dependencySearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/headers/*.h
 cpp_deployType=LOAD
 cpp_deployTypeCICS=CICSLOAD
 cpp_deployTypeDLI=IMSLOAD
@@ -465,7 +465,7 @@ epscmort.cbl=languageConfigProps02
 epsmpmt.cbl=languageConfigProps01
 epsnbrvl.cbl=languageConfigProps01
 excludeFileList=.*,**/.*,**/*.xml,**/*.groovy,**/*.json,**/*.md,**/application-conf/*.*
-eztMacSearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/eztmacros/*.eztm
+eztMacSearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/eztmacros/*.eztm
 formatConsoleOutput=false
 fullBuild=true
 generateDb2BindInfoRecord=true
@@ -476,14 +476,14 @@ global_instreamDataTempAllocation=tracks space(5,5) unit(vio) lrecl(80) recfm(f,
 hlq=DBEHM.BASE.MAIN.BLD
 impactBuildOnBuildPropertyChanges=false
 impactBuildOnBuildPropertyList=[assembler_pgmParms,assembler_db2precompilerParms,assembler_cicsprecompilerParms,bms_copyGenParms,bms_compileParms,bms_linkEditParms,cobol_compilerVersion,cobol_compileParms,cobol_compileCICSParms,cobol_compileSQLParms,dbdgen_pgmParms,linkEdit_parms,mfs_phase1Parms,mfs_phase2Parms,pli_compilerVersion,pli_compileParms,pli_compileCICSParms,pli_compileSQLParms,acbgen_pgmParms,psbgen_pgmParms,psbgen_linkEditParms]
-impactSearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/src/copy/*.cpysearch:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/plinc/*.cpysearch:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/headers/*.hsearch:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/bms/*.bmssearch:[:LINK]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/src/cobol/*.cblsearch:[SYSLIB:COPY]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/rexx/*.rexxsearch:[:ZUNITINC]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/cobol/*.cbl;base/pli/*.pli;base/tests/*.cbl;base/tests/*.plisearch:[SYSPROG:PROGRAMDEPENDENCY]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/cobol/*.cbl;base/pli/*.plisearch:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/eztmacros/*.eztm
+impactSearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/src/copy/*.cpysearch:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/plinc/*.cpysearch:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/headers/*.hsearch:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/bms/*.bmssearch:[:LINK]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/src/cobol/*.cblsearch:[SYSLIB:COPY]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/rexx/*.rexxsearch:[:ZUNITINC]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/cobol/*.cbl;base/pli/*.pli;base/tests/*.cbl;base/tests/*.plisearch:[SYSPROG:PROGRAMDEPENDENCY]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/cobol/*.cbl;base/pli/*.plisearch:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/eztmacros/*.eztm
 isCICS=true::**/cobol/member.cbl
 isIMS=true::**/cobol/DLIBATCH.cbl
 isMQ=true::**/cobol/member.cbl
 isSQL=true::**/cobol/member.cbl
 jobCard=
 linkEdit_parms=MAP,RENT,COMPAT(PM5)
-linkSearch=search:[:LINK]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/src/cobol/*.cbl
+linkSearch=search:[:LINK]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/src/cobol/*.cbl
 linkedit_deployType=LOAD
 linkedit_deployTypeCICS=CICSLOAD
 linkedit_deployTypeDLI=IMSLOAD
@@ -528,7 +528,7 @@ mfs_srcOptions=cyl space(1,1) lrecl(80) dsorg(PO) blksize(32720) recfm(F,B) dsnt
 mfs_srcPDS=DBEHM.BASE.MAIN.BLD.MFS
 mfs_tempOptions=cyl space(5,5) unit(vio) new
 mfs_tformatPDS=DBEHM.BASE.MAIN.BLD.TFORMAT
-outDir=/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs
+outDir=/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs
 pli_BMS_PDS=${team}.BMS.COPY
 pli_compileCICSParms=SYSTEM(CICS),PP(MACRO,CICS)
 pli_compileDebugParms=TEST
@@ -545,7 +545,7 @@ pli_dbrmPDS=DBEHM.BASE.MAIN.BLD.DBRM
 pli_dependenciesAlternativeLibraryNameMapping=
 pli_dependenciesCopyMode=TEXT
 pli_dependenciesDatasetMapping=pli_incPDS
-pli_dependencySearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/plinc/*.cpy
+pli_dependencySearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/plinc/*.cpy
 pli_deployType=LOAD
 pli_deployTypeCICS=CICSLOAD
 pli_deployTypeDLI=IMSLOAD
@@ -583,7 +583,7 @@ pli_test_srcDatasets=DBEHM.BASE.MAIN.BLD.TEST.PLI
 pli_test_srcOptions=cyl space(1,1) lrecl(80) dsorg(PO) recfm(F,B) dsntype(library)
 pli_testcase_loadPDS=DBEHM.BASE.MAIN.BLD.TEST.LOAD
 pli_testcase_srcPDS=DBEHM.BASE.MAIN.BLD.TEST.PLI
-pliincludeSearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/plinc/*.cpy
+pliincludeSearch=search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/plinc/*.cpy
 propFiles=/var/dbb/dbb-zappbuild-config/build.properties,/var/dbb/dbb-zappbuild-config/datasets.properties,/var/dbb/dbb-zappbuild-config/buildFolder.properties,/u/dbehm/git/workspace_test/skipJCL.properties
 propertyFileExtension=properties
 propertyFilePath=properties
@@ -619,7 +619,7 @@ reportExternalImpactsCollectionPatterns=.*-master.*
 requiredBuildProperties=buildOrder,buildListFileExt
 requiredDBBToolkitVersion=2.0.2
 resolveSubsystems=false
-rexxCopySearch=search:[SYSLIB:COPY]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/rexx/*.rexx
+rexxCopySearch=search:[SYSLIB:COPY]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/rexx/*.rexx
 rexx_cexecDatasets=DBEHM.BASE.MAIN.BLD.CEXEC
 rexx_cexecOptions=cyl space(1,1) lrecl(80) recfm(F,B) blksize(27920) DSORG(PO) dsntype(pds) dir(10)
 rexx_cexecPDS=DBEHM.BASE.MAIN.BLD.CEXEC
@@ -628,7 +628,7 @@ rexx_compileMaxRC=4
 rexx_compileParms=OBJECT PRINT XREF CEXEC
 rexx_compileSyslibConcatenation=
 rexx_compiler=REXXCOMP
-rexx_dependencySearch=search:[SYSLIB:COPY]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/rexx/*.rexx
+rexx_dependencySearch=search:[SYSLIB:COPY]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/rexx/*.rexx
 rexx_deployType=CLIST
 rexx_fileBuildRank=
 rexx_impactPropertyList=rexx_compileParms
@@ -654,17 +654,17 @@ rexx_srcPDS=DBEHM.BASE.MAIN.BLD.REXX
 rexx_tempOptions=cyl space(5,5) unit(vio) lrecl(80) recfm(f,b) new
 skipImpactCalculationList=
 skipStoringLogicalFile=true::**/*.jcl
-startTime=20250625.123255.096
+startTime=20250627.085229.803
 systemDatasets=datasets.properties
-tazRecordingFileSearch=search:[SYSPLAY:]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/tests/*.rec
-tazTestConfigSearch=search:[:ZUNITINC]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/cobol/*.cbl;base/pli/*.pli;base/tests/*.cbl;base/tests/*.pli
-tazTestcasePgmSearch=search:[SYSPROG:PROGRAMDEPENDENCY]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/cobol/*.cbl;base/pli/*.pli
+tazRecordingFileSearch=search:[SYSPLAY:]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/tests/*.rec
+tazTestConfigSearch=search:[:ZUNITINC]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/cobol/*.cbl;base/pli/*.pli;base/tests/*.cbl;base/tests/*.pli
+tazTestcasePgmSearch=search:[SYSPROG:PROGRAMDEPENDENCY]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/cobol/*.cbl;base/pli/*.pli
 tazunittest_bzucfgPDS=DBEHM.BASE.MAIN.BLD.BZU.BZUCFG
 tazunittest_bzuplayPDS=DBEHM.BASE.MAIN.BLD.BZU.BZUPLAY
 tazunittest_bzureportPDS=DBEHM.BASE.MAIN.BLD.BZU.BZURPT
 tazunittest_dependenciesCopyMode=BINARY
 tazunittest_dependenciesDatasetMapping=tazunittest_bzuplayPDS
-tazunittest_dependencySearch=search:[SYSPLAY:]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/tests/*.rec
+tazunittest_dependencySearch=search:[SYSPLAY:]/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/tests/*.rec
 tazunittest_eqaplayParms=STOP=E,REPORT=XML
 tazunittest_jobCard=//TAZTEST JOB ,MSGCLASS=H,CLASS=A,NOTIFY=&SYSUID,REGION=0M
 tazunittest_loadDatasets=DBEHM.BASE.MAIN.BLD.BZU.BZUPLAY
@@ -692,7 +692,7 @@ transfer_requiredBuildProperties=transfer_srcPDS,transfer_dsOptions,transfer_dep
 transfer_srcPDS=DBEHM.BASE.MAIN.BLD.SOURCE
 transfer_xmlPDS=DBEHM.BASE.MAIN.BLD.XML
 verbose=true
-workspace=/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36
+workspace=/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10
 zAppBuildDir=/u/dbehm/git/dbb-zappbuild
 zcee2_ARA_packageArtifacts=true
 zcee2_inputType=PROJECT
@@ -706,8 +706,8 @@ zcee3_shellEnvironment=bash
 ** Running DBB Toolkit Version 3.0.2 12-Jun-2025 18:54:20 
 required props = buildOrder,buildListFileExt
 ** File MetadataStore initialized
-** Build output located at /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs
-** Build result created for BuildGroup:base-main BuildLabel:build.20250625.123255.096
+** Build output located at /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs
+** Build result created for BuildGroup:base-main BuildLabel:build.20250627.085229.803
 ** Loading DBB scanner mapping configuration dbb.scannerMapping
 ************* Creation and processing of the build list *************
 ** --fullBuild option selected. Building all programs for application base. Recreating DBB collections.
@@ -717,7 +717,7 @@ required props = buildOrder,buildListFileExt
 ** Created collection base-main
 ** Created collection base-main-outputs
 *** Sorted list of changed files: [base/src/cobol/BAO1.cbl, base/scripts/ts1_change_base_logs/deploy-logs/evidences/evidence.yaml, base/src/cobol/BAB1.cbl, base/scripts/ts1_delete_base_logs/deploy-logs/evidences/evidence.yaml, base/applicationDescriptor.yml, base/src/db2defs/BAD1.db2table, base/src/copy/BAD1SQL.cpy, base/scripts/ts1_delete_base_logs/deploymentPlanReport.html, base/src/cicsdefs/BAO1.cics, base/src/jcl/BAD1.jcl, base/scripts/ts1_change_base_logs/deploymentPlan.yaml, base/scripts/ts1_change_base_tarOnly.sh, base/scripts/ts1_delete_base_logs/deploymentPlan.yaml, base/scripts/ts1_change_base_logs/ts1_change_base.log, base/src/copy/BAD1REC.cpy, base/src/jcl/BAB1.jcl, base/scripts/ts1_change_base_logs/deploymentPlanReport.html, base/scripts/ts1_delete_base_logs/ts1_delete_base.log, base/src/copy/BAM1.cpy, base/src/cobol/BAM1.cbl, base/scripts/ts1_change_base.sh, base/scripts/ts1_delete_base.sh]
-*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/src/cobol/BAO1.cbl' with class com.ibm.dbb.dependency.DependencyScanner
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/src/cobol/BAO1.cbl' with class com.ibm.dbb.dependency.DependencyScanner
 *** Logical file for 'base/src/cobol/BAO1.cbl' =
 {
   "lname": "BAO1",
@@ -735,7 +735,7 @@ required props = buildOrder,buildListFileExt
     }
   ]
 }
-*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/scripts/ts1_change_base_logs/deploy-logs/evidences/evidence.yaml' with class com.ibm.dbb.dependency.DummyScanner
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/scripts/ts1_change_base_logs/deploy-logs/evidences/evidence.yaml' with class com.ibm.dbb.dependency.DummyScanner
 *** Logical file for 'base/scripts/ts1_change_base_logs/deploy-logs/evidences/evidence.yaml' =
 {
   "lname": "EVIDENCE",
@@ -746,7 +746,7 @@ required props = buildOrder,buildListFileExt
   "dli": false,
   "mq": false
 }
-*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/src/cobol/BAB1.cbl' with class com.ibm.dbb.dependency.DependencyScanner
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/src/cobol/BAB1.cbl' with class com.ibm.dbb.dependency.DependencyScanner
 *** Logical file for 'base/src/cobol/BAB1.cbl' =
 {
   "lname": "BAB1",
@@ -764,7 +764,7 @@ required props = buildOrder,buildListFileExt
     }
   ]
 }
-*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/scripts/ts1_delete_base_logs/deploy-logs/evidences/evidence.yaml' with class com.ibm.dbb.dependency.DummyScanner
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/scripts/ts1_delete_base_logs/deploy-logs/evidences/evidence.yaml' with class com.ibm.dbb.dependency.DummyScanner
 *** Logical file for 'base/scripts/ts1_delete_base_logs/deploy-logs/evidences/evidence.yaml' =
 {
   "lname": "EVIDENCE",
@@ -775,7 +775,7 @@ required props = buildOrder,buildListFileExt
   "dli": false,
   "mq": false
 }
-*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/applicationDescriptor.yml' with class com.ibm.dbb.dependency.DummyScanner
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/applicationDescriptor.yml' with class com.ibm.dbb.dependency.DummyScanner
 *** Logical file for 'base/applicationDescriptor.yml' =
 {
   "lname": "APPLICATIONDESCRIPTOR",
@@ -786,7 +786,7 @@ required props = buildOrder,buildListFileExt
   "dli": false,
   "mq": false
 }
-*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/src/db2defs/BAD1.db2table' with class com.ibm.dbb.dependency.DummyScanner
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/src/db2defs/BAD1.db2table' with class com.ibm.dbb.dependency.DummyScanner
 *** Logical file for 'base/src/db2defs/BAD1.db2table' =
 {
   "lname": "BAD1",
@@ -797,7 +797,7 @@ required props = buildOrder,buildListFileExt
   "dli": false,
   "mq": false
 }
-*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/src/copy/BAD1SQL.cpy' with class com.ibm.dbb.dependency.DependencyScanner
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/src/copy/BAD1SQL.cpy' with class com.ibm.dbb.dependency.DependencyScanner
 *** Logical file for 'base/src/copy/BAD1SQL.cpy' =
 {
   "lname": "BAD1SQL",
@@ -808,7 +808,7 @@ required props = buildOrder,buildListFileExt
   "dli": false,
   "mq": false
 }
-*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/scripts/ts1_delete_base_logs/deploymentPlanReport.html' with class com.ibm.dbb.dependency.DummyScanner
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/scripts/ts1_delete_base_logs/deploymentPlanReport.html' with class com.ibm.dbb.dependency.DummyScanner
 *** Logical file for 'base/scripts/ts1_delete_base_logs/deploymentPlanReport.html' =
 {
   "lname": "DEPLOYMENTPLANREPORT",
@@ -819,7 +819,7 @@ required props = buildOrder,buildListFileExt
   "dli": false,
   "mq": false
 }
-*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/src/cicsdefs/BAO1.cics' with class com.ibm.dbb.dependency.DummyScanner
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/src/cicsdefs/BAO1.cics' with class com.ibm.dbb.dependency.DummyScanner
 *** Logical file for 'base/src/cicsdefs/BAO1.cics' =
 {
   "lname": "BAO1",
@@ -830,8 +830,8 @@ required props = buildOrder,buildListFileExt
   "dli": false,
   "mq": false
 }
-*** The file '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/src/jcl/BAD1.jcl' is not added to DBB Metadatastore, but can be processed by build scripts.
-*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/scripts/ts1_change_base_logs/deploymentPlan.yaml' with class com.ibm.dbb.dependency.DummyScanner
+*** The file '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/src/jcl/BAD1.jcl' is not added to DBB Metadatastore, but can be processed by build scripts.
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/scripts/ts1_change_base_logs/deploymentPlan.yaml' with class com.ibm.dbb.dependency.DummyScanner
 *** Logical file for 'base/scripts/ts1_change_base_logs/deploymentPlan.yaml' =
 {
   "lname": "DEPLOYMENTPLAN",
@@ -842,7 +842,7 @@ required props = buildOrder,buildListFileExt
   "dli": false,
   "mq": false
 }
-*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/scripts/ts1_change_base_tarOnly.sh' with class com.ibm.dbb.dependency.DummyScanner
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/scripts/ts1_change_base_tarOnly.sh' with class com.ibm.dbb.dependency.DummyScanner
 *** Logical file for 'base/scripts/ts1_change_base_tarOnly.sh' =
 {
   "lname": "TS1_CHANGE_BASE_TARONLY",
@@ -853,7 +853,7 @@ required props = buildOrder,buildListFileExt
   "dli": false,
   "mq": false
 }
-*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/scripts/ts1_delete_base_logs/deploymentPlan.yaml' with class com.ibm.dbb.dependency.DummyScanner
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/scripts/ts1_delete_base_logs/deploymentPlan.yaml' with class com.ibm.dbb.dependency.DummyScanner
 *** Logical file for 'base/scripts/ts1_delete_base_logs/deploymentPlan.yaml' =
 {
   "lname": "DEPLOYMENTPLAN",
@@ -864,7 +864,7 @@ required props = buildOrder,buildListFileExt
   "dli": false,
   "mq": false
 }
-*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/scripts/ts1_change_base_logs/ts1_change_base.log' with class com.ibm.dbb.dependency.DummyScanner
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/scripts/ts1_change_base_logs/ts1_change_base.log' with class com.ibm.dbb.dependency.DummyScanner
 *** Logical file for 'base/scripts/ts1_change_base_logs/ts1_change_base.log' =
 {
   "lname": "TS1_CHANGE_BASE",
@@ -875,7 +875,7 @@ required props = buildOrder,buildListFileExt
   "dli": false,
   "mq": false
 }
-*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/src/copy/BAD1REC.cpy' with class com.ibm.dbb.dependency.DependencyScanner
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/src/copy/BAD1REC.cpy' with class com.ibm.dbb.dependency.DependencyScanner
 *** Logical file for 'base/src/copy/BAD1REC.cpy' =
 {
   "lname": "BAD1REC",
@@ -886,8 +886,8 @@ required props = buildOrder,buildListFileExt
   "dli": false,
   "mq": false
 }
-*** The file '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/src/jcl/BAB1.jcl' is not added to DBB Metadatastore, but can be processed by build scripts.
-*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/scripts/ts1_change_base_logs/deploymentPlanReport.html' with class com.ibm.dbb.dependency.DummyScanner
+*** The file '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/src/jcl/BAB1.jcl' is not added to DBB Metadatastore, but can be processed by build scripts.
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/scripts/ts1_change_base_logs/deploymentPlanReport.html' with class com.ibm.dbb.dependency.DummyScanner
 *** Logical file for 'base/scripts/ts1_change_base_logs/deploymentPlanReport.html' =
 {
   "lname": "DEPLOYMENTPLANREPORT",
@@ -898,7 +898,7 @@ required props = buildOrder,buildListFileExt
   "dli": false,
   "mq": false
 }
-*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/scripts/ts1_delete_base_logs/ts1_delete_base.log' with class com.ibm.dbb.dependency.DummyScanner
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/scripts/ts1_delete_base_logs/ts1_delete_base.log' with class com.ibm.dbb.dependency.DummyScanner
 *** Logical file for 'base/scripts/ts1_delete_base_logs/ts1_delete_base.log' =
 {
   "lname": "TS1_DELETE_BASE",
@@ -909,7 +909,7 @@ required props = buildOrder,buildListFileExt
   "dli": false,
   "mq": false
 }
-*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/src/copy/BAM1.cpy' with class com.ibm.dbb.dependency.DependencyScanner
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/src/copy/BAM1.cpy' with class com.ibm.dbb.dependency.DependencyScanner
 *** Logical file for 'base/src/copy/BAM1.cpy' =
 {
   "lname": "BAM1",
@@ -920,7 +920,7 @@ required props = buildOrder,buildListFileExt
   "dli": false,
   "mq": false
 }
-*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/src/cobol/BAM1.cbl' with class com.ibm.dbb.dependency.DependencyScanner
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/src/cobol/BAM1.cbl' with class com.ibm.dbb.dependency.DependencyScanner
 *** Logical file for 'base/src/cobol/BAM1.cbl' =
 {
   "lname": "BAM1",
@@ -953,7 +953,7 @@ required props = buildOrder,buildListFileExt
     }
   ]
 }
-*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/scripts/ts1_change_base.sh' with class com.ibm.dbb.dependency.DummyScanner
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/scripts/ts1_change_base.sh' with class com.ibm.dbb.dependency.DummyScanner
 *** Logical file for 'base/scripts/ts1_change_base.sh' =
 {
   "lname": "TS1_CHANGE_BASE",
@@ -964,7 +964,7 @@ required props = buildOrder,buildListFileExt
   "dli": false,
   "mq": false
 }
-*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/scripts/ts1_delete_base.sh' with class com.ibm.dbb.dependency.DummyScanner
+*** Scanning file '(/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/scripts/ts1_delete_base.sh' with class com.ibm.dbb.dependency.DummyScanner
 *** Logical file for 'base/scripts/ts1_delete_base.sh' =
 {
   "lname": "TS1_DELETE_BASE",
@@ -976,7 +976,7 @@ required props = buildOrder,buildListFileExt
   "mq": false
 }
 ** Storing 20 logical files in MetadataStore collection 'base-main'
-** Writing build list file to /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/buildList.txt
+** Writing build list file to /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/buildList.txt
 base/src/cobol/BAO1.cbl
 base/scripts/ts1_change_base_logs/deploy-logs/evidences/evidence.yaml
 base/src/cobol/BAB1.cbl
@@ -1009,13 +1009,13 @@ required props = cobol_srcPDS,cobol_cpyPDS,cobol_objPDS,cobol_loadPDS,cobol_comp
 ** Creating / verifying build dataset DBEHM.BASE.MAIN.BLD.LOAD
 *** (1/3) Building file base/src/cobol/BAB1.cbl
 *** Resolution rules for base/src/cobol/BAB1.cbl:
-search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/src/copy/*.cpy
+search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/src/copy/*.cpy
 *** Physical dependencies for base/src/cobol/BAB1.cbl:
 {
   "lname": "BAM1",
   "library": "SYSLIB",
   "category": "COPY",
-  "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+  "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
   "file": "base/src/copy/BAM1.cpy",
   "resolved": true,
   "excluded": false
@@ -1046,13 +1046,13 @@ Program attributes: CICS=false, SQL=false, DLI=false, MQ=false
 }
 *** (2/3) Building file base/src/cobol/BAM1.cbl
 *** Resolution rules for base/src/cobol/BAM1.cbl:
-search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/src/copy/*.cpy
+search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/src/copy/*.cpy
 *** Physical dependencies for base/src/cobol/BAM1.cbl:
 {
   "lname": "BAD1SQL",
   "library": "SYSLIB",
   "category": "COPY",
-  "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+  "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
   "file": "base/src/copy/BAD1SQL.cpy",
   "resolved": true,
   "excluded": false
@@ -1061,7 +1061,7 @@ search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild
   "lname": "BAM1",
   "library": "SYSLIB",
   "category": "COPY",
-  "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+  "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
   "file": "base/src/copy/BAM1.cpy",
   "resolved": true,
   "excluded": false
@@ -1070,7 +1070,7 @@ search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild
   "lname": "BAD1REC",
   "library": "SYSLIB",
   "category": "SQL INCLUDE",
-  "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+  "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
   "file": "base/src/copy/BAD1REC.cpy",
   "resolved": true,
   "excluded": false
@@ -1113,13 +1113,13 @@ Program attributes: CICS=false, SQL=true, DLI=false, MQ=false
 }
 *** (3/3) Building file base/src/cobol/BAO1.cbl
 *** Resolution rules for base/src/cobol/BAO1.cbl:
-search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/?path=base/src/copy/*.cpy
+search:/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/?path=base/src/copy/*.cpy
 *** Physical dependencies for base/src/cobol/BAO1.cbl:
 {
   "lname": "BAM1",
   "library": "SYSLIB",
   "category": "COPY",
-  "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/",
+  "sourceDir": "/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/",
   "file": "base/src/copy/BAM1.cpy",
   "resolved": true,
   "excluded": false
@@ -1156,33 +1156,33 @@ required props = transfer_srcPDS,transfer_dsOptions,transfer_deployType
 *** (2/2) Transferring file base/src/jcl/BAD1.jcl
 ** Copied base/src/jcl/BAD1.jcl to DBEHM.BASE.MAIN.BLD.JCL with copyMode TEXT and deployType JCL (rc = 0)
 ***************** Finalization of the build process *****************
-*** Obtaining hash for directory /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base
+*** Obtaining hash for directory /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base
 ** Setting property :githash:base : ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
 ** Setting property :giturl:base : https://github.com/dennis-behm/base.git
-** Writing build report data to /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/BuildReport.json
-** Writing build report to /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/BuildReport.html
-** Updating build result BuildGroup:base-main BuildLabel:build.20250625.123255.096
-** Build ended at Wed Jun 25 12:33:03 GMT+02:00 2025
+** Writing build report data to /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/BuildReport.json
+** Writing build report to /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/BuildReport.html
+** Updating build result BuildGroup:base-main BuildLabel:build.20250627.085229.803
+** Build ended at Fri Jun 27 08:52:37 GMT+02:00 2025
 ** Build State : CLEAN
 ** Total files processed : 5
-** Total build time  : 8.097 seconds
+** Total build time  : 7.869 seconds
 
 ** Build finished
 dbbBuild.sh: [INFO] DBB Build Complete. rc=0
 packageBuildOutputs.sh: [INFO] Package Build Outputs wrapper. Version=1.10
-packageBuildOutputs.sh: [INFO] The directory for the baseline package /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/baseline was not found.
+packageBuildOutputs.sh: [INFO] The directory for the baseline package /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/baseline was not found.
 packageBuildOutputs.sh: [INFO] **************************************************************
 packageBuildOutputs.sh: [INFO] ** Started - Package Build Outputs on HOST/USER: z/OS ZT01 01.00 03 8561/BPXROOT
-packageBuildOutputs.sh: [INFO] **                  WorkDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36
+packageBuildOutputs.sh: [INFO] **                  WorkDir: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10
 packageBuildOutputs.sh: [INFO] **                Application: base
 packageBuildOutputs.sh: [INFO] **                     Branch: main
-packageBuildOutputs.sh: [INFO] **      Application directory: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base
+packageBuildOutputs.sh: [INFO] **      Application directory: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base
 packageBuildOutputs.sh: [INFO] **           Type of pipeline: release
-packageBuildOutputs.sh: [INFO] **              Tar file Name: base-rel-1.0.0-2025-06-25_12-32-36.tar
-packageBuildOutputs.sh: [INFO] **       BuildReport Location: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs
+packageBuildOutputs.sh: [INFO] **              Tar file Name: base-rel-1.0.0-2025-06-27_08-52-10.tar
+packageBuildOutputs.sh: [INFO] **       BuildReport Location: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs
 packageBuildOutputs.sh: [INFO] **       PackagingScript Path: /u/dbehm/git/dbb/Templates/Common-Backend-Scripts/../../Pipeline/PackageBuildOutputs/PackageBuildOutputs.groovy
 packageBuildOutputs.sh: [INFO] **              Generate SBOM: false
-packageBuildOutputs.sh: [INFO] **   External Dependencies log: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/externalDependenciesLog.yml
+packageBuildOutputs.sh: [INFO] **   External Dependencies log: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/externalDependenciesLog.yml
 packageBuildOutputs.sh: [INFO] ** Publish to Artifact Repo: true
 packageBuildOutputs.sh: [INFO] **           ArtifactRepo Url: http://10.3.20.231:8081/artifactory
 packageBuildOutputs.sh: [INFO] **          ArtifactRepo User: admin
@@ -1193,21 +1193,21 @@ packageBuildOutputs.sh: [INFO] **                   DBB_HOME: /tmp/dbb_v302_patc
 packageBuildOutputs.sh: [INFO] **************************************************************
 
 packageBuildOutputs.sh: [INFO] Invoking the Package Build Outputs script.
-packageBuildOutputs.sh: [INFO] /tmp/dbb_v302_patch_national_chars/bin/groovyz  -cp /var/dbb/additionalLibraries/cyclonedx-core-java-8.0.3.jar:/var/dbb/additionalLibraries/jackson-annotations-2.16.1.jar:/var/dbb/additionalLibraries/jackson-core-2.16.1.jar:/var/dbb/additionalLibraries/jackson-databind-2.16.1.jar:/var/dbb/additionalLibraries/jackson-dataformat-xml-2.16.1.jar:/var/dbb/additionalLibraries/json-schema-validator-1.2.0.jar:/var/dbb/additionalLibraries/packageurl-java-1.5.0.jar /u/dbehm/git/dbb/Templates/Common-Backend-Scripts/../../Pipeline/PackageBuildOutputs/PackageBuildOutputs.groovy --workDir /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs --tarFileName base-rel-1.0.0-2025-06-25_12-32-36.tar --application base --branch main --applicationFolderPath /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base --addExtension --versionName rel-1.0.0 --externalDependenciesEvidences /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/externalDependenciesLog.yml --publish --artifactRepositoryUrl "http://10.3.20.231:8081/artifactory" --artifactRepositoryUser admin --artifactRepositoryPassword artifactoryadmin --artifactRepositoryName base-dbehm-repo-local --artifactRepositoryDirectory release
-** PackageBuildOutputs start at 20250625.123312.660
+packageBuildOutputs.sh: [INFO] /tmp/dbb_v302_patch_national_chars/bin/groovyz  -cp /var/dbb/additionalLibraries/cyclonedx-core-java-8.0.3.jar:/var/dbb/additionalLibraries/jackson-annotations-2.16.1.jar:/var/dbb/additionalLibraries/jackson-core-2.16.1.jar:/var/dbb/additionalLibraries/jackson-databind-2.16.1.jar:/var/dbb/additionalLibraries/jackson-dataformat-xml-2.16.1.jar:/var/dbb/additionalLibraries/json-schema-validator-1.2.0.jar:/var/dbb/additionalLibraries/packageurl-java-1.5.0.jar /u/dbehm/git/dbb/Templates/Common-Backend-Scripts/../../Pipeline/PackageBuildOutputs/PackageBuildOutputs.groovy --workDir /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs --tarFileName base-rel-1.0.0-2025-06-27_08-52-10.tar --application base --branch main --applicationFolderPath /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base --addExtension --versionName rel-1.0.0 --externalDependenciesEvidences /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/externalDependenciesLog.yml --publish --artifactRepositoryUrl "http://10.3.20.231:8081/artifactory" --artifactRepositoryUser admin --artifactRepositoryPassword artifactoryadmin --artifactRepositoryName base-dbehm-repo-local --artifactRepositoryDirectory release
+** PackageBuildOutputs start at 20250627.085247.296
 ** Properties at startup:
    addExtension -> true
    application -> base
-   applicationFolderPath -> /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base
+   applicationFolderPath -> /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base
    artifactRepository.directory -> release
    artifactRepository.password -> xxxxxx 
    artifactRepository.repo -> base-dbehm-repo-local
    artifactRepository.url -> http://10.3.20.231:8081/artifactory
    artifactRepository.user -> admin
    branch -> main
-   buildReportOrder -> [/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/BuildReport.json]
+   buildReportOrder -> [/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/BuildReport.json]
    copyModeMap -> ["COPYBOOK": "TEXT", "COPY": "TEXT", "DBRM": "BINARY", "LOAD": "LOAD", "JCL": "TEXT", "EQALANGX" : "BINARY", "OBJ" : "BINARY"]
-   externalDependenciesEvidences -> /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/externalDependenciesLog.yml
+   externalDependenciesEvidences -> /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/externalDependenciesLog.yml
    fileEncoding -> UTF-8
    generateConcertBuildManifest -> false
    generateSBOM -> false
@@ -1217,17 +1217,17 @@ packageBuildOutputs.sh: [INFO] /tmp/dbb_v302_patch_national_chars/bin/groovyz  -
    publicInterfacesDeployTypes -> OBJ
    publish -> true
    publishInterfaces -> true
-   startTime -> 20250625.123312.660
-   tarFileName -> base-rel-1.0.0-2025-06-25_12-32-36.tar
+   startTime -> 20250627.085247.296
+   tarFileName -> base-rel-1.0.0-2025-06-27_08-52-10.tar
    verbose -> false
    versionName -> rel-1.0.0
-   workDir -> /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs
-** Read build report data from '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/BuildReport.json'.
+   workDir -> /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs
+** Read build report data from '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/BuildReport.json'.
 ** Remove output records without deployType or with deployType=ZUNIT-TESTCASE
 *! Build output DBEHM.BASE.MAIN.BLD.OBJ(BAB1) with deployType 'OBJ' has been excluded from packaging.
 *! Build output DBEHM.BASE.MAIN.BLD.OBJ(BAM1) with deployType 'OBJ' has been excluded from packaging.
 *! Build output DBEHM.BASE.MAIN.BLD.OBJ(BAO1) with deployType 'OBJ' has been excluded from packaging.
-** 6 Build outputs detected in '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/BuildReport.json':
+** 6 Build outputs detected in '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/BuildReport.json':
 	'BAD1' from 'DBEHM.BASE.MAIN.BLD.JCL' with Deploy Type 'JCL'
 	'BAB1' from 'DBEHM.BASE.MAIN.BLD.JCL' with Deploy Type 'JCL'
 	'BAB1' from 'DBEHM.BASE.MAIN.BLD.LOAD' with Deploy Type 'LOAD'
@@ -1235,50 +1235,50 @@ packageBuildOutputs.sh: [INFO] /tmp/dbb_v302_patch_national_chars/bin/groovyz  -
 	'BAM1' from 'DBEHM.BASE.MAIN.BLD.LOAD' with Deploy Type 'LOAD'
 	'BAM1' from 'DBEHM.BASE.MAIN.BLD.DBRM' with Deploy Type 'DBRM'
 ** Total number of build outputs to package: 6
-** Copy 6 deployable artifacts to temporary package directory '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/tempPackageDir/bin'
-	Copy 'DBEHM.BASE.MAIN.BLD.JCL(BAD1)' to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/tempPackageDir/bin/jcl/BAD1.JCL' with DBB Copymode 'TEXT'
-	Copy 'DBEHM.BASE.MAIN.BLD.JCL(BAB1)' to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/tempPackageDir/bin/jcl/BAB1.JCL' with DBB Copymode 'TEXT'
-	Copy 'DBEHM.BASE.MAIN.BLD.LOAD(BAB1)' to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/tempPackageDir/bin/load/BAB1.LOAD' with DBB Copymode 'LOAD'
-	Copy 'DBEHM.BASE.MAIN.BLD.LOAD(BAO1)' to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/tempPackageDir/bin/load/BAO1.LOAD' with DBB Copymode 'LOAD'
-	Copy 'DBEHM.BASE.MAIN.BLD.LOAD(BAM1)' to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/tempPackageDir/bin/load/BAM1.LOAD' with DBB Copymode 'LOAD'
-	Copy 'DBEHM.BASE.MAIN.BLD.DBRM(BAM1)' to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/tempPackageDir/bin/dbrm/BAM1.DBRM' with DBB Copymode 'BINARY'
-** Copy 0 private interfaces to temporary package directory '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/tempPackageDir/lib'
-** Copy 3 public/shared Include Files from Application Folder to temporary package directory '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/tempPackageDir'
-	Copy '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/src/copy/BAD1REC.cpy' file to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/tempPackageDir/include/src/BAD1REC.cpy'
-	Copy '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/src/copy/BAD1SQL.cpy' file to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/tempPackageDir/include/src/BAD1SQL.cpy'
-	Copy '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/base/src/copy/BAM1.cpy' file to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/tempPackageDir/include/src/BAM1.cpy'
-** Generate Wazi Deploy Application Manifest file to /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/tempPackageDir/wazideploy_manifest.yml
-** Generate package build report order file to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/tempPackageDir/buildReportOrder.txt'
-** Copy packaging properties config file to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/tempPackageDir/packageBuildOutputs.properties'
-** Create tar file at /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/base-rel-1.0.0-2025-06-25_12-32-36.tar
-** Package '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/base-rel-1.0.0-2025-06-25_12-32-36.tar' successfully created.
-** Upload package to Artifact Repository 'http://10.3.20.231:8081/artifactory/base-dbehm-repo-local/release/rel-1.0.0/base-rel-1.0.0-2025-06-25_12-32-36.tar'.
-** ArtifactRepositoryHelper started for upload of /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/base-rel-1.0.0-2025-06-25_12-32-36.tar to http://10.3.20.231:8081/artifactory/base-dbehm-repo-local/release/rel-1.0.0/base-rel-1.0.0-2025-06-25_12-32-36.tar
-** Uploading /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/logs/base-rel-1.0.0-2025-06-25_12-32-36.tar to http://10.3.20.231:8081/artifactory/base-dbehm-repo-local/release/rel-1.0.0/base-rel-1.0.0-2025-06-25_12-32-36.tar...
+** Copy 6 deployable artifacts to temporary package directory '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/tempPackageDir/bin'
+	Copy 'DBEHM.BASE.MAIN.BLD.JCL(BAD1)' to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/tempPackageDir/bin/jcl/BAD1.JCL' with DBB Copymode 'TEXT'
+	Copy 'DBEHM.BASE.MAIN.BLD.JCL(BAB1)' to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/tempPackageDir/bin/jcl/BAB1.JCL' with DBB Copymode 'TEXT'
+	Copy 'DBEHM.BASE.MAIN.BLD.LOAD(BAB1)' to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/tempPackageDir/bin/load/BAB1.LOAD' with DBB Copymode 'LOAD'
+	Copy 'DBEHM.BASE.MAIN.BLD.LOAD(BAO1)' to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/tempPackageDir/bin/load/BAO1.LOAD' with DBB Copymode 'LOAD'
+	Copy 'DBEHM.BASE.MAIN.BLD.LOAD(BAM1)' to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/tempPackageDir/bin/load/BAM1.LOAD' with DBB Copymode 'LOAD'
+	Copy 'DBEHM.BASE.MAIN.BLD.DBRM(BAM1)' to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/tempPackageDir/bin/dbrm/BAM1.DBRM' with DBB Copymode 'BINARY'
+** Copy 0 private interfaces to temporary package directory '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/tempPackageDir/lib'
+** Copy 3 public/shared Include Files from Application Folder to temporary package directory '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/tempPackageDir'
+	Copy '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/src/copy/BAD1REC.cpy' file to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/tempPackageDir/include/src/BAD1REC.cpy'
+	Copy '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/src/copy/BAD1SQL.cpy' file to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/tempPackageDir/include/src/BAD1SQL.cpy'
+	Copy '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/base/src/copy/BAM1.cpy' file to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/tempPackageDir/include/src/BAM1.cpy'
+** Generate Wazi Deploy Application Manifest file to /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/tempPackageDir/wazideploy_manifest.yml
+** Generate package build report order file to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/tempPackageDir/buildReportOrder.txt'
+** Copy packaging properties config file to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/tempPackageDir/packageBuildOutputs.properties'
+** Create tar file at /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/base-rel-1.0.0-2025-06-27_08-52-10.tar
+** Package '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/base-rel-1.0.0-2025-06-27_08-52-10.tar' successfully created.
+** Upload package to Artifact Repository 'http://10.3.20.231:8081/artifactory/base-dbehm-repo-local/release/rel-1.0.0/base-rel-1.0.0-2025-06-27_08-52-10.tar'.
+** ArtifactRepositoryHelper started for upload of /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/base-rel-1.0.0-2025-06-27_08-52-10.tar to http://10.3.20.231:8081/artifactory/base-dbehm-repo-local/release/rel-1.0.0/base-rel-1.0.0-2025-06-27_08-52-10.tar
+** Uploading /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/logs/base-rel-1.0.0-2025-06-27_08-52-10.tar to http://10.3.20.231:8081/artifactory/base-dbehm-repo-local/release/rel-1.0.0/base-rel-1.0.0-2025-06-27_08-52-10.tar...
 ** Upload completed.
 ** Packaging completed successfully.
 ** Build finished
 packageBuildOutputs.sh: [INFO] Package Build Outputs Complete. rc=0
 wazideploy-generate.sh: [INFO] Generate Wazi Deploy Deployment Plan. Version=1.10
 wazideploy-generate.sh: [INFO] Invoking the ArtifactRepositoryHelper groovy script to compute Package Url.
-wazideploy-generate.sh: [INFO] /tmp/dbb_v302_patch_national_chars/bin/groovyz  /u/dbehm/git/dbb/Templates/Common-Backend-Scripts/../../Pipeline/PackageBuildOutputs/ArtifactRepositoryHelpers.groovy --computeArchiveUrl --tarFileName base-rel-1.0.0-2025-06-25_12-32-36.tar --versionName rel-1.0.0 --artifactRepositoryUrl "http://10.3.20.231:8081/artifactory" --artifactRepositoryName base-dbehm-repo-local --artifactRepositoryDirectory release
+wazideploy-generate.sh: [INFO] /tmp/dbb_v302_patch_national_chars/bin/groovyz  /u/dbehm/git/dbb/Templates/Common-Backend-Scripts/../../Pipeline/PackageBuildOutputs/ArtifactRepositoryHelpers.groovy --computeArchiveUrl --tarFileName base-rel-1.0.0-2025-06-27_08-52-10.tar --versionName rel-1.0.0 --artifactRepositoryUrl "http://10.3.20.231:8081/artifactory" --artifactRepositoryName base-dbehm-repo-local --artifactRepositoryDirectory release
 wazideploy-generate.sh: [INFO] Computation of Archive Url completed. rc=0
 wazideploy-generate.sh: [INFO] **************************************************************
 wazideploy-generate.sh: [INFO] ** Start Wazi Deploy Generation on HOST/USER: z/OS ZT01 01.00 03 8561/BPXROOT
 wazideploy-generate.sh: [INFO] **               Deployment Method: /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/deployment-method.yml
-wazideploy-generate.sh: [INFO] **       Generated Deployment Plan: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploymentPlan.yaml
-wazideploy-generate.sh: [INFO] **          Deployment Plan Report: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploymentPlanReport.html
-wazideploy-generate.sh: [INFO] **              Package Input File: http://10.3.20.231:8081/artifactory/base-dbehm-repo-local/release/rel-1.0.0/base-rel-1.0.0-2025-06-25_12-32-36.tar
-wazideploy-generate.sh: [INFO] **             Package Output File: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/applicationArchive.tar
+wazideploy-generate.sh: [INFO] **       Generated Deployment Plan: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploymentPlan.yaml
+wazideploy-generate.sh: [INFO] **          Deployment Plan Report: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploymentPlanReport.html
+wazideploy-generate.sh: [INFO] **              Package Input File: http://10.3.20.231:8081/artifactory/base-dbehm-repo-local/release/rel-1.0.0/base-rel-1.0.0-2025-06-27_08-52-10.tar
+wazideploy-generate.sh: [INFO] **             Package Output File: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/applicationArchive.tar
 wazideploy-generate.sh: [INFO] **              Configuration File: /var/WaziDeploy/config/WaziDeploy-ConfigFile.yml
 wazideploy-generate.sh: [INFO] **        Debug output is disabled.
 wazideploy-generate.sh: [INFO] **************************************************************
 
-wazideploy-generate --deploymentMethod /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/deployment-method.yml --deploymentPlan /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploymentPlan.yaml --packageInputFile http://10.3.20.231:8081/artifactory/base-dbehm-repo-local/release/rel-1.0.0/base-rel-1.0.0-2025-06-25_12-32-36.tar --deploymentPlanReport /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploymentPlanReport.html --packageOutputFile /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/applicationArchive.tar --configFile /var/WaziDeploy/config/WaziDeploy-ConfigFile.yml
+wazideploy-generate --deploymentMethod /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/deployment-method.yml --deploymentPlan /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploymentPlan.yaml --packageInputFile http://10.3.20.231:8081/artifactory/base-dbehm-repo-local/release/rel-1.0.0/base-rel-1.0.0-2025-06-27_08-52-10.tar --deploymentPlanReport /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploymentPlanReport.html --packageOutputFile /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/applicationArchive.tar --configFile /var/WaziDeploy/config/WaziDeploy-ConfigFile.yml
 
 * Read the deployment method from: /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/deployment-method.yml
 * Build the deployment plan from the deployment method with the deployment plan extension: WdDeploymentStateExtension
-* Read manifest from: /tmp/tmpeqiwcvky/wazideploy_manifest_1.yml
+* Read manifest from: /tmp/tmpa8hok2qr/wazideploy_manifest_1.yml
 ** Generic step CONFIG/READ CONFIGURATION/INCLUDE APPLICATION VARIABLES
 *** No item found
 ** Generic step CONFIG/READ CONFIGURATION/INCLUDE MIDDLEWARE VARIABLES
@@ -1291,9 +1291,7 @@ wazideploy-generate --deploymentMethod /u/dbehm/git/wazi-deploy-sample/plum-samp
 *** No item found
 ** Collecting items for DB2/DELETE/MEMBER_DELETE
 *** No item found
-** Collecting items for DB2/UPADTE/MEMBER_ARCHIVE
-*** 1 item found [BAM1.DBRM]
-** Collecting items for DB2/UPADTE/MEMBER_COPY
+** Collecting items for DB2/UPDATE/MEMBER_COPY
 *** 1 item found [BAM1.DBRM]
 ** Collecting items for DB2/BIND/DB2_BIND_PACKAGE
 *** 1 item found [BAM1.DBRM]
@@ -1303,41 +1301,47 @@ wazideploy-generate --deploymentMethod /u/dbehm/git/wazi-deploy-sample/plum-samp
 *** No item found
 ** Collecting items for DEPLOY_MODULES/DELETE/MEMBER_DELETE
 *** No item found
-** Collecting items for DEPLOY_MODULES/UPADTE/MEMBER_ARCHIVE
-*** 6 items found [BAM1.LOAD, BAD1.JCL, BAB1.JCL, BAM1.DBRM, BAB1.LOAD, BAO1.LOAD]
-** Collecting items for DEPLOY_MODULES/UPADTE/MEMBER_COPY
-*** 6 items found [BAM1.LOAD, BAD1.JCL, BAB1.JCL, BAM1.DBRM, BAB1.LOAD, BAO1.LOAD]
+** Collecting items for DEPLOY_MODULES/UPDATE/MEMBER_ARCHIVE
+*** 6 items found [BAM1.DBRM, BAB1.LOAD, BAO1.LOAD, BAB1.JCL, BAD1.JCL, BAM1.LOAD]
+** Collecting items for DEPLOY_MODULES/UPDATE/MEMBER_COPY
+*** 6 items found [BAM1.DBRM, BAB1.LOAD, BAO1.LOAD, BAB1.JCL, BAD1.JCL, BAM1.LOAD]
+** Collecting items for ROLLBACK_MODULES/MODULES/MEMBER_RESTORE
+*** 6 items found [BAM1.DBRM, BAB1.LOAD, BAO1.LOAD, BAB1.JCL, BAD1.JCL, BAM1.LOAD]
+** Collecting items for ROLLBACK_MODULES/BIND/DB2_BIND_PACKAGE
+*** 1 item found [BAM1.DBRM]
+** Collecting items for ROLLBACK_MODULES/BIND/DB2_BIND_PLAN
+*** 1 item found [BAM1.DBRM]
 ** Collecting items for VERIFICATION/JCLEXPERT/SCAN_JCL
-*** 2 items found [BAD1.JCL, BAB1.JCL]
+*** 2 items found [BAB1.JCL, BAD1.JCL]
 ** Collecting items for CICS/UPDATE/PROG_UPDATE
 *** No item found
-* Save the deployment plan to: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploymentPlan.yaml
-* Save the deployment plan report to: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploymentPlanReport.html
+* Save the deployment plan to: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploymentPlan.yaml
+* Save the deployment plan report to: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploymentPlanReport.html
 Deploy DBRM first
 wazideploy-deploy.sh: [INFO] Deploy Package with Wazi Deploy. Version=1.20
 wazideploy-deploy.sh: [INFO] ** Archive was found at location '/applicationArchive.tar'.
 wazideploy-deploy.sh: [INFO] **************************************************************
 wazideploy-deploy.sh: [INFO] ** Start Wazi Deploy Deployment on HOST/USER: z/OS ZT01 01.00 03 8561/BPXROOT
 wazideploy-deploy.sh: [INFO] **                Application Name: base
-wazideploy-deploy.sh: [INFO] **               Working Directory: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36
-wazideploy-deploy.sh: [INFO] **                 Deployment Plan: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploymentPlan.yaml
+wazideploy-deploy.sh: [INFO] **               Working Directory: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10
+wazideploy-deploy.sh: [INFO] **                 Deployment Plan: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploymentPlan.yaml
 wazideploy-deploy.sh: [INFO] **                Environment File: /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/environment-conf/python/EOLEB7-Integration.yml
-wazideploy-deploy.sh: [INFO] **              Package Input File: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/applicationArchive.tar
+wazideploy-deploy.sh: [INFO] **              Package Input File: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/applicationArchive.tar
 wazideploy-deploy.sh: [INFO] **         User-provided extraVars: hlq=DBEHM.BASETEST
 wazideploy-deploy.sh: [INFO] **                        planTags: db2
-wazideploy-deploy.sh: [INFO] **                   Evidence File: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploy/evidences/evidence.yaml
+wazideploy-deploy.sh: [INFO] **                   Evidence File: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploy/evidences/evidence.yaml
 wazideploy-deploy.sh: [INFO] **        Debug output is disabled.
 wazideploy-deploy.sh: [INFO] **************************************************************
 
-wazideploy-deploy --workingFolder /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36 --deploymentPlan /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploymentPlan.yaml --envFile /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/environment-conf/python/EOLEB7-Integration.yml -e application=base -e hlq=DBEHM.BASETEST --planTags db2 -e deploy_cfg_home=/u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/ --packageInputFile /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/applicationArchive.tar --evidencesFileName /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploy/evidences/evidence.yaml
-** Reading the deployment file from: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploymentPlan.yaml
+wazideploy-deploy --workingFolder /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10 --deploymentPlan /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploymentPlan.yaml --envFile /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/environment-conf/python/EOLEB7-Integration.yml -e application=base -e hlq=DBEHM.BASETEST --planTags db2 -e deploy_cfg_home=/u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/ --packageInputFile /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/applicationArchive.tar --evidencesFileName /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploy/evidences/evidence.yaml
+** Reading the deployment file from: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploymentPlan.yaml
 ** Reading the target environment file from: /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/environment-conf/python/EOLEB7-Integration.yml
 *! WARNING: Accessing extra vars via extra_vars.myvar in environment files is deprecated.
 *!          You can now directly access the extra variables (example: myvar).
 *** Validate Deployment Plan before processing it
 *** End of Deployment Plan validation
-*** Validate /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/applicationArchive.tar fingerprint
-*** Checksum is valid for /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/applicationArchive.tar
+*** Validate /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/applicationArchive.tar fingerprint
+*** Checksum is valid for /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/applicationArchive.tar
 ** Registering SMF Record
 ** Processing CONFIG(s)
 ** Processing CONFIG/READ CONFIGURATION(s)
@@ -1353,70 +1357,68 @@ wazideploy-deploy --workingFolder /u/dbehm/git/june-engagement-workspace/ts1_cha
 ** Processing PACKAGE(s)
 ** Processing PACKAGE/PACKAGE(s)
 ** Processing PACKAGE/PACKAGE/PACKAGE(s) with package
-*** Processing package /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/applicationArchive.tar
-*** Expand the package /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/applicationArchive.tar to /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36 on system os OS/390
+*** Processing package /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/applicationArchive.tar
+*** Expand the package /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/applicationArchive.tar to /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10 on system os OS/390
 ** Processing DB2(s)
-** Processing DB2/UPADTE(s)
-** Processing DB2/UPADTE/MEMBER_ARCHIVE(s) with member_archive
-*** Copy 'DBEHM.BASETEST.DBRM(BAM1)' to 'DBEHM.BASETEST.BACK.DBRM(BAM1)' (1/1)
-** Processing DB2/UPADTE/MEMBER_COPY(s) with member_copy
-*** Copy /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/dbrm/BAM1.DBRM to 'DBEHM.BASETEST.DBRM(BAM1)' (1/1)
+** Processing DB2/UPDATE(s)
+** Processing DB2/UPDATE/MEMBER_COPY(s) with member_copy
+*** Copy /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/bin/dbrm/BAM1.DBRM to 'DBEHM.BASETEST.TMP.DBRM(BAM1)' (1/1)
 ** Processing DB2/BIND(s)
 ** Processing DB2/BIND/DB2_BIND_PACKAGE(s) with db2_bind_package
 **** Perform BIND PACKAGE on 'BAM1.DBRM' (1/1)
 *** Perform BIND PACKAGE with template 'db2_bind_package.jcl.j2'
-*** Submit jcl /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bind_package_1.jcl
-** Job JOB06430 submitted with ZOAU Python API.
-**** Job JOB06430 finished CC=0004
+*** Submit jcl /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/bind_package_1.jcl
+** Job JOB06775 submitted with ZOAU Python API.
+**** Job JOB06775 finished CC=0004
 ** Processing DB2/BIND/DB2_BIND_PLAN(s) with db2_bind_plan
 *** Perform BIND PLAN with template 'db2_bind_plan.jcl.j2'
-*** Submit jcl /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bind_plan_1.jcl
-** Job JOB06431 submitted with ZOAU Python API.
-**** Job JOB06431 finished CC=0000
+*** Submit jcl /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/bind_plan_1.jcl
+** Job JOB06776 submitted with ZOAU Python API.
+**** Job JOB06776 finished CC=0000
 ** Processing VERIFICATION(s)
 ** Processing VERIFICATION/JCLEXPERT(s)
-** Evidences saved in /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploy/evidences/evidence.yaml
+** Evidences saved in /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploy/evidences/evidence.yaml
 wazideploy-evidence.sh: [INFO] Generate deployment reports with Wazi Deploy. Version=1.10
 wazideploy-evidence.sh: [INFO] **************************************************************
 wazideploy-evidence.sh: [INFO] ** Start Wazi Deploy evidence reporting on HOST/USER: z/OS ZT01 01.00 03 8561/BPXROOT
-wazideploy-evidence.sh: [INFO] **               Working Directory: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36
-wazideploy-evidence.sh: [INFO] **                     Output File: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploy/deployment-report_db2.html
-wazideploy-evidence.sh: [INFO] **                   Evidence File: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploy/evidences/evidence.yaml
+wazideploy-evidence.sh: [INFO] **               Working Directory: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10
+wazideploy-evidence.sh: [INFO] **                     Output File: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploy/deployment-report_db2.html
+wazideploy-evidence.sh: [INFO] **                   Evidence File: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploy/evidences/evidence.yaml
 wazideploy-evidence.sh: [INFO] **************************************************************
 
-wazideploy-evidence --index /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/index --dataFolder /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploy/evidences i
-Indexing '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploy/evidences' to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/index' ...
-1 new file scanned in 0.16 seconds
-Index in '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/index':
+wazideploy-evidence --index /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/index --dataFolder /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploy/evidences i
+Indexing '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploy/evidences' to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/index' ...
+1 new file scanned in 0.14 seconds
+Index in '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/index':
     File count: 1 (1 new, 0 deleted)
-    Field count: 110
-    Record count: 155
-wazideploy-evidence --index /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/index --template /u/dbehm/git/wazi-deploy-sample/plum-samples/evidences/templates/full-report.yml --output=/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploy/deployment-report_db2.html r renderer=/u/dbehm/git/wazi-deploy-sample/plum-samples/evidences/renderers/full-report.html
-1 record extracted to file '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploy/deployment-report_db2.html' in 0.06 seconds
+    Field count: 109
+    Record count: 139
+wazideploy-evidence --index /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/index --template /u/dbehm/git/wazi-deploy-sample/plum-samples/evidences/templates/full-report.yml --output=/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploy/deployment-report_db2.html r renderer=/u/dbehm/git/wazi-deploy-sample/plum-samples/evidences/renderers/full-report.html
+1 record extracted to file '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploy/deployment-report_db2.html' in 0.06 seconds
 Deploy remaining artifacts
 wazideploy-deploy.sh: [INFO] Deploy Package with Wazi Deploy. Version=1.20
 wazideploy-deploy.sh: [INFO] ** Archive was found at location '/applicationArchive.tar'.
 wazideploy-deploy.sh: [INFO] **************************************************************
 wazideploy-deploy.sh: [INFO] ** Start Wazi Deploy Deployment on HOST/USER: z/OS ZT01 01.00 03 8561/BPXROOT
 wazideploy-deploy.sh: [INFO] **                Application Name: base
-wazideploy-deploy.sh: [INFO] **               Working Directory: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36
-wazideploy-deploy.sh: [INFO] **                 Deployment Plan: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploymentPlan.yaml
+wazideploy-deploy.sh: [INFO] **               Working Directory: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10
+wazideploy-deploy.sh: [INFO] **                 Deployment Plan: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploymentPlan.yaml
 wazideploy-deploy.sh: [INFO] **                Environment File: /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/environment-conf/python/EOLEB7-Integration.yml
-wazideploy-deploy.sh: [INFO] **              Package Input File: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/applicationArchive.tar
+wazideploy-deploy.sh: [INFO] **              Package Input File: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/applicationArchive.tar
 wazideploy-deploy.sh: [INFO] **         User-provided extraVars: hlq=DBEHM.BASETEST
-wazideploy-deploy.sh: [INFO] **                   Evidence File: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploy/evidences/evidence.yaml
+wazideploy-deploy.sh: [INFO] **                   Evidence File: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploy/evidences/evidence.yaml
 wazideploy-deploy.sh: [INFO] **        Debug output is disabled.
 wazideploy-deploy.sh: [INFO] **************************************************************
 
-wazideploy-deploy --workingFolder /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36 --deploymentPlan /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploymentPlan.yaml --envFile /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/environment-conf/python/EOLEB7-Integration.yml -e application=base -e hlq=DBEHM.BASETEST --planSkipTags db2 -e deploy_cfg_home=/u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/ --packageInputFile /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/applicationArchive.tar --evidencesFileName /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploy/evidences/evidence.yaml
-** Reading the deployment file from: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploymentPlan.yaml
+wazideploy-deploy --workingFolder /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10 --deploymentPlan /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploymentPlan.yaml --envFile /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/environment-conf/python/EOLEB7-Integration.yml -e application=base -e hlq=DBEHM.BASETEST --planSkipTags db2 -e deploy_cfg_home=/u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/ --packageInputFile /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/applicationArchive.tar --evidencesFileName /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploy/evidences/evidence.yaml
+** Reading the deployment file from: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploymentPlan.yaml
 ** Reading the target environment file from: /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/environment-conf/python/EOLEB7-Integration.yml
 *! WARNING: Accessing extra vars via extra_vars.myvar in environment files is deprecated.
 *!          You can now directly access the extra variables (example: myvar).
 *** Validate Deployment Plan before processing it
 *** End of Deployment Plan validation
-*** Validate /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/applicationArchive.tar fingerprint
-*** Checksum is valid for /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/applicationArchive.tar
+*** Validate /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/applicationArchive.tar fingerprint
+*** Checksum is valid for /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/applicationArchive.tar
 ** Registering SMF Record
 ** Processing CONFIG(s)
 ** Processing CONFIG/READ CONFIGURATION(s)
@@ -1432,53 +1434,53 @@ wazideploy-deploy --workingFolder /u/dbehm/git/june-engagement-workspace/ts1_cha
 ** Processing PACKAGE(s)
 ** Processing PACKAGE/PACKAGE(s)
 ** Processing PACKAGE/PACKAGE/PACKAGE(s) with package
-*** Processing package /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/applicationArchive.tar
-*** Expand the package /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/applicationArchive.tar to /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36 on system os OS/390
+*** Processing package /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/applicationArchive.tar
+*** Expand the package /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/applicationArchive.tar to /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10 on system os OS/390
 ** Processing DEPLOY_MODULES(s)
-** Processing DEPLOY_MODULES/UPADTE(s)
-** Processing DEPLOY_MODULES/UPADTE/MEMBER_ARCHIVE(s) with member_archive
+** Processing DEPLOY_MODULES/UPDATE(s)
+** Processing DEPLOY_MODULES/UPDATE/MEMBER_ARCHIVE(s) with member_archive
+*** Copy 'DBEHM.BASETEST.DBRM(BAM1)' to 'DBEHM.BASETEST.BACK.DBRM(BAM1)' (1/6)
 *! WARNING: force_lock=True is ineffective with native copy
-*** Copy 'DBEHM.BASETEST.LOAD(BAM1)' to 'DBEHM.BASETEST.BACK.LOAD(BAM1)' (1/6)
 *** Copy 'DBEHM.BASETEST.LOAD(BAB1)' to 'DBEHM.BASETEST.BACK.LOAD(BAB1)' (2/6)
 *** Copy 'DBEHM.BASETEST.LOAD(BAO1)' to 'DBEHM.BASETEST.BACK.LOAD(BAO1)' (3/6)
-*** Copy 'DBEHM.BASETEST.JCL(BAD1)' to 'DBEHM.BASETEST.BACK.JCL(BAD1)' (4/6)
+*** Copy 'DBEHM.BASETEST.LOAD(BAM1)' to 'DBEHM.BASETEST.BACK.LOAD(BAM1)' (4/6)
 *** Copy 'DBEHM.BASETEST.JCL(BAB1)' to 'DBEHM.BASETEST.BACK.JCL(BAB1)' (5/6)
-*** Copy 'DBEHM.BASETEST.DBRM(BAM1)' to 'DBEHM.BASETEST.BACK.DBRM(BAM1)' (6/6)
-** Processing DEPLOY_MODULES/UPADTE/MEMBER_COPY(s) with member_copy
+*** Copy 'DBEHM.BASETEST.JCL(BAD1)' to 'DBEHM.BASETEST.BACK.JCL(BAD1)' (6/6)
+** Processing DEPLOY_MODULES/UPDATE/MEMBER_COPY(s) with member_copy
+*** Copy /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/bin/dbrm/BAM1.DBRM to 'DBEHM.BASETEST.DBRM(BAM1)' (1/6)
 *! WARNING: force_lock=True is ineffective with native copy
-*** Copy /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/load/BAM1.LOAD to 'DBEHM.BASETEST.LOAD(BAM1)' (1/6)
-*** Copy /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/load/BAB1.LOAD to 'DBEHM.BASETEST.LOAD(BAB1)' (2/6)
-*** Copy /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/load/BAO1.LOAD to 'DBEHM.BASETEST.LOAD(BAO1)' (3/6)
-*** Copy /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/jcl/BAD1.JCL to 'DBEHM.BASETEST.JCL(BAD1)' (4/6)
-**** Substitute text in /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/jcl/BAD1.JCL.IBM-1047
-*** Copy /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/jcl/BAB1.JCL to 'DBEHM.BASETEST.JCL(BAB1)' (5/6)
-**** Substitute text in /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/jcl/BAB1.JCL.IBM-1047
-*** Copy /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/bin/dbrm/BAM1.DBRM to 'DBEHM.BASETEST.DBRM(BAM1)' (6/6)
+*** Copy /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/bin/load/BAB1.LOAD to 'DBEHM.BASETEST.LOAD(BAB1)' (2/6)
+*** Copy /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/bin/load/BAO1.LOAD to 'DBEHM.BASETEST.LOAD(BAO1)' (3/6)
+*** Copy /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/bin/load/BAM1.LOAD to 'DBEHM.BASETEST.LOAD(BAM1)' (4/6)
+*** Copy /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/bin/jcl/BAB1.JCL to 'DBEHM.BASETEST.JCL(BAB1)' (5/6)
+**** Substitute text in /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/bin/jcl/BAB1.JCL.IBM-1047
+*** Copy /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/bin/jcl/BAD1.JCL to 'DBEHM.BASETEST.JCL(BAD1)' (6/6)
+**** Substitute text in /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/bin/jcl/BAD1.JCL.IBM-1047
 ** Processing VERIFICATION(s)
 ** Processing VERIFICATION/JCLEXPERT(s)
 ** Processing VERIFICATION/JCLEXPERT/SCAN_JCL(s) with job_submit
 *** Render job template /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/templates/jcl_expert_validation.jcl.j2 to '/tmp/wazi-deploy/jcl_gen/jcl_expert_validation.jcl'
-** Job JOB06432 submitted with ZOAU Python API.
-**** Job JOB06432 finished CC=0008
+** Job JOB06777 submitted with ZOAU Python API.
+**** Job JOB06777 finished CC=0008
 *** Render job template /u/dbehm/git/wazi-deploy-sample/plum-samples/external-repos/deployment-method/templates/jcl_expert_validation.jcl.j2 to '/tmp/wazi-deploy/jcl_gen/jcl_expert_validation.jcl'
-** Job JOB06433 submitted with ZOAU Python API.
-**** Job JOB06433 finished CC=0008
-** Evidences saved in /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploy/evidences/evidence.yaml
+** Job JOB06778 submitted with ZOAU Python API.
+**** Job JOB06778 finished CC=0008
+** Evidences saved in /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploy/evidences/evidence.yaml
 wazideploy-evidence.sh: [INFO] Generate deployment reports with Wazi Deploy. Version=1.10
 wazideploy-evidence.sh: [INFO] **************************************************************
 wazideploy-evidence.sh: [INFO] ** Start Wazi Deploy evidence reporting on HOST/USER: z/OS ZT01 01.00 03 8561/BPXROOT
-wazideploy-evidence.sh: [INFO] **               Working Directory: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36
-wazideploy-evidence.sh: [INFO] **                     Output File: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploy/deployment-report_all.html
-wazideploy-evidence.sh: [INFO] **                   Evidence File: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploy/evidences/evidence.yaml
+wazideploy-evidence.sh: [INFO] **               Working Directory: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10
+wazideploy-evidence.sh: [INFO] **                     Output File: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploy/deployment-report_all.html
+wazideploy-evidence.sh: [INFO] **                   Evidence File: /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploy/evidences/evidence.yaml
 wazideploy-evidence.sh: [INFO] **************************************************************
 
-wazideploy-evidence --index /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/index --dataFolder /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploy/evidences i
-Indexing '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploy/evidences' to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/index' ...
-1 new file scanned in 0.30 seconds
-Index in '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/index':
+wazideploy-evidence --index /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/index --dataFolder /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploy/evidences i
+Indexing '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploy/evidences' to '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/index' ...
+1 new file scanned in 0.28 seconds
+Index in '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/index':
     File count: 1 (1 new, 1 deleted)
     Field count: 123
-    Record count: 429
-wazideploy-evidence --index /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/index --template /u/dbehm/git/wazi-deploy-sample/plum-samples/evidences/templates/full-report.yml --output=/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploy/deployment-report_all.html r renderer=/u/dbehm/git/wazi-deploy-sample/plum-samples/evidences/renderers/full-report.html
-1 record extracted to file '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-25_12-32-36/deployPkgDir/deploy/deployment-report_all.html' in 0.08 seconds
+    Record count: 414
+wazideploy-evidence --index /u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/index --template /u/dbehm/git/wazi-deploy-sample/plum-samples/evidences/templates/full-report.yml --output=/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploy/deployment-report_all.html r renderer=/u/dbehm/git/wazi-deploy-sample/plum-samples/evidences/renderers/full-report.html
+1 record extracted to file '/u/dbehm/git/june-engagement-workspace/ts1_change_base/base/main/dbbbuild_2025-06-27_08-52-10/deployPkgDir/deploy/deployment-report_all.html' in 0.08 seconds
 ts1_change_base completed with 0
