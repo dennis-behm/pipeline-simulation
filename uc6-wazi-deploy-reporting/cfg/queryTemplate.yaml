@@ -1,0 +1,63 @@
+select:
+  name: '{{module}}'
+  ymli_category~: ^ activities:[0-9]* actions:[0-9]* steps:[0-9]* artifacts:[0-9]* $
+#  ymli_parent:
+#    steps: 
+#      name: MEMBER_COPY 
+  ymli_parent:
+    #{% if env is defined %}
+    metadata:
+        annotations:
+            environment_name: '{{env}}' 
+    #{% endif %}
+    #{% if app is defined %}
+    manifests:
+        name: '{{app}}'
+    #{% endif %}  
+  properties:
+    key: type
+    value: '{{type}}'
+output:
+  #limit: 1
+  format: 
+    sort_keys: true
+  fields:
+    # element name is the third sort criteria
+    name: 3
+    properties:
+      key: true
+      value:
+        lname: true
+        library: true
+        category: true
+        file: true
+        resolved: true
+        excluded: true
+    ymli_parent:
+      name: true
+      step_result:
+        status: true
+      ymli_parent:
+        ymli_parent:
+          ymli_parent:
+                manifests: 
+                    # application name is the second sort criteria
+                    name: 2
+                    description: true
+                    version: true
+                    annotations:
+                        scmInfo:
+                            uri: true
+                            shortCommit: true
+                metadata:
+                    annotations: 
+                        creation_timestamp : true
+                        # environment is the firt sort criteria
+                        environment_name: 1
+                        # last sort criteria. Reverse sort of timestamps
+                        deploy_timestamp: -4
+
+#name: true
+#{% if renderer is defined %}
+renderer: {{renderer}}
+#{% endif %}

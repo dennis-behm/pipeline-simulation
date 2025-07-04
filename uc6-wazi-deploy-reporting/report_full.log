@@ -1,0 +1,14 @@
+ 
+Query Wazi Deploy index
+*******************************************
+Query Options
+*******************************************
+*     application = *
+*     module      = *
+*     type        = *
+*     environment = *
+[INFO] Executing following query: wazideploy-evidence  --indexFolder reporting_index  --query cfg/queryTemplate.yaml  --output=reports/2025-07-04_08-57-52/report.html  r  app=* env=* type=* module=* renderer=cfg/renderer.html
+ 
+*******************************************
+1 record extracted to file 'reports/2025-07-04_08-57-52/report.html' in 1.33 seconds
+[INFO] - Query Wazi Deploy Query completed. Find output at reports/2025-07-04_08-57-52/report.html.

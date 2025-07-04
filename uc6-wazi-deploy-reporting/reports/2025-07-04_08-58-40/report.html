@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<!--
+    Licensed Materials - Property of IBM
+    (c) Copyright IBM Corporation 2023. All Rights Reserved.
+
+    Note to U.S. Government Users Restricted Rights:
+    Use, duplication or disclosure restricted by GSA ADP Schedule
+    Contract with IBM Corp.
+ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+
+<head>
+    <title>IBM Deploy Evidences</title>
+    <style type="text/css">
+        body {
+            font: 12px Arial, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            vertical-align: top;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        tr.even {
+            background-color: #f2f2f2
+        }
+
+        th {
+            background-color: #ddd;
+            color: black !important;
+        }
+
+        td.label {
+            font-weight: bold;
+        }
+
+        span.vlabel {
+            float: left;
+            font-weight: bold;
+            width: 10em;
+            margin-left: 20px;
+        }
+
+        span.vlabel_ok {
+            font-weight: bold;
+            color: green;
+        }
+
+        span.vlabel_skipped {
+            font-weight: bold;
+            color: orange;
+        }
+
+        span.vlabel_ko {
+            font-weight: bold;
+            color: red;
+        }
+
+        .bottomRight {
+            float: right;
+            text-align: right;
+            font: 10px Arial, sans-serif;
+        }
+
+        .dep {
+            font: 11px Arial, sans-serif;
+        }
+
+        .depType {
+            font: 9px Arial, sans-serif;
+            background-color: #81C4E8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        function toggle(log, text)
+        {
+            if (document.getElementById(text).text == 'Show Log')
+                document.getElementById(text).text = 'Hide Log';
+            else
+                document.getElementById(text).text = 'Show Log';
+        
+            if (document.getElementById(log).style.display == 'none')
+                document.getElementById(log).style.display = 'block';
+            else
+                document.getElementById(log).style.display = 'none';
+        };
+        </script>
+        
+
+    <div id="main">
+
+        <hr>
+        <h1>Deployment Log</h1>
+        <hr>
+        <table border='1px solid #A9A9A9' style='width:100%;'>
+            <tr>
+                <th id=\"name\">Environment</th>
+                <th id=\"name\">Application</th>
+                <th id=\"name\">Component</th>
+                <th id=\"name\">Action:Status</th>
+                <th id=\"name\">Component Properties</th>
+                <th id=\"name\">Version</th>
+                <th id=\"version\">Deploy Date</th>
+                <th id=\"version\">Version timestamp</th>
+                <th id=\"version\">Git Commit Build Hash</th>
+            </tr>
+            <tr>
+                <td>
+                    
+                    <!-- environment name-->
+                    EOLEB7-Integration
+                </td>
+
+                <td>
+                    <!-- Application name -->
+                    base
+
+                </td>
+                <td>
+                    <!-- Element -->
+                    BAB1
+
+
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    </div>
+
+                </td>
+                <td>
+                    <!-- Component Action -->
+                    MEMBER_ARCHIVE:Ok
+                </td>
+                <td>
+                    <!-- Element Properties, specifically type -->
+                    
+                    
+                    
+                    
+                    
+                    type: JCL<br>
+                    
+                    
+
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    20250627.164754.530
+
+                </td>
+
+
+                <td>
+                    <!-- deployment timestamp -->
+                    20250627.144804.420
+                </td>
+
+                <td>
+                    20250627.144803.319
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    
+                    <!-- environment name-->
+                    EOLEB7-Integration
+                </td>
+
+                <td>
+                    <!-- Application name -->
+                    base
+
+                </td>
+                <td>
+                    <!-- Element -->
+                    BAB1
+
+
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    </div>
+
+                </td>
+                <td>
+                    <!-- Component Action -->
+                    MEMBER_COPY:Ok
+                </td>
+                <td>
+                    <!-- Element Properties, specifically type -->
+                    
+                    
+                    
+                    
+                    
+                    type: JCL<br>
+                    
+                    
+
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    20250627.164754.530
+
+                </td>
+
+
+                <td>
+                    <!-- deployment timestamp -->
+                    20250627.144804.420
+                </td>
+
+                <td>
+                    20250627.144803.319
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    
+                    <!-- environment name-->
+                    EOLEB7-Integration
+                </td>
+
+                <td>
+                    <!-- Application name -->
+                    base
+
+                </td>
+                <td>
+                    <!-- Element -->
+                    BAB1
+
+
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    </div>
+
+                </td>
+                <td>
+                    <!-- Component Action -->
+                    SCAN_JCL:Ok
+                </td>
+                <td>
+                    <!-- Element Properties, specifically type -->
+                    
+                    
+                    
+                    
+                    
+                    type: JCL<br>
+                    
+                    
+
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    20250627.164754.530
+
+                </td>
+
+
+                <td>
+                    <!-- deployment timestamp -->
+                    20250627.144804.420
+                </td>
+
+                <td>
+                    20250627.144803.319
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    
+                    <!-- environment name-->
+                    EOLEB7-Integration
+                </td>
+
+                <td>
+                    <!-- Application name -->
+                    base
+
+                </td>
+                <td>
+                    <!-- Element -->
+                    BAB1
+
+
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    </div>
+
+                </td>
+                <td>
+                    <!-- Component Action -->
+                    SCAN_JCL:Ok
+                </td>
+                <td>
+                    <!-- Element Properties, specifically type -->
+                    
+                    
+                    
+                    
+                    
+                    type: JCL<br>
+                    
+                    
+
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    20250627.164754.530
+
+                </td>
+
+
+                <td>
+                    <!-- deployment timestamp -->
+                    20250627.144804.420
+                </td>
+
+                <td>
+                    20250627.144803.319
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    
+                    <!-- environment name-->
+                    EOLEB7-Integration
+                </td>
+
+                <td>
+                    <!-- Application name -->
+                    base
+
+                </td>
+                <td>
+                    <!-- Element -->
+                    BAB1
+
+
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    </div>
+
+                </td>
+                <td>
+                    <!-- Component Action -->
+                    MEMBER_ARCHIVE:Ok
+                </td>
+                <td>
+                    <!-- Element Properties, specifically type -->
+                    
+                    
+                    
+                    
+                    
+                    type: JCL<br>
+                    
+                    
+
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    20250627.085247.296
+
+                </td>
+
+
+                <td>
+                    <!-- deployment timestamp -->
+                    20250627.065319.075
+                </td>
+
+                <td>
+                    20250627.065256.149
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    
+                    <!-- environment name-->
+                    EOLEB7-Integration
+                </td>
+
+                <td>
+                    <!-- Application name -->
+                    base
+
+                </td>
+                <td>
+                    <!-- Element -->
+                    BAB1
+
+
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    </div>
+
+                </td>
+                <td>
+                    <!-- Component Action -->
+                    MEMBER_COPY:Ok
+                </td>
+                <td>
+                    <!-- Element Properties, specifically type -->
+                    
+                    
+                    
+                    
+                    
+                    type: JCL<br>
+                    
+                    
+
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    20250627.085247.296
+
+                </td>
+
+
+                <td>
+                    <!-- deployment timestamp -->
+                    20250627.065319.075
+                </td>
+
+                <td>
+                    20250627.065256.149
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    
+                    <!-- environment name-->
+                    EOLEB7-Integration
+                </td>
+
+                <td>
+                    <!-- Application name -->
+                    base
+
+                </td>
+                <td>
+                    <!-- Element -->
+                    BAB1
+
+
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    </div>
+
+                </td>
+                <td>
+                    <!-- Component Action -->
+                    SCAN_JCL:Ok
+                </td>
+                <td>
+                    <!-- Element Properties, specifically type -->
+                    
+                    
+                    
+                    
+                    
+                    type: JCL<br>
+                    
+                    
+
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    20250627.085247.296
+
+                </td>
+
+
+                <td>
+                    <!-- deployment timestamp -->
+                    20250627.065319.075
+                </td>
+
+                <td>
+                    20250627.065256.149
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    
+                    <!-- environment name-->
+                    EOLEB7-Integration
+                </td>
+
+                <td>
+                    <!-- Application name -->
+                    base
+
+                </td>
+                <td>
+                    <!-- Element -->
+                    BAB1
+
+
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    </div>
+
+                </td>
+                <td>
+                    <!-- Component Action -->
+                    SCAN_JCL:Ok
+                </td>
+                <td>
+                    <!-- Element Properties, specifically type -->
+                    
+                    
+                    
+                    
+                    
+                    type: JCL<br>
+                    
+                    
+
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    20250627.085247.296
+
+                </td>
+
+
+                <td>
+                    <!-- deployment timestamp -->
+                    20250627.065319.075
+                </td>
+
+                <td>
+                    20250627.065256.149
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    
+                    <!-- environment name-->
+                    EOLEB7-Integration
+                </td>
+
+                <td>
+                    <!-- Application name -->
+                    base
+
+                </td>
+                <td>
+                    <!-- Element -->
+                    BAB1
+
+
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    </div>
+
+                </td>
+                <td>
+                    <!-- Component Action -->
+                    MEMBER_RESTORE:Ok
+                </td>
+                <td>
+                    <!-- Element Properties, specifically type -->
+                    
+                    
+                    
+                    
+                    
+                    type: JCL<br>
+                    
+                    
+
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    20250626.161204.112
+
+                </td>
+
+
+                <td>
+                    <!-- deployment timestamp -->
+                    20250626.141309.135
+                </td>
+
+                <td>
+                    20250626.141308.023
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    
+                    <!-- environment name-->
+                    EOLEB7-Integration
+                </td>
+
+                <td>
+                    <!-- Application name -->
+                    base
+
+                </td>
+                <td>
+                    <!-- Element -->
+                    BAB1
+
+
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    </div>
+
+                </td>
+                <td>
+                    <!-- Component Action -->
+                    SCAN_JCL:Skipped
+                </td>
+                <td>
+                    <!-- Element Properties, specifically type -->
+                    
+                    
+                    
+                    
+                    
+                    type: JCL<br>
+                    
+                    
+
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    20250626.161204.112
+
+                </td>
+
+
+                <td>
+                    <!-- deployment timestamp -->
+                    20250626.141309.135
+                </td>
+
+                <td>
+                    20250626.141308.023
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    
+                    <!-- environment name-->
+                    EOLEB7-Integration
+                </td>
+
+                <td>
+                    <!-- Application name -->
+                    base
+
+                </td>
+                <td>
+                    <!-- Element -->
+                    BAB1
+
+
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    </div>
+
+                </td>
+                <td>
+                    <!-- Component Action -->
+                    MEMBER_ARCHIVE:Ok
+                </td>
+                <td>
+                    <!-- Element Properties, specifically type -->
+                    
+                    
+                    
+                    
+                    
+                    type: JCL<br>
+                    
+                    
+
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    20250626.161204.112
+
+                </td>
+
+
+                <td>
+                    <!-- deployment timestamp -->
+                    20250626.141214.411
+                </td>
+
+                <td>
+                    20250626.141213.341
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    
+                    <!-- environment name-->
+                    EOLEB7-Integration
+                </td>
+
+                <td>
+                    <!-- Application name -->
+                    base
+
+                </td>
+                <td>
+                    <!-- Element -->
+                    BAB1
+
+
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    </div>
+
+                </td>
+                <td>
+                    <!-- Component Action -->
+                    MEMBER_COPY:Ok
+                </td>
+                <td>
+                    <!-- Element Properties, specifically type -->
+                    
+                    
+                    
+                    
+                    
+                    type: JCL<br>
+                    
+                    
+
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    20250626.161204.112
+
+                </td>
+
+
+                <td>
+                    <!-- deployment timestamp -->
+                    20250626.141214.411
+                </td>
+
+                <td>
+                    20250626.141213.341
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    
+                    <!-- environment name-->
+                    EOLEB7-Integration
+                </td>
+
+                <td>
+                    <!-- Application name -->
+                    base
+
+                </td>
+                <td>
+                    <!-- Element -->
+                    BAB1
+
+
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    </div>
+
+                </td>
+                <td>
+                    <!-- Component Action -->
+                    SCAN_JCL:Ok
+                </td>
+                <td>
+                    <!-- Element Properties, specifically type -->
+                    
+                    
+                    
+                    
+                    
+                    type: JCL<br>
+                    
+                    
+
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    20250626.161204.112
+
+                </td>
+
+
+                <td>
+                    <!-- deployment timestamp -->
+                    20250626.141214.411
+                </td>
+
+                <td>
+                    20250626.141213.341
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    
+                    <!-- environment name-->
+                    EOLEB7-Integration
+                </td>
+
+                <td>
+                    <!-- Application name -->
+                    base
+
+                </td>
+                <td>
+                    <!-- Element -->
+                    BAB1
+
+
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    </div>
+
+                </td>
+                <td>
+                    <!-- Component Action -->
+                    SCAN_JCL:Ok
+                </td>
+                <td>
+                    <!-- Element Properties, specifically type -->
+                    
+                    
+                    
+                    
+                    
+                    type: JCL<br>
+                    
+                    
+
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    20250626.161204.112
+
+                </td>
+
+
+                <td>
+                    <!-- deployment timestamp -->
+                    20250626.141214.411
+                </td>
+
+                <td>
+                    20250626.141213.341
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    
+                    <!-- environment name-->
+                    EOLEB7-Integration
+                </td>
+
+                <td>
+                    <!-- Application name -->
+                    base
+
+                </td>
+                <td>
+                    <!-- Element -->
+                    BAB1
+
+
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    </div>
+
+                </td>
+                <td>
+                    <!-- Component Action -->
+                    MEMBER_ARCHIVE:Ok
+                </td>
+                <td>
+                    <!-- Element Properties, specifically type -->
+                    
+                    
+                    
+                    
+                    
+                    type: JCL<br>
+                    
+                    
+
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    20250625.111627.889
+
+                </td>
+
+
+                <td>
+                    <!-- deployment timestamp -->
+                    20250625.091632.291
+                </td>
+
+                <td>
+                    20250625.091631.584
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    2e1b563d896167219c4527450ec57c9c6b71a934
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    
+                    <!-- environment name-->
+                    EOLEB7-Integration
+                </td>
+
+                <td>
+                    <!-- Application name -->
+                    base
+
+                </td>
+                <td>
+                    <!-- Element -->
+                    BAB1
+
+
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    </div>
+
+                </td>
+                <td>
+                    <!-- Component Action -->
+                    MEMBER_DELETE:Ok
+                </td>
+                <td>
+                    <!-- Element Properties, specifically type -->
+                    
+                    
+                    
+                    
+                    
+                    type: JCL<br>
+                    
+                    
+
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    20250625.111627.889
+
+                </td>
+
+
+                <td>
+                    <!-- deployment timestamp -->
+                    20250625.091632.291
+                </td>
+
+                <td>
+                    20250625.091631.584
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    2e1b563d896167219c4527450ec57c9c6b71a934
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    
+                    <!-- environment name-->
+                    EOLEB7-Integration
+                </td>
+
+                <td>
+                    <!-- Application name -->
+                    base
+
+                </td>
+                <td>
+                    <!-- Element -->
+                    BAB1
+
+
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    </div>
+
+                </td>
+                <td>
+                    <!-- Component Action -->
+                    MEMBER_COPY:Ok
+                </td>
+                <td>
+                    <!-- Element Properties, specifically type -->
+                    
+                    
+                    
+                    
+                    
+                    type: JCL<br>
+                    
+                    
+
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    20250625.092452.496
+
+                </td>
+
+
+                <td>
+                    <!-- deployment timestamp -->
+                    20250625.072501.882
+                </td>
+
+                <td>
+                    20250625.072500.989
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    
+                    <!-- environment name-->
+                    EOLEB7-Integration
+                </td>
+
+                <td>
+                    <!-- Application name -->
+                    base
+
+                </td>
+                <td>
+                    <!-- Element -->
+                    BAB1
+
+
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    </div>
+
+                </td>
+                <td>
+                    <!-- Component Action -->
+                    SCAN_JCL:Ok
+                </td>
+                <td>
+                    <!-- Element Properties, specifically type -->
+                    
+                    
+                    
+                    
+                    
+                    type: JCL<br>
+                    
+                    
+
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    20250625.092452.496
+
+                </td>
+
+
+                <td>
+                    <!-- deployment timestamp -->
+                    20250625.072501.882
+                </td>
+
+                <td>
+                    20250625.072500.989
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    
+                    <!-- environment name-->
+                    EOLEB7-Integration
+                </td>
+
+                <td>
+                    <!-- Application name -->
+                    base
+
+                </td>
+                <td>
+                    <!-- Element -->
+                    BAB1
+
+
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    </div>
+
+                </td>
+                <td>
+                    <!-- Component Action -->
+                    SCAN_JCL:Ok
+                </td>
+                <td>
+                    <!-- Element Properties, specifically type -->
+                    
+                    
+                    
+                    
+                    
+                    type: JCL<br>
+                    
+                    
+
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    20250625.092452.496
+
+                </td>
+
+
+                <td>
+                    <!-- deployment timestamp -->
+                    20250625.072501.882
+                </td>
+
+                <td>
+                    20250625.072500.989
+                </td>
+
+                <td>
+                    <!-- Version -->
+                    ebb0b0a59879694e65ba7e12a92cc6a714e9f9f6
+                </td>
+
+            </tr>
+            
+        </table>
+    </div>
+</body>
+
+</html>
